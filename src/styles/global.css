@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bc-green: #1B7A3D;
+  --bc-green-dark: #145C2E;
+  --bc-green-light: #E8F5EC;
+  --bc-green-glow: #22C55E;
+  --bc-navy: #0F1B2D;
+  --bc-navy-light: #1A2A42;
+  --bc-gold: #F59E0B;
+  --bc-white: #FFFFFF;
+  --bc-off-white: #F8FAFB;
+  --bc-gray-50: #F1F5F9;
+  --bc-gray-100: #E2E8F0;
+  --bc-gray-200: #CBD5E1;
+  --bc-gray-400: #94A3B8;
+  --bc-gray-600: #475569;
+  --bc-gray-700: #334155;
+  --bc-gray-800: #1E293B;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--bc-gray-800);
+  background: var(--bc-white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); line-height: 1.2; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }

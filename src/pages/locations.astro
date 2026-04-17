@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const locations = [
+  {
+    id: 'madison',
+    city: 'Madison',
+    state: 'AL',
+    description: 'Madison is our home base. We provide full carpet cleaning, tile cleaning, upholstery cleaning, water damage restoration, and mold services throughout Madison and the surrounding communities including Redstone Arsenal, Madison City schools area, and all Madison County neighborhoods.',
+    zip: '35758',
+  },
+  {
+    id: 'huntsville',
+    city: 'Huntsville',
+    state: 'AL',
+    description: 'Huntsville\'s Rocket City gets full BamaClean service coverage. From Hampton Cove to Jones Valley and South Huntsville — we serve all residential and commercial properties in Madison County\'s largest city.',
+    zip: '35801',
+  },
+  {
+    id: 'florence',
+    city: 'Florence',
+    state: 'AL',
+    description: 'Our Florence location serves the Shoals area including Florence, Muscle Shoals, Sheffield, and Tuscumbia. Professional carpet, tile, and restoration services for the entire Shoals region.',
+    zip: '35630',
+  },
+  {
+    id: 'decatur',
+    city: 'Decatur',
+    state: 'AL',
+    description: 'BamaClean provides professional cleaning and restoration services throughout Decatur and Morgan County. Carpet cleaning, tile cleaning, and 24/7 emergency water damage response.',
+    zip: '35601',
+  },
+  {
+    id: 'athens',
+    city: 'Athens',
+    state: 'AL',
+    description: 'Serving Athens and Limestone County with expert carpet cleaning, upholstery cleaning, tile & grout cleaning, and emergency restoration services.',
+    zip: '35611',
+  },
+  {
+    id: 'muscle-shoals',
+    city: 'Muscle Shoals',
+    state: 'AL',
+    description: 'Professional cleaning services throughout Muscle Shoals, including carpet, tile, and upholstery cleaning for residential and commercial properties.',
+    zip: '35661',
+  },
+  {
+    id: 'tuscumbia',
+    city: 'Tuscumbia',
+    state: 'AL',
+    description: 'Full-service carpet and restoration services in Tuscumbia and the surrounding Colbert County area.',
+    zip: '35674',
+  },
+  {
+    id: 'sheffield',
+    city: 'Sheffield',
+    state: 'AL',
+    description: 'BamaClean serves Sheffield homeowners and businesses with professional carpet cleaning, tile cleaning, and restoration services.',
+    zip: '35660',
+  },
+  {
+    id: 'russellville',
+    city: 'Russellville',
+    state: 'AL',
+    description: 'Professional cleaning and restoration services throughout Russellville and Franklin County, including carpet, tile, upholstery, and mold services.',
+    zip: '35653',
+  },
+];
+---
+<Layout
+  title="Service Areas | Carpet Cleaning in Huntsville, Madison, Florence & North Alabama | BamaClean"
+  description="BamaClean provides professional carpet cleaning, tile cleaning, water damage restoration, and mold services throughout North Alabama including Madison, Huntsville, Florence, Decatur, Athens, and more."
+>
+
+  <!-- Hero -->
+  <section style="background:linear-gradient(135deg,#0F1B2D 0%,#1A2A42 100%);color:#fff;padding:72px 24px;text-align:center;">
+    <div style="max-width:700px;margin:0 auto;">
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#22C55E;margin-bottom:12px;">Where We Work</p>
+      <h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:16px;">Service Areas</h1>
+      <p style="font-size:1.0625rem;color:rgba(255,255,255,.8);line-height:1.7;">BamaClean serves the entire North Alabama region. Call <a href="tel:+12563240492" style="color:#22C55E;font-weight:700;">(256) 324-0492</a> to confirm service in your area.</p>
+    </div>
+  </section>
+
+  <!-- Map-style overview -->
+  <section style="padding:64px 24px;background:#F1F5F9;text-align:center;">
+    <div style="max-width:900px;margin:0 auto;">
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:#0F1B2D;margin-bottom:16px;">Proudly Serving North Alabama Since 1993</h2>
+      <p style="color:#475569;font-size:1rem;line-height:1.7;margin-bottom:40px;">From the Tennessee Valley to the Shoals, BamaClean covers all of North Alabama with professional carpet cleaning, tile cleaning, upholstery cleaning, water damage restoration, mold inspection, and fire damage cleanup.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+        {locations.map(l => (
+          <a href={`#${l.id}`} style="background:#fff;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:100px;border:2px solid #E8F5EC;transition:background .2s;">{l.city}, AL</a>
+        ))}
+        <span style="background:#E8F5EC;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:100px;">Killen, AL</span>
+        <span style="background:#E8F5EC;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:100px;">Hartselle, AL</span>
+        <span style="background:#E8F5EC;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:100px;">Cullman, AL</span>
+        <span style="background:#E8F5EC;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:100px;">And More...</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Individual location cards -->
+  <section style="padding:80px 24px;background:#fff;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;">
+        {locations.map(l => (
+          <div id={l.id} style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+              <span style="background:#E8F5EC;color:#1B7A3D;font-size:1.25rem;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;">📍</span>
+              <div>
+                <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:#0F1B2D;">{l.city}, {l.state}</h3>
+                <p style="font-size:.8125rem;color:#94A3B8;font-weight:500;">{l.zip}</p>
+              </div>
+            </div>
+            <p style="font-size:.9375rem;color:#475569;line-height:1.65;margin-bottom:20px;">{l.description}</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+              <span style="background:#F1F5F9;color:#334155;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:100px;">Carpet Cleaning</span>
+              <span style="background:#F1F5F9;color:#334155;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:100px;">Tile & Grout</span>
+              <span style="background:#F1F5F9;color:#334155;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:100px;">Water Damage</span>
+              <span style="background:#F1F5F9;color:#334155;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:100px;">Mold Inspection</span>
+            </div>
+            <a href="/contact" style="display:inline-block;background:#1B7A3D;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:10px 24px;border-radius:100px;font-size:.875rem;">Get a Quote in {l.city}</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:linear-gradient(135deg,#1B7A3D 0%,#145C2E 100%);color:#fff;padding:80px 24px;text-align:center;">
+    <div style="max-width:700px;margin:0 auto;">
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;margin-bottom:16px;">Don't See Your City?</h2>
+      <p style="font-size:1.125rem;color:rgba(255,255,255,.85);margin-bottom:40px;">We serve many more communities throughout North Alabama. Call us to check availability in your area.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="tel:+12563240492" style="background:#fff;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;padding:16px 36px;border-radius:100px;font-size:1rem;">Call (256) 324-0492</a>
+        <a href="/contact" style="background:transparent;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:16px 36px;border-radius:100px;border:2px solid rgba(255,255,255,.5);font-size:1rem;">Send a Message</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

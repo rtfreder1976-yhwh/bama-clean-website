@@ -1,0 +1,150 @@
+---
+import '../styles/global.css';
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+}
+const { title, description = "Professional carpet cleaning, tile & grout cleaning, upholstery cleaning, water damage restoration, and mold inspection in Madison, Huntsville & North Alabama. Call (256) 324-0492.", canonical } = Astro.props;
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, 'https://bamaclean.com').toString();
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/images/logo.webp" />
+  <meta property="og:site_name" content="BamaClean" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTGLLFNDXW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GTGLLFNDXW');
+  </script>
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "BamaClean",
+    "description": "Professional carpet cleaning, tile & grout cleaning, upholstery cleaning, water damage restoration, and mold inspection in North Alabama.",
+    "url": "https://bamaclean.com",
+    "telephone": "+12563240492",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "205 S Seminary St",
+      "addressLocality": "Florence",
+      "addressRegion": "AL",
+      "postalCode": "35630",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.7998,
+      "longitude": -87.6773
+    },
+    "areaServed": ["Madison AL","Huntsville AL","Florence AL","Muscle Shoals AL","Decatur AL","Athens AL","Russellville AL"],
+    "openingHours": "Mo-Su 00:00-23:59",
+    "priceRange": "$$",
+    "image": "/images/logo.webp",
+    "sameAs": [
+      "https://www.facebook.com/people/BamaCleancom-Cleaning-Sanitation-Services/100063969132518/",
+      "https://www.instagram.com/bamacleanteam/"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Utility Bar -->
+  <div style="background:#0F1B2D;color:#fff;padding:10px 24px;">
+    <div style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <span style="font-size:.875rem;font-family:'Plus Jakarta Sans',sans-serif;">
+        📍 Serving Madison, Huntsville & All of North Alabama
+      </span>
+      <a href="tel:+12563240492" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.1rem;color:#22C55E;display:flex;align-items:center;gap:6px;">
+        📞 (256) 324-0492
+      </a>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <header style="position:sticky;top:0;z-index:90;background:#fff;border-bottom:1px solid #E2E8F0;box-shadow:0 4px 16px rgba(0,0,0,.08);">
+    <div style="max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;height:80px;">
+      <a href="/">
+        <img src="/images/logo.webp" alt="BamaClean Logo" style="height:56px;width:auto;" />
+      </a>
+      <nav style="display:flex;align-items:center;gap:4px;font-family:'Plus Jakarta Sans',sans-serif;">
+        <a href="/" style="font-weight:600;padding:8px 14px;border-radius:8px;color:#334155;font-size:.9375rem;transition:color .2s;">Home</a>
+        <a href="/services" style="font-weight:600;padding:8px 14px;border-radius:8px;color:#334155;font-size:.9375rem;">Services</a>
+        <a href="/locations" style="font-weight:600;padding:8px 14px;border-radius:8px;color:#334155;font-size:.9375rem;">Locations</a>
+        <a href="/about" style="font-weight:600;padding:8px 14px;border-radius:8px;color:#334155;font-size:.9375rem;">About</a>
+        <a href="/contact" style="background:#1B7A3D;color:#fff;font-weight:700;padding:10px 22px;border-radius:100px;margin-left:8px;font-size:.9375rem;">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <slot />
+
+  <!-- Footer -->
+  <footer style="background:#0F1B2D;color:rgba(255,255,255,.75);padding:60px 24px 32px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:48px;margin-bottom:48px;">
+        <div>
+          <img src="/images/logo.webp" alt="BamaClean" style="height:48px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);" />
+          <p style="font-size:.9rem;line-height:1.6;">Professional cleaning & restoration services across North Alabama since 1993.</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Plus Jakarta Sans',sans-serif;color:#fff;font-size:1rem;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:.06em;">Services</h3>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:.9rem;">
+            <li><a href="/services#carpet" style="color:rgba(255,255,255,.75);transition:color .2s;">Carpet Cleaning</a></li>
+            <li><a href="/services#tile" style="color:rgba(255,255,255,.75);">Tile & Grout Cleaning</a></li>
+            <li><a href="/services#upholstery" style="color:rgba(255,255,255,.75);">Upholstery Cleaning</a></li>
+            <li><a href="/services#water" style="color:rgba(255,255,255,.75);">Water Damage Restoration</a></li>
+            <li><a href="/services#mold" style="color:rgba(255,255,255,.75);">Mold Inspection & Removal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-family:'Plus Jakarta Sans',sans-serif;color:#fff;font-size:1rem;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:.06em;">Service Areas</h3>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:.9rem;">
+            <li><a href="/locations#madison" style="color:rgba(255,255,255,.75);">Madison, AL</a></li>
+            <li><a href="/locations#huntsville" style="color:rgba(255,255,255,.75);">Huntsville, AL</a></li>
+            <li><a href="/locations#florence" style="color:rgba(255,255,255,.75);">Florence, AL</a></li>
+            <li><a href="/locations#decatur" style="color:rgba(255,255,255,.75);">Decatur, AL</a></li>
+            <li><a href="/locations" style="color:rgba(255,255,255,.75);">All Locations →</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-family:'Plus Jakarta Sans',sans-serif;color:#fff;font-size:1rem;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:.06em;">Contact</h3>
+          <p style="font-size:.9rem;margin-bottom:8px;">205 S Seminary St<br/>Florence, AL 35630</p>
+          <a href="tel:+12563240492" style="color:#22C55E;font-weight:700;font-size:1.1rem;display:block;margin-bottom:8px;">(256) 324-0492</a>
+          <a href="/contact" style="color:rgba(255,255,255,.75);font-size:.9rem;">Send a Message →</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.8125rem;">
+        <p>© {new Date().getFullYear()} BamaClean, Inc. All rights reserved.</p>
+        <p>Licensed & Insured · Serving North Alabama</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
