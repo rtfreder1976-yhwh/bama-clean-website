@@ -16,22 +16,63 @@ const canonicalURL = `${SITE}${canonical}`;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0F1B2D" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalURL} />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- Preload LCP asset (nav logo, above the fold on every page) -->
+  <link rel="preload" as="image" href="/images/logo.webp" fetchpriority="high" />
+
+  <!-- DNS prefetch / preconnect for third-party origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+  <!-- Google Fonts — display=swap prevents invisible text during load -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Critical above-fold CSS inlined to eliminate render-blocking -->
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:'DM Sans',system-ui,sans-serif;color:#1E293B;background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+    h1,h2,h3,h4,h5,h6{font-family:'Plus Jakarta Sans',system-ui,sans-serif;line-height:1.2}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;height:auto;display:block}
+    /* Utility bar */
+    .ub{background:#0F1B2D;color:#fff;padding:10px 24px}
+    .ub-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+    /* Sticky header */
+    .site-header{position:sticky;top:0;z-index:90;background:#fff;border-bottom:1px solid #E2E8F0;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+    .site-header-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;height:80px}
+    /* Hero gradient (used on every page) */
+    .page-hero{background:linear-gradient(135deg,#0F1B2D 0%,#1A2A42 100%);color:#fff}
+    /* Prevent layout shift on logo */
+    .nav-logo{height:56px;width:auto;aspect-ratio:auto}
+    /* Mobile nav toggle */
+    .nav-links{display:flex;align-items:center;gap:4px;font-family:'Plus Jakarta Sans',sans-serif}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#334155}
+    @media(max-width:768px){
+      .nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:16px;gap:4px;border-bottom:1px solid #E2E8F0;box-shadow:0 8px 24px rgba(0,0,0,.1)}
+      .nav-links.open{display:flex}
+      .nav-toggle{display:flex;align-items:center;justify-content:center}
+      .site-header{position:sticky;top:0}
+    }
+  </style>
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content="/images/logo.webp" />
+  <meta property="og:image" content="https://bamaclean.com/images/logo.webp" />
   <meta property="og:site_name" content="BamaClean" />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTGLLFNDXW"></script>
-  <script>
+  <!-- Google Analytics deferred — does not block render -->
+  <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-GTGLLFNDXW"></script>
+  <script type="text/partytown">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -166,32 +207,47 @@ const canonicalURL = `${SITE}${canonical}`;
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- Utility Bar -->
-  <div style="background:#0F1B2D;color:#fff;padding:10px 24px;">
-    <div style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+  <div class="ub">
+    <div class="ub-inner">
       <span style="font-size:.875rem;font-family:'Plus Jakarta Sans',sans-serif;">
-        📍 Serving Madison, Huntsville & All of North Alabama
+        📍 Serving Madison, Huntsville &amp; All of North Alabama
       </span>
-      <a href="tel:+12563240492" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.1rem;color:#22C55E;display:flex;align-items:center;gap:6px;">
+      <a href="tel:+12563240492" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.05rem;color:#22C55E;display:flex;align-items:center;gap:6px;">
         📞 (256) 324-0492
       </a>
     </div>
   </div>
 
   <!-- Nav -->
-  <header style="position:sticky;top:0;z-index:90;background:#fff;border-bottom:1px solid #E2E8F0;box-shadow:0 4px 16px rgba(0,0,0,.08);">
-    <div style="max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;height:80px;">
-      <a href="/">
-        <img src="/images/logo.webp" alt="BamaClean Logo" style="height:56px;width:auto;" />
+  <header class="site-header">
+    <div class="site-header-inner" style="position:relative;">
+      <a href="/" aria-label="BamaClean home">
+        <!-- fetchpriority=high + eager loading: this is the LCP element -->
+        <img
+          src="/images/logo.webp"
+          alt="BamaClean Logo"
+          class="nav-logo"
+          width="168"
+          height="56"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+        />
       </a>
-      <nav style="display:flex;align-items:center;gap:4px;font-family:'Plus Jakarta Sans',sans-serif;">
-        <a href="/" style="font-weight:600;padding:8px 14px;border-radius:8px;color:#334155;font-size:.9375rem;transition:color .2s;">Home</a>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <nav class="nav-links" id="nav-links" style="font-family:'Plus Jakarta Sans',sans-serif;">
+        <a href="/" style="font-weight:600;padding:8px 14px;border-radius:8px;color:#334155;font-size:.9375rem;">Home</a>
         <a href="/services" style="font-weight:600;padding:8px 14px;border-radius:8px;color:#334155;font-size:.9375rem;">Services</a>
         <a href="/locations" style="font-weight:600;padding:8px 14px;border-radius:8px;color:#334155;font-size:.9375rem;">Locations</a>
         <a href="/about" style="font-weight:600;padding:8px 14px;border-radius:8px;color:#334155;font-size:.9375rem;">About</a>
@@ -200,6 +256,16 @@ const canonicalURL = `${SITE}${canonical}`;
     </div>
   </header>
 
+  <script>
+    // Mobile nav toggle — tiny, no framework needed
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle?.addEventListener('click', () => {
+      const open = links?.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  </script>
+
   <slot />
 
   <!-- Footer -->
@@ -207,7 +273,7 @@ const canonicalURL = `${SITE}${canonical}`;
     <div style="max-width:1280px;margin:0 auto;">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:48px;margin-bottom:48px;">
         <div>
-          <img src="/images/logo.webp" alt="BamaClean" style="height:48px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);" />
+          <img src="/images/logo.webp" alt="BamaClean" width="144" height="48" loading="lazy" decoding="async" style="height:48px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);" />
           <p style="font-size:.9rem;line-height:1.6;">Professional cleaning & restoration services across North Alabama since 1993.</p>
         </div>
         <div>
