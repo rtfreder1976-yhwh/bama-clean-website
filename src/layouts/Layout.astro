@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import QuoteForm from '../components/QuoteForm.astro';
 
 const SITE = 'https://bamaclean.com';
 
@@ -90,7 +91,7 @@ const canonicalURL = `${SITE}${canonical}`;
     "url": "https://bamaclean.com",
     "telephone": "+12563240492",
     "email": "info@bamaclean.com",
-    "foundingDate": "1993",
+    "foundingDate": "1985",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "205 S Seminary St",
@@ -131,6 +132,23 @@ const canonicalURL = `${SITE}${canonical}`;
     "sameAs": [
       "https://www.facebook.com/people/BamaCleancom-Cleaning-Sanitation-Services/100063969132518/",
       "https://www.instagram.com/bamacleanteam/"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "AJ Ruiz",
+      "jobTitle": "Owner & Operator"
+    },
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "IICRC Certified Firm" },
+      { "@type": "EducationalOccupationalCredential", "name": "IICRC Water Damage Restoration Technician (WRT)" },
+      { "@type": "EducationalOccupationalCredential", "name": "IICRC Applied Microbial Remediation Technician (AMRT)" },
+      { "@type": "EducationalOccupationalCredential", "name": "EPA LEAD Certified" },
+      { "@type": "EducationalOccupationalCredential", "name": "Green Seal Certified Products" }
+    ],
+    "memberOf": { "@type": "Organization", "name": "Better Business Bureau" },
+    "identifier": [
+      { "@type": "PropertyValue", "name": "SAM UEI", "value": "MKPLF7TJPFA4" },
+      { "@type": "PropertyValue", "name": "CAGE Code", "value": "5FWC1" }
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -213,8 +231,8 @@ const canonicalURL = `${SITE}${canonical}`;
   <!-- Utility Bar -->
   <div class="ub">
     <div class="ub-inner">
-      <span style="font-size:.875rem;font-family:'Plus Jakarta Sans',sans-serif;">
-        📍 Serving Madison, Huntsville &amp; All of North Alabama
+      <span style="font-size:.8125rem;font-family:'Plus Jakarta Sans',sans-serif;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+        <span>IICRC Certified · Licensed, Insured &amp; Bonded · Serving North Alabama Since 1985</span>
       </span>
       <a href="tel:+12563240492" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.05rem;color:#22C55E;display:flex;align-items:center;gap:6px;">
         📞 (256) 324-0492
@@ -251,7 +269,7 @@ const canonicalURL = `${SITE}${canonical}`;
         <a href="/services" style="font-weight:600;padding:8px 14px;border-radius:8px;color:#334155;font-size:.9375rem;">Services</a>
         <a href="/locations" style="font-weight:600;padding:8px 14px;border-radius:8px;color:#334155;font-size:.9375rem;">Locations</a>
         <a href="/about" style="font-weight:600;padding:8px 14px;border-radius:8px;color:#334155;font-size:.9375rem;">About</a>
-        <a href="/contact" style="background:#1B7A3D;color:#fff;font-weight:700;padding:10px 22px;border-radius:100px;margin-left:8px;font-size:.9375rem;">Get a Quote</a>
+        <a href="#quote" style="background:#1B7A3D;color:#fff;font-weight:700;padding:10px 22px;border-radius:100px;margin-left:8px;font-size:.9375rem;">Get a Quote</a>
       </nav>
     </div>
   </header>
@@ -267,6 +285,8 @@ const canonicalURL = `${SITE}${canonical}`;
   </script>
 
   <slot />
+
+  <QuoteForm />
 
   <!-- Footer -->
   <footer style="background:#0F1B2D;color:rgba(255,255,255,.75);padding:60px 24px 32px;">
@@ -289,11 +309,11 @@ const canonicalURL = `${SITE}${canonical}`;
         <div>
           <h3 style="font-family:'Plus Jakarta Sans',sans-serif;color:#fff;font-size:1rem;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:.06em;">Service Areas</h3>
           <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:.9rem;">
-            <li><a href="/locations#madison" style="color:rgba(255,255,255,.75);">Madison, AL</a></li>
-            <li><a href="/locations#huntsville" style="color:rgba(255,255,255,.75);">Huntsville, AL</a></li>
-            <li><a href="/locations#florence" style="color:rgba(255,255,255,.75);">Florence, AL</a></li>
-            <li><a href="/locations#decatur" style="color:rgba(255,255,255,.75);">Decatur, AL</a></li>
-            <li><a href="/locations" style="color:rgba(255,255,255,.75);">All Locations →</a></li>
+            <li><a href="/locations/madison/" style="color:rgba(255,255,255,.75);">Madison, AL</a></li>
+            <li><a href="/locations/huntsville/" style="color:rgba(255,255,255,.75);">Huntsville, AL</a></li>
+            <li><a href="/locations/florence/" style="color:rgba(255,255,255,.75);">Florence, AL</a></li>
+            <li><a href="/locations/decatur/" style="color:rgba(255,255,255,.75);">Decatur, AL</a></li>
+            <li><a href="/locations/" style="color:rgba(255,255,255,.75);">All Locations →</a></li>
           </ul>
         </div>
         <div>
@@ -303,9 +323,63 @@ const canonicalURL = `${SITE}${canonical}`;
           <a href="/contact" style="color:rgba(255,255,255,.75);font-size:.9rem;">Send a Message →</a>
         </div>
       </div>
-      <div style="border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.8125rem;">
-        <p>© {new Date().getFullYear()} BamaClean, Inc. All rights reserved.</p>
-        <p>Licensed & Insured · Serving North Alabama</p>
+      <!-- Owner / Trust Section -->
+      <div style="border-top:1px solid rgba(255,255,255,.1);padding-top:40px;margin-bottom:40px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+        <img
+          src="/images/aj-ruiz.webp"
+          alt="AJ Ruiz, Owner of BamaClean"
+          width="100"
+          height="100"
+          loading="lazy"
+          decoding="async"
+          style="width:100px;height:100px;border-radius:50%;object-fit:cover;object-position:top;border:3px solid #22C55E;flex-shrink:0;"
+        />
+        <div style="flex:1;min-width:220px;">
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.0625rem;font-weight:700;color:#fff;margin-bottom:4px;">AJ Ruiz — Owner &amp; Operator</p>
+          <p style="font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.6;margin-bottom:10px;">Family-owned and Hispanic American-owned since 1985. Every job carries my name — and my guarantee. If it's not right, we make it right.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:4px 12px;font-size:.75rem;font-family:'Plus Jakarta Sans',sans-serif;color:rgba(255,255,255,.85);">IICRC Certified</span>
+            <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:4px 12px;font-size:.75rem;font-family:'Plus Jakarta Sans',sans-serif;color:rgba(255,255,255,.85);">LEAD Certified</span>
+            <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:4px 12px;font-size:.75rem;font-family:'Plus Jakarta Sans',sans-serif;color:rgba(255,255,255,.85);">Licensed, Insured &amp; Bonded</span>
+            <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:4px 12px;font-size:.75rem;font-family:'Plus Jakarta Sans',sans-serif;color:rgba(255,255,255,.85);">BBB Member</span>
+            <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:4px 12px;font-size:.75rem;font-family:'Plus Jakarta Sans',sans-serif;color:rgba(255,255,255,.85);">Green Seal Products</span>
+            <span style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:4px 12px;font-size:.75rem;font-family:'Plus Jakarta Sans',sans-serif;color:rgba(255,255,255,.85);">Family-Owned Since 1985</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Credential Bar -->
+      <div style="border-top:1px solid rgba(255,255,255,.1);padding-top:24px;margin-bottom:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;text-align:center;">
+        <div>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:#22C55E;">40+</p>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.6);margin-top:2px;">Years in Business</p>
+        </div>
+        <div>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:#22C55E;">IICRC</p>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.6);margin-top:2px;">Certified Firm</p>
+        </div>
+        <div>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:#22C55E;">100%</p>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.6);margin-top:2px;">Satisfaction Guarantee</p>
+        </div>
+        <div>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:#22C55E;">24/7</p>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.6);margin-top:2px;">Emergency Response</p>
+        </div>
+        <div>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:#22C55E;">Licensed</p>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.6);margin-top:2px;">Insured &amp; Bonded</p>
+        </div>
+        <div>
+          <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:#22C55E;">No Subs</p>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.6);margin-top:2px;">In-House Crew Only</p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div style="border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.8125rem;">
+        <p>© {new Date().getFullYear()} BamaClean, Inc. All rights reserved. · Family-Owned Since 1985</p>
+        <p style="color:rgba(255,255,255,.5);">"It's Not Clean Until It's BamaClean."</p>
       </div>
     </div>
   </footer>
