@@ -1,0 +1,91 @@
+---
+import LocationLayout from '../../components/LocationLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BamaClean",
+  "telephone": "+12563240492",
+  "areaServed": { "@type": "City", "name": "Russellville", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+  "url": "https://bamaclean.com/locations/russellville/",
+});
+---
+
+<LocationLayout
+  title="Carpet Cleaning & Restoration Services in Russellville, AL | BamaClean"
+  description="BamaClean serves Russellville, AL and Franklin County with carpet cleaning, water damage restoration, mold remediation, and tile & grout cleaning. (256) 324-0492."
+  canonical="/locations/russellville/"
+  city="Russellville"
+  responseTime="40–60 minutes"
+  hero={{
+    label: "Serving Russellville & Franklin County Since 1993",
+    heading: "Russellville's Professional Cleaning & Restoration Company",
+    subheading: "BamaClean serves Russellville and Franklin County with the same IICRC-certified standards and upfront pricing we've delivered across North Alabama for 30+ years. Honest work, honest pricing — no surprises.",
+  }}
+  intro={`
+    <p style="margin-bottom:20px;">Russellville is Franklin County's hub — a working-class Alabama community built around agriculture, manufacturing, and the pragmatic values of rural North Alabama. BamaClean has served Russellville and the surrounding Franklin County communities since 1993, and our relationship with this market is built on the same foundation as our relationship with every community we serve: do the job right, charge what you quoted, show up when you said you would.</p>
+    <p style="margin-bottom:20px;">Russellville's residential stock skews toward practical family homes — a mix of 1960s–1990s brick ranch construction, modest subdivision development, and rural homes on larger lots that reflect Franklin County's agricultural character. These homes have real cleaning needs: carpet that accumulates North Alabama soil, tile and grout that hasn't had professional attention since it was installed, and crawlspaces in older homes that have been absorbing moisture for decades without professional inspection. We bring the same equipment and the same standards to Russellville that we bring to our highest-density markets.</p>
+    <p>Franklin County sits at the southern edge of our primary service area, and we're honest about response times: for Russellville, expect 40–60 minutes from our Florence headquarters. For emergency restoration calls — water damage, fire damage — we dispatch immediately and make that drive. For scheduled cleaning services, we plan routes that bring us to Russellville efficiently. If you're in the outer parts of Franklin County, call us and we'll confirm coverage for your address.</p>
+  `}
+  zipCodes={['35653', '35654']}
+  neighborhoods={[
+    'Downtown Russellville area', 'Jackson Way corridor',
+    'Russellville High School area neighborhoods', 'Industrial Drive corridor',
+    'Highway 43 corridor neighborhoods', 'College Street area',
+    'Franklin County residential areas', 'Phil Campbell adjacent',
+    'Red Bay adjacent',
+  ]}
+  surroundingCommunities={['Phil Campbell', 'Red Bay', 'Vina', 'Belgreen', 'Spruce Pine', 'Franklin County unincorporated', 'Marion County border communities']}
+  responseTime="40–60 minutes"
+  weatherSection={{
+    heading: "Franklin County Weather Patterns and Their Impact on Your Home",
+    body: `
+      <p style="margin-bottom:20px;">Russellville and Franklin County sit at the southwestern edge of the Appalachian foothills, where the terrain begins to rise from the Tennessee Valley floor. This position means the area receives significant rainfall — Franklin County averages over 55 inches annually, above the Alabama state average — and that rainfall, combined with the county's clay soil composition, creates persistent moisture management challenges for older homes throughout the area.</p>
+      <p style="margin-bottom:20px;">Franklin County's older housing stock — much of it built on crawlspace foundations in the 1960s through 1980s — has accumulated decades of moisture exposure in crawlspaces that were not designed to modern vapor barrier standards. Mold in these crawlspaces is common, and it often goes undetected until a homeowner notices a musty smell in the home or a moisture meter reading during a real estate inspection reveals elevated readings throughout the first floor. We conduct mold inspections in Franklin County homes regularly and find actionable growth in the majority of older crawlspace homes we assess.</p>
+      <p style="margin-bottom:20px;">The Phil Campbell and Red Bay communities in southwestern Franklin County, along with the rural areas of the county, sit in tornado-prone terrain — the 2011 tornado outbreak struck these communities with devastating effect. Water and structural damage following severe weather events is a restoration reality in Franklin County, and we respond to these events from our Florence headquarters when they occur.</p>
+      <p>Pollen season in Russellville is significant — the hardwood forests of the Appalachian foothills to the east and north contribute tree pollen from March through May, and the agricultural land surrounding the city adds grass and ragweed pollen through summer and fall. Families with allergy sufferers in Russellville experience the same carpet and upholstery allergen accumulation that we address throughout North Alabama.</p>
+    `,
+  }}
+  employers={[
+    { name: "Russell Lands / Poultry Processing (Franklin County)", desc: "Poultry processing and agricultural operations are major Franklin County employers. Workers and their families throughout Russellville use BamaClean for home cleaning services." },
+    { name: "Potlatch Deltic / Timber Industry", desc: "Franklin County's timber industry employs workers throughout the county. We serve timber industry families with residential cleaning and restoration services." },
+    { name: "Franklin County Schools", desc: "The county school system with campuses in Russellville and surrounding communities. We provide commercial carpet cleaning and sanitation to Franklin County school facilities." },
+    { name: "Northwest Shoals Community College (Phil Campbell)", desc: "NWSCC's Phil Campbell campus serves Franklin County students and faculty. We serve campus facilities and the residential needs of faculty and staff throughout the area." },
+    { name: "Manufacturing (Industrial Drive corridor)", desc: "Russellville's industrial corridor hosts manufacturing and distribution operations. BamaClean provides commercial cleaning services to industrial facilities in the Russellville area." },
+    { name: "Franklin County Healthcare", desc: "Red Bay Hospital and healthcare providers throughout Franklin County. We serve healthcare workers' homes with residential cleaning and medical office facilities with commercial sanitation." },
+  ]}
+  neighborhoodSection={{
+    heading: "Serving Russellville and Franklin County Homeowners",
+    body: `
+      <p style="margin-bottom:20px;">Russellville's residential neighborhoods are characterized by practical family homes — well-maintained brick ranches, modest subdivisions, and the kind of community where neighbors know each other and referrals move through the network quickly. We've built our Russellville customer base almost entirely on word-of-mouth — a customer in the Highway 43 corridor tells a neighbor, that neighbor tells their sister in Phil Campbell, and the relationship grows organically. That's how a local company with no marketing budget builds a presence in a market over 30 years.</p>
+      <p style="margin-bottom:20px;">The homes we service most frequently in Russellville are carpet-cleaning jobs where the homeowner has been putting off a professional cleaning and finally decides the carpet needs professional attention. The results are consistently dramatic — North Alabama red clay soil compacts in carpet pile in ways that make even 5-year-old carpet look worn and dull. Hot-water extraction removes what regular vacuuming can't reach, and Russellville homeowners are frequently surprised by how different the carpet looks after the first pass.</p>
+      <p>We also see significant tile and grout demand in Russellville — particularly in homes where the kitchen and bathroom tile has never had professional cleaning since installation. Grout in a 15-year-old home that's been mopped weekly looks dramatically different after professional steam extraction. The contrast between cleaned and uncleaned grout on the same floor is visible to the homeowner within the first five minutes of our work — and it's one of the most consistent satisfaction drivers we have in any market.</p>
+    `,
+  }}
+  services={[
+    { icon: "🧹", name: "Carpet Cleaning", href: "/services/carpet-cleaning/", desc: "Professional extraction for Russellville and Franklin County homes." },
+    { icon: "💧", name: "Water Damage Restoration", href: "/services/water-flood-damage/", desc: "24/7 emergency response — we make the drive when it matters." },
+    { icon: "🔬", name: "Mold Inspection & Remediation", href: "/services/mold-inspection/", desc: "Common in Franklin County's older crawlspace homes." },
+    { icon: "🔲", name: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/", desc: "Steam restoration for kitchens, baths, and floors." },
+    { icon: "🛋️", name: "Upholstery Cleaning", href: "/services/upholstery-cleaning/", desc: "Safe for all fabrics — pet odor and allergen removal." },
+    { icon: "🌲", name: "Hardwood Floor Cleaning", href: "/services/hardwood-floor-cleaning/", desc: "Finish-safe deep cleaning for Franklin County homes." },
+    { icon: "🔬", name: "Radon Testing", href: "/services/radon-testing/", desc: "EPA-protocol testing for Franklin County homeowners." },
+    { icon: "🔥", name: "Fire & Smoke Damage", href: "/services/fire-smoke-damage/", desc: "24/7 response with insurance documentation." },
+  ]}
+  competitorSection={{
+    heading: "Why Russellville Homeowners Trust BamaClean Over the Alternatives",
+    body: `
+      <p style="margin-bottom:20px;">Russellville's geographic position means it doesn't have the density of competing cleaning companies that Huntsville or Decatur do. National franchises don't maintain local operations here — they dispatch from regional hubs, which means longer response times and crews who have no local familiarity. Local operators exist but vary dramatically in equipment quality, certification level, and reliability.</p>
+      <p style="margin-bottom:20px;">BamaClean comes to Russellville with the same truck-mounted equipment, the same IICRC-certified technicians, and the same upfront pricing that we apply in our highest-density markets. We don't have a "small market" service tier — Russellville gets the same BamaClean that Madison and Huntsville get. That consistency matters when you're paying for a service and want to know what you're getting.</p>
+      <p>Our Franklin County customers have told us directly that they called us because a neighbor recommended us — not because they found us in a national franchise directory. Referral trust in a community like Russellville carries more weight than any marketing budget, and we've earned it by delivering consistently for three decades.</p>
+    `,
+  }}
+  faqs={[
+    { q: "Does BamaClean really come to Russellville from Florence?", a: "Yes — our Florence headquarters is about 40–60 minutes from Russellville depending on your specific address. For scheduled services, we plan efficiently. For emergencies, we dispatch immediately and make the drive regardless of distance." },
+    { q: "Do you serve Phil Campbell and Red Bay in western Franklin County?", a: "We serve Phil Campbell regularly and cover Red Bay on a case-by-case basis based on availability. Call us to confirm coverage for your specific address in western Franklin County." },
+    { q: "Can you handle mold remediation in a Franklin County home?", a: "Yes — mold remediation is a core service we perform in Franklin County homes. Older crawlspace homes in this area are some of the highest-risk properties we inspect. IICRC-certified process, written documentation, insurance coordination." },
+    { q: "What's your pricing like for Russellville jobs — is there a travel fee?", a: "We don't add a travel surcharge for Russellville. Our pricing is based on scope of work — square footage, room count, service type. The quote we give you includes everything." },
+    { q: "How often should a Russellville home get professional carpet cleaning?", a: "IICRC recommends every 12–18 months for most households. Homes with pets, children, or allergy sufferers benefit from annual cleaning. Franklin County's red clay soil environment means carpets accumulate embedded soil faster than you might expect from appearance alone." },
+  ]}
+  schema={schema}
+/>

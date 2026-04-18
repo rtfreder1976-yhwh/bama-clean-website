@@ -1,0 +1,89 @@
+---
+import LocationLayout from '../../components/LocationLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BamaClean",
+  "telephone": "+12563240492",
+  "areaServed": { "@type": "City", "name": "Tuscumbia", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+  "url": "https://bamaclean.com/locations/tuscumbia/",
+});
+---
+
+<LocationLayout
+  title="Carpet Cleaning & Restoration Services in Tuscumbia, AL | BamaClean"
+  description="BamaClean serves Tuscumbia, AL — Helen Keller's birthplace — with carpet cleaning, water damage, mold remediation, and tile & grout cleaning. (256) 324-0492."
+  canonical="/locations/tuscumbia/"
+  city="Tuscumbia"
+  responseTime="15–25 minutes"
+  hero={{
+    label: "Serving Tuscumbia, Alabama Since 1993",
+    heading: "Tuscumbia's Professional Cleaning & Restoration Company",
+    subheading: "The birthplace of Helen Keller deserves a cleaning company with the standards to match its heritage. BamaClean serves Tuscumbia with IICRC-certified technicians, upfront pricing, and 15–25 minute response — because we're right next door.",
+  }}
+  intro={`
+    <p style="margin-bottom:20px;">Tuscumbia is Colbert County's seat and one of the Shoals' oldest and most historically significant communities — the birthplace of Helen Keller, home of Ivy Green and the Spring Park that anchors its downtown, and a city with a historic character that extends into its residential neighborhoods. BamaClean has served Tuscumbia since 1993, and our familiarity with the city's residential stock goes beyond what any out-of-market franchise can claim.</p>
+    <p style="margin-bottom:20px;">Tuscumbia's homes range from pre-Civil War historic structures near the downtown core to postwar brick ranches in the surrounding residential neighborhoods to newer construction on the city's western edge toward Muscle Shoals. Each category presents different cleaning and restoration needs — and we serve all of them. The historic homes around Spring Park and the Keller neighborhood require the careful, finish-aware approach that comes from genuine expertise. The mid-century ranches need the hot-water extraction capability that rental machines can't provide. The newer construction needs the mold awareness that comes from understanding North Alabama's humidity reality.</p>
+    <p>Tuscumbia sits 15–25 minutes from our Florence headquarters — well within our fastest response corridor. For water damage emergencies, fire damage, or any situation where arrival time matters, Tuscumbia is one of the cities where BamaClean's local positioning is a real operational advantage.</p>
+  `}
+  zipCodes={['35674']}
+  neighborhoods={[
+    'Downtown Tuscumbia / Ivy Green Historic District', 'Spring Park area',
+    'Keller neighborhood (Helen Keller birthplace area)', 'East Tuscumbia',
+    'West Tuscumbia / Muscle Shoals boundary area', 'Colbert County Courthouse area',
+    'Spring Valley area', 'Tuscumbia City Schools neighborhood',
+    'Highway 72 corridor neighborhoods', 'Industrial Drive area',
+  ]}
+  surroundingCommunities={['Muscle Shoals', 'Sheffield', 'Florence', 'Cherokee', 'Barton', 'Colbert County unincorporated']}
+  responseTime="15–25 minutes"
+  weatherSection={{
+    heading: "Why Tuscumbia's Climate Creates Ongoing Home Care Needs",
+    body: `
+      <p style="margin-bottom:20px;">Tuscumbia's position in the Shoals' Tennessee River valley means it shares the high-humidity profile that characterizes all four Quad Cities. Average summer relative humidity in Tuscumbia exceeds 80%, and that moisture doesn't stay in the air — it infiltrates through crawlspace vents, around window frames, and through the gaps that develop in older construction as it settles over decades. Tuscumbia's historic homes near the downtown core — some of which predate the Civil War — have lived through over 150 years of North Alabama humidity cycles. The crawlspaces and foundation areas of these homes require professional assessment that most homeowners have never had done.</p>
+      <p style="margin-bottom:20px;">Flooding events in Tuscumbia tend to track with the Shoals-wide pattern — the Tennessee River's drainage system, Colbert Creek, and the storm infrastructure of a city that was built before modern stormwater management standards. During significant rain events, Tuscumbia's low-lying neighborhoods can experience standing water in yards and against foundations, which wicks into crawlspaces and creates the moisture conditions that mold requires. We see the aftermath of these events in the form of mold inspections that homeowners schedule after noticing water intrusion they hadn't previously tracked.</p>
+      <p>Spring pollen in Tuscumbia is substantial — the Tennessee River bottomlands immediately north of the city, the Colbert County agricultural land, and the hardwood forests that surround the Shoals region contribute to some of the highest pollen loads in North Alabama. Tuscumbia families with respiratory conditions need professional carpet and upholstery cleaning as a health maintenance service, not just an aesthetic one.</p>
+    `,
+  }}
+  employers={[
+    { name: "Colbert County Government", desc: "Tuscumbia is the Colbert County seat, with county government offices employing administrative and service workers throughout the city. We provide commercial cleaning to county facilities and residential services to county employees." },
+    { name: "Tuscumbia City Schools", desc: "The city school system with campus facilities in Tuscumbia. Commercial carpet cleaning, tile & grout, and sanitation on scheduled service agreements." },
+    { name: "Spring Park Cultural & Tourism Sector", desc: "Tuscumbia's tourism and cultural sector — anchored by Spring Park, Ivy Green, and the annual Alabama Jubilee — employs workers throughout the city and surrounding area." },
+    { name: "Shoals Industrial Employers (commuters)", desc: "Many Tuscumbia residents work in the broader Shoals industrial economy — Novelis, Helen Keller Hospital, the Muscle Shoals Sound Studio complex. These professional families are BamaClean residential clients." },
+    { name: "Healthcare (Colbert County)", desc: "Healthcare providers throughout Colbert County serve Tuscumbia residents. We provide residential services to healthcare workers and commercial sanitation to medical office facilities." },
+  ]}
+  neighborhoodSection={{
+    heading: "Tuscumbia's Neighborhoods — Heritage and Practicality",
+    body: `
+      <p style="margin-bottom:20px;">The <strong>Ivy Green and Spring Park historic districts</strong> in Tuscumbia represent some of the most architecturally significant residential properties in all of North Alabama. Homes in these areas often predate the twentieth century — original heart pine floors, plaster walls, and the kind of structural character that makes every cleaning and restoration decision consequential. We approach historic Tuscumbia homes with the same care we bring to Twickenham in Huntsville and the Pope Avenue corridor in Florence: finish identification first, conservative chemistry, low-moisture methods, and full attention to what these homes have meant to the families who've maintained them.</p>
+      <p style="margin-bottom:20px;"><strong>East Tuscumbia and the residential neighborhoods along Highway 72</strong> represent the city's practical residential core — mid-century brick homes, some newer subdivision development, and the family demographics that define most of our residential business: children, pets, and carpet that needs professional attention more often than the homeowner has been giving it. These are straightforward but high-satisfaction jobs — the carpet looks dramatically better after professional extraction, the tile comes back to its original grout color, and the homeowner calls again in 12 months because the difference was real.</p>
+      <p>The <strong>West Tuscumbia area</strong>, where the city interfaces with Muscle Shoals, is practically a single residential fabric that crosses the municipal boundary. We don't differentiate service between these communities — we serve the neighborhood, regardless of which city's limits it technically falls within.</p>
+    `,
+  }}
+  services={[
+    { icon: "🧹", name: "Carpet Cleaning", href: "/services/carpet-cleaning/", desc: "Deep extraction for Tuscumbia homes — 15–25 min response." },
+    { icon: "💧", name: "Water Damage Restoration", href: "/services/water-flood-damage/", desc: "24/7 emergency response to all Tuscumbia addresses." },
+    { icon: "🔬", name: "Mold Inspection & Remediation", href: "/services/mold-inspection/", desc: "IICRC-certified — essential for Tuscumbia's historic homes." },
+    { icon: "🔲", name: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/", desc: "Steam cleaning including natural stone in historic properties." },
+    { icon: "🌲", name: "Hardwood Floor Cleaning", href: "/services/hardwood-floor-cleaning/", desc: "Finish-specific care for pre-war and mid-century floors." },
+    { icon: "🛋️", name: "Upholstery Cleaning", href: "/services/upholstery-cleaning/", desc: "Safe for all fabrics including antique upholstery." },
+    { icon: "🔬", name: "Radon Testing", href: "/services/radon-testing/", desc: "EPA-protocol radon testing for Colbert County homes." },
+    { icon: "🛡️", name: "Sanitation Services", href: "/services/sanitation-services/", desc: "EPA-registered disinfection for homes and businesses." },
+  ]}
+  competitorSection={{
+    heading: "Why Tuscumbia Chooses BamaClean",
+    body: `
+      <p style="margin-bottom:20px;">Tuscumbia's size means national franchise brands don't maintain dedicated local presence here — they reach Tuscumbia from Florence, Sheffield, or Muscle Shoals dispatching points, which means response times are longer and local knowledge is absent. BamaClean's Florence headquarters puts us 15–25 minutes from downtown Tuscumbia — genuinely local response.</p>
+      <p style="margin-bottom:20px;">For Tuscumbia's historic homes, the choice between BamaClean and a national franchise is not just about price and response time — it's about expertise. Cleaning a pre-war hardwood floor incorrectly causes irreversible damage. Treating a plaster wall with too much moisture creates a mold problem where none existed. We bring 30 years of experience with exactly these kinds of homes. National franchises bring standardized processes designed for the average home, not Tuscumbia's exceptional ones.</p>
+      <p>Our Tuscumbia customers tend to be loyal precisely because the stakes are higher with an older, more historically significant home. When you find a company that handles your 1920s hardwood floors correctly and your crawlspace moisture issue professionally, you don't keep shopping.</p>
+    `,
+  }}
+  faqs={[
+    { q: "Can you clean antique or pre-war hardwood floors in Tuscumbia's historic homes?", a: "Yes — and we treat these with particular care. Pre-war floors often have shellac or wax finishes that are incompatible with modern cleaning chemistry. We test finish type before applying any product and use low-moisture methods appropriate to the finish." },
+    { q: "How quickly can you reach Tuscumbia for a water damage emergency?", a: "15–25 minutes from our Florence headquarters to most Tuscumbia addresses. 24/7 availability every day of the year." },
+    { q: "Do you serve the rural areas of Colbert County outside Tuscumbia?", a: "Yes — Cherokee, Barton, and unincorporated Colbert County are within our service area. Call to confirm coverage for your specific address." },
+    { q: "Is mold a concern in Tuscumbia's older homes near Spring Park?", a: "Yes — homes in the historic district near Spring Park and Ivy Green are among the highest-risk for crawlspace mold in the Shoals. The combination of age, original-era construction standards, and Tennessee River humidity creates conditions we find mold in regularly. If your home is over 50 years old and hasn't had a professional crawlspace inspection, we recommend one." },
+    { q: "Do you clean the grout in historic tile work?", a: "Yes. Historic tile — including penny tile, subway tile, and other period-appropriate surfaces — can be cleaned with appropriate chemistry and pressure. We identify tile type before selecting any cleaning method, and we use pH-neutral chemistry for historic tile that may include natural stone elements." },
+  ]}
+  schema={schema}
+/>

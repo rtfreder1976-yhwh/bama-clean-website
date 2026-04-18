@@ -3,123 +3,211 @@ import Layout from '../layouts/Layout.astro';
 
 const locations = [
   {
-    id: 'madison',
+    slug: 'madison',
     city: 'Madison',
-    state: 'AL',
-    description: 'Madison is our home base. We provide full carpet cleaning, tile cleaning, upholstery cleaning, water damage restoration, and mold services throughout Madison and the surrounding communities including Redstone Arsenal, Madison City schools area, and all Madison County neighborhoods.',
-    zip: '35758',
+    zip: '35756–35759',
+    response: '30–45 min',
+    highlight: 'BamaClean\'s most-served suburb. Hunters Ridge, Providence, Redstone Village, and all Madison zip codes.',
+    tags: ['Carpet Cleaning', 'Water Damage', 'Mold', 'Radon Testing'],
+    priority: true,
   },
   {
-    id: 'huntsville',
+    slug: 'huntsville',
     city: 'Huntsville',
-    state: 'AL',
-    description: 'Huntsville\'s Rocket City gets full BamaClean service coverage. From Hampton Cove to Jones Valley and South Huntsville — we serve all residential and commercial properties in Madison County\'s largest city.',
-    zip: '35801',
+    zip: '35801–35824',
+    response: '25–40 min',
+    highlight: 'All Huntsville neighborhoods — Twickenham, Hampton Cove, Five Points, Jones Valley, Research Park.',
+    tags: ['Carpet Cleaning', 'Water Damage', 'Mold', 'Historic Hardwood'],
+    priority: true,
   },
   {
-    id: 'florence',
+    slug: 'florence',
     city: 'Florence',
-    state: 'AL',
-    description: 'Our Florence location serves the Shoals area including Florence, Muscle Shoals, Sheffield, and Tuscumbia. Professional carpet, tile, and restoration services for the entire Shoals region.',
-    zip: '35630',
+    zip: '35630–35634',
+    response: '15–25 min',
+    highlight: 'BamaClean\'s headquarters city. Fastest response in North Alabama. Pope Ave, Cox Creek, Westside, UNA area.',
+    tags: ['All Services', '24/7 Emergency', 'Fastest Response'],
+    priority: true,
   },
   {
-    id: 'decatur',
+    slug: 'decatur',
     city: 'Decatur',
-    state: 'AL',
-    description: 'BamaClean provides professional cleaning and restoration services throughout Decatur and Morgan County. Carpet cleaning, tile cleaning, and 24/7 emergency water damage response.',
-    zip: '35601',
+    zip: '35601–35603',
+    response: '35–55 min',
+    highlight: 'Old Decatur, Kingsway Historic District, Point Mallard, Beltline Road — all of Morgan County\'s largest city.',
+    tags: ['Carpet Cleaning', 'Water Damage', 'Mold', 'Commercial'],
+    priority: true,
   },
   {
-    id: 'athens',
+    slug: 'athens',
     city: 'Athens',
-    state: 'AL',
-    description: 'Serving Athens and Limestone County with expert carpet cleaning, upholstery cleaning, tile & grout cleaning, and emergency restoration services.',
-    zip: '35611',
+    zip: '35611–35613',
+    response: '30–45 min',
+    highlight: 'Limestone County\'s highest radon risk area. MTMUS workforce families. Historic downtown to new subdivisions.',
+    tags: ['Radon Testing', 'Carpet Cleaning', 'Mold', 'MTMUS Area'],
+    priority: true,
   },
   {
-    id: 'muscle-shoals',
+    slug: 'muscle-shoals',
     city: 'Muscle Shoals',
-    state: 'AL',
-    description: 'Professional cleaning services throughout Muscle Shoals, including carpet, tile, and upholstery cleaning for residential and commercial properties.',
-    zip: '35661',
+    zip: '35661–35662',
+    response: '15–25 min',
+    highlight: 'Wilson Reservoir area — high crawlspace mold risk. Jackson Highway corridor, Executive Hills, Northbrook.',
+    tags: ['Carpet Cleaning', 'Mold Inspection', 'Water Damage', 'Radon'],
+    priority: false,
   },
   {
-    id: 'tuscumbia',
-    city: 'Tuscumbia',
-    state: 'AL',
-    description: 'Full-service carpet and restoration services in Tuscumbia and the surrounding Colbert County area.',
-    zip: '35674',
-  },
-  {
-    id: 'sheffield',
-    city: 'Sheffield',
-    state: 'AL',
-    description: 'BamaClean serves Sheffield homeowners and businesses with professional carpet cleaning, tile cleaning, and restoration services.',
-    zip: '35660',
-  },
-  {
-    id: 'russellville',
+    slug: 'russellville',
     city: 'Russellville',
-    state: 'AL',
-    description: 'Professional cleaning and restoration services throughout Russellville and Franklin County, including carpet, tile, upholstery, and mold services.',
-    zip: '35653',
+    zip: '35653–35654',
+    response: '40–60 min',
+    highlight: 'Franklin County hub. Older crawlspace homes with real mold risk. Professional results at honest prices.',
+    tags: ['Carpet Cleaning', 'Mold Inspection', 'Water Damage'],
+    priority: false,
+  },
+  {
+    slug: 'sheffield',
+    city: 'Sheffield',
+    zip: '35660',
+    response: '15–25 min',
+    highlight: 'Quad City — 15 minutes from BamaClean HQ. Mid-century homes. Helen Keller Hospital area.',
+    tags: ['Carpet Cleaning', 'Mold', 'Hardwood Floors', 'Water Damage'],
+    priority: false,
+  },
+  {
+    slug: 'tuscumbia',
+    city: 'Tuscumbia',
+    zip: '35674',
+    response: '15–25 min',
+    highlight: 'Colbert County seat. Historic Ivy Green district. Finish-aware care for antebellum and craftsman homes.',
+    tags: ['Historic Homes', 'Carpet Cleaning', 'Hardwood', 'Mold'],
+    priority: false,
+  },
+  {
+    slug: 'killen',
+    city: 'Killen',
+    zip: '35645',
+    response: '20–35 min',
+    highlight: 'North Lauderdale County. Limestone geology — elevated radon risk. Elk River area communities.',
+    tags: ['Radon Testing', 'Carpet Cleaning', 'Mold Inspection'],
+    priority: false,
+  },
+  {
+    slug: 'leighton',
+    city: 'Leighton',
+    zip: '35646',
+    response: '20–35 min',
+    highlight: 'Colbert County Tennessee River communities. Cherokee and Barton included. Rural residential expertise.',
+    tags: ['Carpet Cleaning', 'Mold Inspection', 'Radon Testing'],
+    priority: false,
+  },
+  {
+    slug: 'hartselle',
+    city: 'Hartselle',
+    zip: '35640',
+    response: '50–65 min',
+    highlight: 'South Morgan County. Hartselle City Schools area. Priceville and Trinity included.',
+    tags: ['Carpet Cleaning', 'Mold Inspection', 'Water Damage'],
+    priority: false,
   },
 ];
 ---
+
 <Layout
-  title="Service Areas | Madison, Huntsville, Florence AL | BamaClean"
-  description="BamaClean serves Madison, Huntsville, Florence, Decatur, Athens, Muscle Shoals & all of North Alabama. Professional carpet, tile & restoration services. Call (256) 324-0492."
+  title="Service Areas | North Alabama Carpet Cleaning & Restoration | BamaClean"
+  description="BamaClean serves Madison, Huntsville, Florence, Decatur, Athens, Muscle Shoals, Russellville, Sheffield, Tuscumbia, Killen, Leighton, Hartselle & all of North Alabama. (256) 324-0492."
   canonical="/locations/"
 >
 
   <!-- Hero -->
   <section style="background:linear-gradient(135deg,#0F1B2D 0%,#1A2A42 100%);color:#fff;padding:72px 24px;text-align:center;">
-    <div style="max-width:700px;margin:0 auto;">
+    <div style="max-width:800px;margin:0 auto;">
       <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#22C55E;margin-bottom:12px;">Where We Work</p>
-      <h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:16px;">Service Areas</h1>
-      <p style="font-size:1.0625rem;color:rgba(255,255,255,.8);line-height:1.7;">BamaClean serves the entire North Alabama region. Call <a href="tel:+12563240492" style="color:#22C55E;font-weight:700;">(256) 324-0492</a> to confirm service in your area.</p>
+      <h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:16px;">Serving All of North Alabama Since 1993</h1>
+      <p style="font-size:1.0625rem;color:rgba(255,255,255,.8);line-height:1.7;margin-bottom:28px;">IICRC-certified carpet cleaning, tile & grout, water damage restoration, mold remediation, radon testing, and more — across 12+ communities in the Tennessee Valley and Shoals. Each city has its own dedicated page with local details, neighborhood information, and city-specific content.</p>
+      <a href="tel:+12563240492" style="background:#1B7A3D;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:14px 32px;border-radius:100px;font-size:1rem;">📞 Call (256) 324-0492</a>
     </div>
   </section>
 
-  <!-- Map-style overview -->
-  <section style="padding:64px 24px;background:#F1F5F9;text-align:center;">
-    <div style="max-width:900px;margin:0 auto;">
-      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:#0F1B2D;margin-bottom:16px;">Proudly Serving North Alabama Since 1993</h2>
-      <p style="color:#475569;font-size:1rem;line-height:1.7;margin-bottom:40px;">From the Tennessee Valley to the Shoals, BamaClean covers all of North Alabama with professional carpet cleaning, tile cleaning, upholstery cleaning, water damage restoration, mold inspection, and fire damage cleanup.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
-        {locations.map(l => (
-          <a href={`#${l.id}`} style="background:#fff;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:100px;border:2px solid #E8F5EC;transition:background .2s;">{l.city}, AL</a>
+  <!-- Primary Markets -->
+  <section style="padding:72px 24px;background:#fff;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:10px;">Primary Service Areas</p>
+        <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;">Our Highest-Coverage Cities</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:24px;margin-bottom:64px;">
+        {locations.filter(l => l.priority).map(l => (
+          <a href={`/locations/${l.slug}/`} style="display:block;background:#fff;border:2px solid #E8F5EC;border-radius:18px;padding:32px;text-decoration:none;box-shadow:0 2px 16px rgba(0,0,0,.06);">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+              <div>
+                <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.375rem;font-weight:800;color:#0F1B2D;">{l.city}, AL</h3>
+                <p style="font-size:.8125rem;color:#94A3B8;font-weight:500;margin-top:2px;">ZIP: {l.zip}</p>
+              </div>
+              <div style="background:#E8F5EC;border-radius:10px;padding:10px 14px;text-align:center;">
+                <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.7rem;font-weight:700;color:#1B7A3D;text-transform:uppercase;letter-spacing:.06em;">Response</p>
+                <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;font-weight:800;color:#1B7A3D;">{l.response}</p>
+              </div>
+            </div>
+            <p style="font-size:.9375rem;color:#475569;line-height:1.65;margin-bottom:20px;">{l.highlight}</p>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px;">
+              {l.tags.map(tag => (
+                <span style="background:#F1F5F9;color:#334155;font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:600;padding:4px 11px;border-radius:100px;">{tag}</span>
+              ))}
+            </div>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.9375rem;color:#1B7A3D;">View {l.city} Page →</span>
+          </a>
         ))}
-        <span style="background:#E8F5EC;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:100px;">Killen, AL</span>
-        <span style="background:#E8F5EC;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:100px;">Hartselle, AL</span>
-        <span style="background:#E8F5EC;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:100px;">Cullman, AL</span>
-        <span style="background:#E8F5EC;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:100px;">And More...</span>
+      </div>
+
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:10px;">Additional Coverage</p>
+        <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;">More Communities We Serve</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;">
+        {locations.filter(l => !l.priority).map(l => (
+          <a href={`/locations/${l.slug}/`} style="display:block;background:#F8FAFB;border:1px solid #E2E8F0;border-radius:14px;padding:24px;text-decoration:none;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+              <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.125rem;font-weight:700;color:#0F1B2D;">{l.city}, AL</h3>
+              <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:700;color:#1B7A3D;background:#E8F5EC;padding:4px 10px;border-radius:100px;">{l.response}</span>
+            </div>
+            <p style="font-size:.875rem;color:#475569;line-height:1.6;margin-bottom:14px;">{l.highlight}</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
+              {l.tags.map(tag => (
+                <span style="background:#fff;color:#475569;font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:500;padding:3px 10px;border-radius:100px;border:1px solid #E2E8F0;">{tag}</span>
+              ))}
+            </div>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.875rem;color:#1B7A3D;">View {l.city} Page →</span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- Individual location cards -->
-  <section style="padding:80px 24px;background:#fff;">
-    <div style="max-width:1280px;margin:0 auto;">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;">
-        {locations.map(l => (
-          <div id={l.id} style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
-            <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
-              <span style="background:#E8F5EC;color:#1B7A3D;font-size:1.25rem;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;">📍</span>
-              <div>
-                <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:#0F1B2D;">{l.city}, {l.state}</h3>
-                <p style="font-size:.8125rem;color:#94A3B8;font-weight:500;">{l.zip}</p>
-              </div>
-            </div>
-            <p style="font-size:.9375rem;color:#475569;line-height:1.65;margin-bottom:20px;">{l.description}</p>
-            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
-              <span style="background:#F1F5F9;color:#334155;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:100px;">Carpet Cleaning</span>
-              <span style="background:#F1F5F9;color:#334155;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:100px;">Tile & Grout</span>
-              <span style="background:#F1F5F9;color:#334155;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:100px;">Water Damage</span>
-              <span style="background:#F1F5F9;color:#334155;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:100px;">Mold Inspection</span>
-            </div>
-            <a href="/contact" style="display:inline-block;background:#1B7A3D;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:10px 24px;border-radius:100px;font-size:.875rem;">Get a Quote in {l.city}</a>
+  <!-- Response Time Map -->
+  <section style="padding:72px 24px;background:#F1F5F9;">
+    <div style="max-width:900px;margin:0 auto;text-align:center;">
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:12px;">Emergency Response</p>
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;margin-bottom:16px;">Response Times From Our Florence Headquarters</h2>
+      <p style="color:#475569;font-size:1rem;margin-bottom:40px;">BamaClean is headquartered at 205 S Seminary St, Florence, AL — centrally located in the Shoals. These are typical drive times for emergency dispatch:</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
+        {[
+          {city:'Florence', time:'15–25 min', color:'#1B7A3D'},
+          {city:'Sheffield', time:'15–25 min', color:'#1B7A3D'},
+          {city:'Tuscumbia', time:'15–25 min', color:'#1B7A3D'},
+          {city:'Muscle Shoals', time:'15–25 min', color:'#1B7A3D'},
+          {city:'Killen', time:'20–35 min', color:'#2D8A50'},
+          {city:'Leighton', time:'20–35 min', color:'#2D8A50'},
+          {city:'Huntsville', time:'25–40 min', color:'#2D8A50'},
+          {city:'Madison', time:'30–45 min', color:'#3D9A60'},
+          {city:'Athens', time:'30–45 min', color:'#3D9A60'},
+          {city:'Russellville', time:'40–60 min', color:'#E18B2B'},
+          {city:'Decatur', time:'35–55 min', color:'#E18B2B'},
+          {city:'Hartselle', time:'50–65 min', color:'#C05A1F'},
+        ].map(r => (
+          <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06);">
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.875rem;font-weight:700;color:#0F1B2D;margin-bottom:6px;">{r.city}, AL</p>
+            <p style={`font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:${r.color}`}>{r.time}</p>
           </div>
         ))}
       </div>
@@ -127,10 +215,10 @@ const locations = [
   </section>
 
   <!-- CTA -->
-  <section style="background:linear-gradient(135deg,#1B7A3D 0%,#145C2E 100%);color:#fff;padding:80px 24px;text-align:center;">
+  <section style="background:linear-gradient(135deg,#1B7A3D 0%,#145C2E 100%);color:#fff;padding:72px 24px;text-align:center;">
     <div style="max-width:700px;margin:0 auto;">
-      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;margin-bottom:16px;">Don't See Your City?</h2>
-      <p style="font-size:1.125rem;color:rgba(255,255,255,.85);margin-bottom:40px;">We serve many more communities throughout North Alabama. Call us to check availability in your area.</p>
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;margin-bottom:16px;">Not Sure We Cover Your Area?</h2>
+      <p style="font-size:1.125rem;color:rgba(255,255,255,.85);margin-bottom:40px;">Call us — we serve many communities beyond this list and can often confirm coverage for your address in under a minute.</p>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
         <a href="tel:+12563240492" style="background:#fff;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;padding:16px 36px;border-radius:100px;font-size:1rem;">Call (256) 324-0492</a>
         <a href="/contact" style="background:transparent;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:16px 36px;border-radius:100px;border:2px solid rgba(255,255,255,.5);font-size:1rem;">Send a Message</a>

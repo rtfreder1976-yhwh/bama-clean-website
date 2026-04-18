@@ -1,0 +1,92 @@
+---
+import LocationLayout from '../../components/LocationLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BamaClean",
+  "telephone": "+12563240492",
+  "areaServed": { "@type": "City", "name": "Decatur", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+  "url": "https://bamaclean.com/locations/decatur/",
+});
+---
+
+<LocationLayout
+  title="Carpet Cleaning & Restoration Services in Decatur, AL | BamaClean"
+  description="BamaClean serves Decatur, AL with carpet cleaning, water damage restoration, mold remediation, tile & grout, and more. IICRC-certified. Free quote: (256) 324-0492."
+  canonical="/locations/decatur/"
+  city="Decatur"
+  responseTime="35–55 minutes"
+  hero={{
+    label: "Serving Decatur, Alabama Since 1993",
+    heading: "Decatur's Trusted Professional Cleaning & Restoration Company",
+    subheading: "From the historic neighborhoods of Old Decatur to the subdivisions of Southwest Decatur — BamaClean delivers IICRC-certified cleaning and emergency restoration to Morgan County's largest city. No franchise. No bait-and-switch pricing. Just results.",
+  }}
+  intro={`
+    <p style="margin-bottom:20px;">Decatur is Morgan County's economic engine — a city defined by its Tennessee River access, its industrial base, and its residential neighborhoods that range from pre-war historic homes in the Kingsway district to newer subdivisions in the Beltline Road corridor. BamaClean has served Decatur since 1993, and we understand the city's distinct cleaning and restoration landscape better than any out-of-town competitor can.</p>
+    <p style="margin-bottom:20px;">Decatur's position at the midpoint of the Tennessee River makes it particularly susceptible to the flooding events that characterize the river system. Point Mallard Park and the areas along the river bottom have flooded repeatedly, and residential areas adjacent to Flint Creek and its tributaries see water intrusion during heavy rain events that the drainage infrastructure cannot always handle. We've performed water damage restoration in Decatur homes during multiple significant weather events — and our familiarity with the city's flood-risk geography helps us scope jobs accurately from the first call.</p>
+    <p>The industrial character of Decatur — anchored by GE Appliances and 3M, with a manufacturing corridor that stretches along the Tennessee River industrial district — also creates commercial cleaning demand that we've served for decades. Decatur's workforce families are practical, value-oriented, and skeptical of hype. That's a customer base we've built a business around: deliver what you quote, do it right, and let the results speak.</p>
+  `}
+  zipCodes={['35601', '35602', '35603']}
+  neighborhoods={[
+    'Old Decatur / Kingsway Historic District', 'Albany / New Decatur',
+    'Point Mallard area', 'Beltline Road corridor subdivisions',
+    'Westmeade', 'Country Club of Decatur area', 'Southeast Decatur',
+    'Southwest Decatur', 'Moulton Street corridor', 'Riverside Drive area',
+    'Somerville Road neighborhoods', 'Wilson Morgan Park area',
+  ]}
+  surroundingCommunities={['Hartselle', 'Trinity', 'Priceville', 'Lacey\'s Spring', 'Athens', 'Tanner', 'Morgan County unincorporated']}
+  responseTime="35–55 minutes"
+  weatherSection={{
+    heading: "Why Decatur's River Location Drives Ongoing Restoration Demand",
+    body: `
+      <p style="margin-bottom:20px;">Decatur's Tennessee River location means flood risk is never abstract. The river's flood stage directly impacts properties near the waterfront, and the creek tributaries — Flint Creek, Indian Creek — extend that risk well into residential areas during significant rain events. We've responded to water damage calls in Decatur triggered by river flooding, creek overflow, storm drain backups, and infrastructure failures during heavy rainfall. When flooding events hit Decatur, we hear about it quickly — and we respond.</p>
+      <p style="margin-bottom:20px;">The combination of Decatur's humid climate and its aging housing stock creates persistent mold risk. Homes in the Old Decatur and Kingsway historic districts — many built before 1950 — have crawlspaces and foundation characteristics that predate modern moisture management standards. High clay soil content, limited crawlspace ventilation, and decades of accumulated moisture intrusion create conditions we find mold in regularly. If your historic Decatur home has never had a professional mold inspection, the probability of finding something is higher than you'd expect.</p>
+      <p style="margin-bottom:20px;">Decatur's industrial environment also contributes to indoor air quality challenges that aren't purely weather-driven. Particulate matter from the industrial corridor, combined with high pollen loads during spring and fall, creates elevated allergen concentrations in homes throughout the city. Professional carpet and upholstery cleaning in Decatur is as much about air quality as appearance — particularly for families with children or respiratory conditions.</p>
+      <p>Winter freeze events in Decatur track with the broader North Alabama pattern — infrequent but consequential. The 2021 freeze event affected Decatur similarly to the rest of the region, with burst pipe damage in homes across the city. We responded to multiple Decatur calls during that event.</p>
+    `,
+  }}
+  employers={[
+    { name: "GE Appliances (Decatur)", desc: "One of Decatur's largest employers, manufacturing appliances at its Lawrence County facility. GE Appliances employees and their families throughout Decatur are among our long-term residential customers." },
+    { name: "3M (Decatur Plant)", desc: "3M's Decatur manufacturing facility is a major employer in the industrial corridor. We provide residential services to 3M employees and commercial cleaning to facilities in the Decatur industrial district." },
+    { name: "Decatur Morgan Hospital", desc: "Decatur's primary hospital system. Healthcare workers live throughout Decatur's residential neighborhoods and use BamaClean for home cleaning and emergency restoration." },
+    { name: "Nucor Steel (nearby)", desc: "Nucor's manufacturing workforce lives throughout Morgan County. We serve both residential and commercial clients connected to Decatur's steel industry presence." },
+    { name: "Daikin (Decatur)", desc: "One of the world's largest HVAC manufacturers with a major Decatur facility. Daikin employees throughout Decatur use BamaClean for residential services." },
+    { name: "Decatur City Schools / Morgan County Schools", desc: "Multiple school campuses throughout the Decatur area. BamaClean provides commercial carpet cleaning, tile care, and sanitation to educational facilities on scheduled service agreements." },
+  ]}
+  neighborhoodSection={{
+    heading: "Serving Decatur's Neighborhoods with Precision",
+    body: `
+      <p style="margin-bottom:20px;">The <strong>Old Decatur and Kingsway Historic District</strong> is Decatur at its most distinctive — Victorian-era homes, craftsman bungalows, and early-twentieth-century residences that carry the architectural character of the city's industrial prime. These homes present cleaning and restoration challenges that require genuine expertise: original hardwood floors under decades of finish layers, crawlspaces with moisture histories measured in generations, and plaster walls that respond to moisture differently than modern construction. We approach every historic Decatur job with the care these homes have earned.</p>
+      <p style="margin-bottom:20px;">The <strong>Point Mallard area</strong> — including the neighborhoods adjacent to Decatur's signature waterfront park — sits in a flood-adjacent zone that has experienced water intrusion during significant Tennessee River events. Homeowners in this area are not surprised when we tell them their crawlspace has moisture issues. What surprises them is how far the moisture has traveled into the structure. We map it, we dry it, and we document it for their insurance company.</p>
+      <p style="margin-bottom:20px;">The <strong>Beltline Road corridor and Southwest Decatur subdivisions</strong> represent Decatur's growth from the 1970s through the 1990s — a mix of brick ranch homes and two-story construction with carpet throughout the living areas and bedrooms. These are working families, many connected to Decatur's manufacturing sector, who need reliable carpet cleaning at fair prices with accurate quotes and no upsell surprises. This is the segment we've served most consistently and whose referrals drive the most new Decatur business we receive.</p>
+      <p>The <strong>Country Club area and Westmeade</strong> represent Decatur's established professional neighborhoods — larger homes, hardwood and tile in the main living areas, carpet in the bedrooms and bonus rooms, and homeowners who've been using the same cleaning company for a decade because they found one that works and stopped looking. Many of these long-term Decatur clients have been with BamaClean since the 1990s.</p>
+    `,
+  }}
+  services={[
+    { icon: "🧹", name: "Carpet Cleaning", href: "/services/carpet-cleaning/", desc: "Deep extraction for Decatur homes — residential and commercial." },
+    { icon: "💧", name: "Water Damage Restoration", href: "/services/water-flood-damage/", desc: "24/7 emergency response for Decatur's flood-prone geography." },
+    { icon: "🔬", name: "Mold Inspection & Remediation", href: "/services/mold-inspection/", desc: "IICRC-certified. Critical for Decatur's aging housing stock." },
+    { icon: "🔲", name: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/", desc: "Steam cleaning for kitchens, baths, and commercial surfaces." },
+    { icon: "🛋️", name: "Upholstery Cleaning", href: "/services/upholstery-cleaning/", desc: "Pet-safe, child-safe cleaning for Decatur living rooms." },
+    { icon: "🌲", name: "Hardwood Floor Cleaning", href: "/services/hardwood-floor-cleaning/", desc: "Finish-specific care for Decatur's historic home floors." },
+    { icon: "🔥", name: "Fire & Smoke Damage", href: "/services/fire-smoke-damage/", desc: "24/7 response with full insurance documentation." },
+    { icon: "🛡️", name: "Sanitation Services", href: "/services/sanitation-services/", desc: "EPA-registered disinfection for homes, businesses, and facilities." },
+  ]}
+  competitorSection={{
+    heading: "BamaClean vs. the Alternatives in Decatur",
+    body: `
+      <p style="margin-bottom:20px;">Decatur's cleaning and restoration market is served by national franchises operating out of Huntsville and Decatur-based offices, and by a rotating cast of local operators. The franchise options — Stanley Steemer, SERVPRO — bring brand recognition and standardized processes. The local operators bring variable quality and variable equipment levels. Here's the honest comparison.</p>
+      <p style="margin-bottom:20px;">National franchises price for volume and upsell margin. The quote you get on the phone is not the price on the invoice. Protection packages, per-stain charges, and add-ons are built into the franchise revenue model — not because the technician is dishonest, but because the franchise system is designed to maximize per-job revenue. BamaClean quotes by square footage before we start. That number is your invoice.</p>
+      <p>We've been serving Decatur since 1993 — which means we've watched competitors come and go, seen the franchise owners change, and maintained a consistent presence in the market long enough to have multi-generational customers in Kingsway and Old Decatur. That continuity is not something any franchise can manufacture. It's earned job by job, decade by decade.</p>
+    `,
+  }}
+  faqs={[
+    { q: "How long does it take BamaClean to reach Decatur for an emergency?", a: "From our Florence headquarters, we target 35–55 minutes to most Decatur addresses. For water damage emergencies, we dispatch immediately regardless of time of day or day of week." },
+    { q: "Is flood damage covered by standard homeowner's insurance in Decatur?", a: "Flood damage from an overflowing river or storm surge typically requires separate flood insurance (NFIP). Damage from burst pipes or internal plumbing failures is usually covered under standard homeowner's policies. We help you document the cause accurately for your insurer." },
+    { q: "Do you provide commercial cleaning to Decatur industrial facilities?", a: "Yes. We provide commercial carpet cleaning, tile care, sanitation, and emergency restoration to manufacturing facilities, office buildings, and commercial properties in Decatur's industrial and commercial corridors." },
+    { q: "Can you assess mold risk in a historic Decatur home before I buy it?", a: "Yes. A pre-purchase mold inspection is a smart step when buying any home over 30 years old in Decatur. We provide written inspection reports that can support real estate negotiation or inform your decision to proceed." },
+    { q: "Do you serve Hartselle and other Morgan County communities?", a: "Yes. We serve Hartselle, Priceville, Trinity, and unincorporated Morgan County. Hartselle is covered on its own dedicated location page as well." },
+  ]}
+  schema={schema}
+/>

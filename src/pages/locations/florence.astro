@@ -1,0 +1,93 @@
+---
+import LocationLayout from '../../components/LocationLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BamaClean",
+  "telephone": "+12563240492",
+  "address": { "@type": "PostalAddress", "streetAddress": "205 S Seminary St", "addressLocality": "Florence", "addressRegion": "AL", "postalCode": "35630" },
+  "areaServed": { "@type": "City", "name": "Florence", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+  "url": "https://bamaclean.com/locations/florence/",
+});
+---
+
+<LocationLayout
+  title="Carpet Cleaning & Restoration Services in Florence, AL | BamaClean"
+  description="BamaClean is headquartered in Florence, AL. Professional carpet cleaning, water damage, mold remediation, tile & grout, radon testing. 30+ years local. (256) 324-0492."
+  canonical="/locations/florence/"
+  city="Florence"
+  responseTime="15–25 minutes"
+  hero={{
+    label: "BamaClean's Home City — Florence, Alabama",
+    heading: "Florence's Most Trusted Cleaning & Restoration Company",
+    subheading: "BamaClean is headquartered in Florence at 205 S Seminary St. We know every street, every neighborhood, every zip code. Fastest response times in the city — because this is home.",
+  }}
+  intro={`
+    <p style="margin-bottom:20px;">Florence is BamaClean's home. Our office is at 205 S Seminary St, and we've been operating out of this city since 1993 — through the Tennessee River floods that impacted the riverfront district, through the storms that roll in across the Shoals from the west, through the economic cycles that have brought new industries and new residents to the Quad Cities region. We know Florence the way a company only can when it has been part of the community for three decades.</p>
+    <p style="margin-bottom:20px;">Florence is a city of genuine character: the birthplace of W.C. Handy and Muscle Shoals Sound Studios' spiritual home, a city with a historic downtown, a growing University of North Alabama campus, and the full residential range from 1920s craftsman bungalows in the Pope Avenue corridor to new construction in the subdivisions off Cox Creek Parkway. Each part of the city presents different cleaning and restoration challenges, and we've navigated all of them enough times to know what to expect before we arrive.</p>
+    <p>For Florence residents, our fastest response times apply: 15–25 minutes from call to arrival for most addresses. In a water damage emergency, that difference is measured in gallons of additional absorption and hundreds of dollars of additional remediation scope. Being headquartered here isn't just a point of pride — it's a practical advantage for every Florence homeowner who needs us fast.</p>
+  `}
+  zipCodes={['35630', '35631', '35632', '35633', '35634']}
+  neighborhoods={[
+    'Downtown Florence / Pope Avenue corridor', 'Westside Florence', 'Cox Creek area',
+    'Sweetwater neighborhood', 'Country Club area', 'Irvine Avenue district',
+    'UNA campus adjacent neighborhoods', 'Kendale Estates', 'Rolling Hills',
+    'Homestead Hills', 'Sherwood Forest area', 'Harrington Hills',
+    'Cloverdale area', 'Seminary Street corridor',
+  ]}
+  surroundingCommunities={['Muscle Shoals', 'Sheffield', 'Tuscumbia', 'Killen', 'Leighton', 'Rogersville', 'Russellville', 'Lauderdale County unincorporated']}
+  responseTime="15–25 minutes"
+  weatherSection={{
+    heading: "Florence's Tennessee River Location Creates Unique Cleaning Demands",
+    body: `
+      <p style="margin-bottom:20px;">Florence sits on the south bank of the Tennessee River, and that geography defines its weather reality. The river moderates temperature extremes somewhat but contributes significantly to year-round humidity — Florence's average relative humidity stays above 70% for most of the year, peaking in summer months when it regularly exceeds 85%. This sustained humidity is the primary driver of mold growth in Florence's older housing stock, particularly in the crawlspace-foundation homes that dominate the historic residential areas west of downtown.</p>
+      <p style="margin-bottom:20px;">Flooding is a genuine and recurring risk in Florence. The Tennessee River has flood stages that affect the riverfront district and low-lying areas near Wilson Dam. Severe thunderstorms — which arrive with particular violence from the west across open terrain — produce flash flooding in streets and drainage systems throughout the city. We have responded to flood-related water damage calls in Florence more times than we can count, and our familiarity with the city's drainage patterns helps us assess scope quickly when we arrive.</p>
+      <p style="margin-bottom:20px;">The Shoals region also sits in a high-pollen zone. Florence's proximity to the Tennessee River bottomlands, the agricultural land south of the city, and the hardwood forests of the Appalachian foothills to the east creates a pollen environment that rivals any in the state. Spring tree pollen, summer grass pollen, and fall ragweed keep allergen loads high in Florence homes from March through October. Families with respiratory sensitivities in Florence call us for seasonal carpet and upholstery cleaning as consistently as any service we provide.</p>
+      <p>Winter ice and freeze events affect Florence with less frequency than areas further north and east, but when a significant cold event hits the Shoals — as happened in February 2021 — the city's older housing stock, with supply lines in exterior walls that were built before modern insulation standards, is vulnerable. We handled multiple burst pipe emergency calls in Florence's historic neighborhoods during that event.</p>
+    `,
+  }}
+  employers={[
+    { name: "University of North Alabama", desc: "Florence's anchor institution, with 7,000+ students and hundreds of faculty and staff. BamaClean provides commercial cleaning services to UNA-adjacent facilities and residential services to faculty and staff throughout the city." },
+    { name: "North Alabama Medical Center / Shoals Hospital", desc: "The Shoals' primary acute care hospital. Healthcare workers live throughout Florence and use BamaClean for home cleaning. We provide commercial sanitation services to medical office facilities." },
+    { name: "Shoals Economic Development Authority clients", desc: "Florence's industrial base includes automotive suppliers, food processing, and logistics operations. BamaClean provides commercial cleaning and sanitation to manufacturing and distribution facilities in the Florence industrial corridor." },
+    { name: "Florence City Schools", desc: "Florence's public school system with multiple campuses throughout the city. We provide commercial carpet cleaning, tile care, and sanitation to school facilities on scheduled service contracts." },
+    { name: "Retail & Hospitality (Cox Creek Parkway corridor)", desc: "Florence's primary commercial retail corridor hosts national retailers, restaurants, and hospitality businesses. We provide commercial tile cleaning, carpet care, and sanitation services to Cox Creek Parkway businesses." },
+    { name: "State Government Facilities (Lauderdale County)", desc: "Lauderdale County and Alabama state agency offices in Florence. BamaClean provides commercial carpet cleaning and sanitation to government office facilities." },
+  ]}
+  neighborhoodSection={{
+    heading: "Florence Neighborhood by Neighborhood — What We Know",
+    body: `
+      <p style="margin-bottom:20px;">The <strong>Pope Avenue corridor and downtown Florence</strong> historic district contains some of the most interesting residential cleaning challenges in the Shoals. Craftsman bungalows from the 1920s and 1930s, many with original hardwood floors that have been through 80–90 years of North Alabama humidity cycles, require the finish-specific, low-moisture approach we've developed through decades of experience with these homes. Original pine floors that predate the widespread use of polyurethane finishes are particularly sensitive — the wrong chemistry or too much moisture causes permanent damage. We do this right.</p>
+      <p style="margin-bottom:20px;">The <strong>Westside Florence neighborhoods</strong> include a mix of working-class established homes and newer construction, with carpet in the majority of residences. This is some of our highest-volume residential carpet cleaning territory — families with children and pets, homes where the carpet is 10–15 years old and has been through the full range of North Alabama soil and allergen loading. Hot-water extraction in these homes consistently delivers dramatic visual results and measurable allergen reduction.</p>
+      <p style="margin-bottom:20px;">The <strong>Country Club area and Harrington Hills</strong> represent Florence's established professional residential neighborhoods — larger homes, higher-end finishes, and homeowners who expect service quality to match their investment in their properties. We provide tile and grout work in the kitchens and bathrooms of these homes regularly, hardwood floor cleaning in the formal areas, and carpet deep-cleaning in the bedrooms and bonus rooms. These clients tend to be long-term BamaClean customers who've been using us since we started.</p>
+      <p>The <strong>UNA campus-adjacent neighborhoods</strong> have high rental density — student housing, graduate student apartments, and faculty rental properties cycle between occupants and need professional cleaning and sanitation between tenants. Property managers in this area use BamaClean for between-tenant carpet cleaning and sanitation on regular schedules.</p>
+    `,
+  }}
+  services={[
+    { icon: "🧹", name: "Carpet Cleaning", href: "/services/carpet-cleaning/", desc: "Fastest response in Florence — we're headquartered here." },
+    { icon: "💧", name: "Water Damage Restoration", href: "/services/water-flood-damage/", desc: "24/7 emergency response — 15–25 min to most Florence addresses." },
+    { icon: "🔬", name: "Mold Inspection & Remediation", href: "/services/mold-inspection/", desc: "IICRC-certified. Critical for Florence's humid riverfront climate." },
+    { icon: "🔲", name: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/", desc: "Steam restoration for kitchens, baths, and commercial tile." },
+    { icon: "🛋️", name: "Upholstery Cleaning", href: "/services/upholstery-cleaning/", desc: "Fabric-safe cleaning for Florence homes and rental properties." },
+    { icon: "🌲", name: "Hardwood Floor Cleaning", href: "/services/hardwood-floor-cleaning/", desc: "Finish-specific care including pre-war historic homes." },
+    { icon: "🔬", name: "Radon Testing", href: "/services/radon-testing/", desc: "EPA-protocol testing with written reports for real estate and homeowners." },
+    { icon: "🛡️", name: "Sanitation Services", href: "/services/sanitation-services/", desc: "EPA-registered disinfection for homes, offices, and facilities." },
+  ]}
+  competitorSection={{
+    heading: "Why Florence Homeowners Choose Their Local Company Over National Alternatives",
+    body: `
+      <p style="margin-bottom:20px;">Florence's market is dominated by the same national franchise names that operate throughout North Alabama — Stanley Steemer and SERVPRO franchises cover the Shoals from both the Huntsville and Tuscumbia directions. The pitch is familiar: national brand, standardized process, recognized name. The reality, as Florence homeowners who've used both have told us: the national brand gets you a crew that may never have been to Florence before, pricing that escalates from the phone quote to the invoice, and a call center in another state when you need to follow up.</p>
+      <p style="margin-bottom:20px;">BamaClean is headquartered in Florence. When you call, someone answers who knows what Cox Creek Parkway looks like in a rainstorm, who knows which subdivisions have the most mold risk, and who can give you a realistic response time rather than a marketing promise. That local knowledge is not something a franchise model can replicate — regardless of what the national TV commercials say.</p>
+      <p>For emergency restoration in particular, being headquartered in Florence is a meaningful operational advantage. When a pipe bursts in your home on a Sunday morning, the difference between a 15-minute response and a 60-minute response is measured in gallons of water absorbed into your subfloor and walls. We are the local option — not a franchise dispatching from a hub in another city.</p>
+    `,
+  }}
+  faqs={[
+    { q: "How fast can BamaClean get to my Florence home in an emergency?", a: "15–25 minutes for most Florence addresses. We are headquartered at 205 S Seminary St in Florence — we are not dispatching from another city." },
+    { q: "Do you clean historic hardwood floors in Florence's older homes?", a: "Yes — and it's one of our specialties. We identify finish type before any chemistry is applied. Pre-war homes with original pine or oak floors often have wax or shellac finishes that require different treatment than modern polyurethane. We handle this correctly." },
+    { q: "Is flooding a real risk in Florence neighborhoods near the river?", a: "Yes. The Tennessee River has documented flood stages that affect areas near Wilson Dam and the riverfront. Flash flooding in storm drains affects neighborhoods throughout the city during heavy rain events. We've responded to flooding calls in Florence regularly across three decades." },
+    { q: "Can you handle mold in the crawlspace of an older Florence home?", a: "Yes — and this is common work for us in Florence's historic neighborhoods. We inspect, contain, remediate per IICRC S520 protocol, and provide written documentation. If the moisture source (a plumbing leak, inadequate vapor barrier, foundation drainage issue) isn't addressed, mold returns. We identify the source and tell you honestly what needs to be fixed." },
+    { q: "Do you serve Lauderdale County outside Florence city limits?", a: "Yes. We serve Killen, Rogersville, Waterloo, and unincorporated Lauderdale County. Response times vary by distance from our Florence headquarters — call us to confirm your address." },
+  ]}
+  schema={schema}
+/>

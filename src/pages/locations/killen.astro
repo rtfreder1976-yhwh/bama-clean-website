@@ -1,0 +1,87 @@
+---
+import LocationLayout from '../../components/LocationLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BamaClean",
+  "telephone": "+12563240492",
+  "areaServed": { "@type": "City", "name": "Killen", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+  "url": "https://bamaclean.com/locations/killen/",
+});
+---
+
+<LocationLayout
+  title="Carpet Cleaning & Restoration Services in Killen, AL | BamaClean"
+  description="BamaClean serves Killen, AL and north Lauderdale County with carpet cleaning, water damage, mold remediation, tile & grout, and radon testing. (256) 324-0492."
+  canonical="/locations/killen/"
+  city="Killen"
+  responseTime="20–35 minutes"
+  hero={{
+    label: "Serving Killen & North Lauderdale County Since 1993",
+    heading: "Killen's Local Cleaning & Restoration Company",
+    subheading: "Killen families know their neighbors and they know their service providers. BamaClean has served Killen and north Lauderdale County for over 30 years — IICRC-certified, upfront pricing, 20–35 minute response from our Florence base.",
+  }}
+  intro={`
+    <p style="margin-bottom:20px;">Killen is north Lauderdale County at its most characteristic — a community of families, farms, and practical homeowners who know value when they see it and skepticism when they smell a sales pitch. BamaClean has been the cleaning and restoration company of choice in this community for over three decades, building its presence entirely through word-of-mouth in a community where reputation travels fast and lasts long.</p>
+    <p style="margin-bottom:20px;">Killen's homes tend toward the rural residential character of Lauderdale County's north end: larger lots, a mix of 1970s–1990s brick ranch construction and newer development, and homes that sit on the kind of terrain that holds water after rain events. The Elk River drainage basin and the agricultural character of north Lauderdale County create moisture conditions in crawlspaces and around foundations that we address regularly. Killen homes that have never had a professional mold inspection are often the ones where we find the most substantial crawlspace growth during an initial visit.</p>
+    <p>Killen is also one of the communities in our service area with the highest radon awareness — the limestone geology that extends through Lauderdale County from the Athens area creates radon risk that we test for regularly in Killen homes. Homeowners in this community have been increasingly proactive about radon testing, particularly when buying or selling homes, and our EPA-protocol testing with written reports is the standard they need for real estate transactions.</p>
+  `}
+  zipCodes={['35645']}
+  neighborhoods={[
+    'Downtown Killen area', 'Highway 157 corridor neighborhoods',
+    'Killen High School area', 'North Lauderdale County rural residential',
+    'Elk River area communities', 'Waterloo Road corridor',
+    'Wilson Lake adjacent communities', 'Lindsey Bridge Road area',
+  ]}
+  surroundingCommunities={['Rogersville', 'Waterloo', 'Florence', 'Leighton', 'Lauderdale County unincorporated', 'Cloverdale']}
+  responseTime="20–35 minutes"
+  weatherSection={{
+    heading: "North Lauderdale County's Climate and Your Home",
+    body: `
+      <p style="margin-bottom:20px;">Killen and north Lauderdale County receive the full benefit — and burden — of North Alabama's humid subtropical climate. Annual rainfall in this part of Lauderdale County averages over 54 inches, with rain distributed across the year in a way that keeps soil moisture high for most of the calendar. Homes on the clay-heavy soils of north Lauderdale County sit on ground that holds moisture against their foundations year-round — which means crawlspace moisture management is not a seasonal concern but a constant condition that older homes without modern vapor barriers are managing poorly.</p>
+      <p style="margin-bottom:20px;">The Elk River, which drains much of north Lauderdale County into Wilson Lake, creates flooding risk in low-lying areas during significant rain events. Homes near the river and its tributaries experience water intrusion risk that standard homeowner's insurance may or may not cover — and that BamaClean's water damage restoration team addresses when it occurs. We've responded to Elk River flooding calls in Killen and Rogersville multiple times over our 30-year history in this area.</p>
+      <p>North Lauderdale County's limestone geology — the same formation that runs through Limestone County to the east — creates elevated radon risk. We conduct radon testing in Killen homes at the request of buyers, sellers, and homeowners who simply want to know their exposure level. The testing is straightforward; the risk, in some cases, is not.</p>
+    `,
+  }}
+  employers={[
+    { name: "Shoals Commuter Workforce", desc: "Many Killen residents commute to Florence, Sheffield, Muscle Shoals, and the broader Shoals employment base. These professional families are BamaClean's core Killen residential market." },
+    { name: "Agriculture & Timber (Lauderdale County)", desc: "North Lauderdale County's agricultural and timber operations employ workers throughout the community. We serve agricultural family homes with residential cleaning and restoration." },
+    { name: "Lauderdale County Schools", desc: "School facilities in north Lauderdale County, including Killen High School. Commercial cleaning and sanitation services on scheduled agreements." },
+    { name: "Local Healthcare & Service Sector", desc: "Healthcare workers and service sector employees in north Lauderdale County use BamaClean for residential cleaning. We serve medical offices and professional facilities in the area." },
+  ]}
+  neighborhoodSection={{
+    heading: "Killen Homes — What We Know About This Community",
+    body: `
+      <p style="margin-bottom:20px;">Killen's residential character is defined by the practical North Alabama homeowner — families who maintain their homes carefully, who know what things should cost, and who are acutely aware of companies that try to pad invoices with add-ons and upsells. BamaClean's model is built for exactly this customer. We quote before we start, we deliver what we promised, and we leave. The Killen customers who found us through a neighbor's recommendation 20 years ago are still calling us today.</p>
+      <p style="margin-bottom:20px;">The most common services in Killen are carpet cleaning — hot-water extraction in family rooms and bedrooms that haven't had professional attention in several years — and crawlspace mold inspection in the older homes that dominate north Lauderdale County's residential stock. Both of these jobs deliver immediate, visible value: carpets that look dramatically cleaner, and crawlspace inspections that give homeowners clear, actionable information about what's under their homes.</p>
+      <p>Radon testing has become increasingly common in Killen over the past decade as awareness has grown about Lauderdale County's geology. We provide these tests for real estate transactions and for homeowners who simply want to know. The test itself is simple; the peace of mind it provides — or the actionable information when levels are elevated — is valuable regardless.</p>
+    `,
+  }}
+  services={[
+    { icon: "🧹", name: "Carpet Cleaning", href: "/services/carpet-cleaning/", desc: "Professional extraction for Killen and north Lauderdale County homes." },
+    { icon: "🔬", name: "Radon Testing", href: "/services/radon-testing/", desc: "Limestone geology creates elevated risk — we test and document." },
+    { icon: "🔬", name: "Mold Inspection & Remediation", href: "/services/mold-inspection/", desc: "Common in older north Lauderdale County crawlspace homes." },
+    { icon: "💧", name: "Water Damage Restoration", href: "/services/water-flood-damage/", desc: "24/7 emergency response — Elk River flooding included." },
+    { icon: "🔲", name: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/", desc: "Steam restoration for kitchens and bathrooms." },
+    { icon: "🛋️", name: "Upholstery Cleaning", href: "/services/upholstery-cleaning/", desc: "Pet-safe, allergen-reducing fabric cleaning." },
+    { icon: "🌲", name: "Hardwood Floor Cleaning", href: "/services/hardwood-floor-cleaning/", desc: "Finish-safe care for Killen home floors." },
+    { icon: "🛡️", name: "Sanitation Services", href: "/services/sanitation-services/", desc: "EPA-registered disinfection for homes and businesses." },
+  ]}
+  competitorSection={{
+    heading: "Local Knowledge vs. National Dispatch — Why It Matters in Killen",
+    body: `
+      <p style="margin-bottom:20px;">National franchise cleaning companies reach Killen from Florence and Huntsville hubs — which means longer response times, crews with no familiarity with north Lauderdale County's geography and drainage patterns, and pricing structures built for high-volume suburban markets rather than the practical household budgets of rural North Alabama.</p>
+      <p style="margin-bottom:20px;">BamaClean has been serving Killen and north Lauderdale County since 1993. We know the Elk River flood patterns. We know which roads close during heavy rain. We know the geology that drives radon risk in this community. That's the difference between a company that happens to serve your zip code and a company that actually knows your community.</p>
+      <p>For Killen homeowners, the value of working with a local company is simple: faster response, honest pricing, and accountability that doesn't end when the franchise owner in another city reviews the job ticket. With BamaClean, the owner is 20–35 minutes away. We stand behind every job we do — because our reputation in this community is our business.</p>
+    `,
+  }}
+  faqs={[
+    { q: "Do you serve all of north Lauderdale County including Rogersville and Waterloo?", a: "Yes — Rogersville, Waterloo, Cloverdale, and rural Lauderdale County north of Florence are all within our regular service area. Call to confirm response time for your specific address." },
+    { q: "Is radon a real concern in Killen specifically?", a: "Yes. The limestone geology of north Lauderdale County creates elevated radon potential. We test homes in Killen and the surrounding area regularly and find levels above the EPA 4 pCi/L action threshold with meaningful frequency. Testing is simple and inexpensive — the information is valuable." },
+    { q: "Can you clean a mobile home or manufactured home in Killen?", a: "Yes. We provide carpet cleaning and upholstery cleaning in manufactured homes. For water damage and mold in manufactured homes, we assess on a case-by-case basis — construction type affects the remediation approach." },
+    { q: "What's the response time for a water emergency in Killen?", a: "We target 20–35 minutes from our Florence headquarters. We dispatch immediately for water damage regardless of time of day." },
+    { q: "Do you have a minimum job size for Killen calls?", a: "No minimum. We serve one-room jobs and whole-house cleanings with the same equipment and the same crew. The pricing is by square footage — there's no penalty for a smaller job." },
+  ]}
+  schema={schema}
+/>

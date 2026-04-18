@@ -1,0 +1,95 @@
+---
+import LocationLayout from '../../components/LocationLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BamaClean",
+  "description": "Professional carpet cleaning, water damage restoration, mold remediation, and cleaning services in Madison, AL.",
+  "telephone": "+12563240492",
+  "address": { "@type": "PostalAddress", "streetAddress": "205 S Seminary St", "addressLocality": "Florence", "addressRegion": "AL", "postalCode": "35630" },
+  "areaServed": { "@type": "City", "name": "Madison", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+  "url": "https://bamaclean.com/locations/madison/",
+});
+---
+
+<LocationLayout
+  title="Carpet Cleaning & Restoration Services in Madison, AL | BamaClean"
+  description="BamaClean serves Madison, AL with professional carpet cleaning, tile & grout, water damage restoration, mold inspection, and more. IICRC-certified. Free quote: (256) 324-0492."
+  canonical="/locations/madison/"
+  city="Madison"
+  responseTime="30–45 minutes"
+  hero={{
+    label: "Serving Madison, Alabama Since 1993",
+    heading: "Madison's Trusted Carpet Cleaning & Restoration Company",
+    subheading: "From the subdivisions off Hughes Road to the neighborhoods near Madison City Schools, BamaClean has served Madison families for over 30 years. IICRC-certified technicians. Upfront pricing. No national franchise — your neighbors.",
+  }}
+  intro={`
+    <p style="margin-bottom:20px;">Madison, Alabama has grown from a quiet bedroom community into one of the fastest-growing cities in the Southeast — and BamaClean has been here through every phase of that growth. We've cleaned carpets in the original subdivisions off Wall Triana Highway, restored homes after the flooding events that hit the Limestone Creek basin, and handled mold inspections in newer construction along County Line Road where the clay soil holds moisture long after a rain event passes.</p>
+    <p style="margin-bottom:20px;">The Madison market is distinct: a high concentration of dual-income professional households, many with young children and pets, who expect reliability, punctuality, and honest pricing. These are the families who researched their options before calling us, and who became long-term customers because we showed up when we said we would, charged what we quoted, and delivered results that held up. That's the BamaClean standard — and it's why we've been the call Madison homeowners make for over three decades.</p>
+    <p>Madison's growth has also brought a surge in new construction — slab foundations on clay-heavy soil, tight subdivision drainage, and the kind of rapid buildout that sometimes leaves moisture management issues behind. We see it regularly: newer homes developing mold in crawlspaces, carpet in high-traffic family rooms that needs professional extraction long before the warranty on the home expires, tile in mudrooms and laundry areas that accumulates North Alabama red clay in its grout channels within months of move-in. We know Madison's neighborhoods, its soil, its drainage patterns, and its homes. We're not sending a crew from three counties away who needs GPS to find your street.</p>
+  `}
+  zipCodes={['35756', '35757', '35758', '35759']}
+  neighborhoods={[
+    'Hunters Ridge', 'Madison Station', 'Crestwood', 'Redstone Village',
+    'Lake Forest', 'Bristol', 'Heritage neighborhoods off Hughes Road',
+    'Providence', 'Mill Creek', 'Traditions of Braselton (adjacent)',
+    'Moores Mill Road corridor', 'Wall Triana Highway subdivisions',
+    'County Line Road area', 'Bob Wade Lane neighborhoods',
+  ]}
+  surroundingCommunities={['Harvest', 'Toney', 'Hazel Green', 'Meridianville', 'Huntsville', 'Athens', 'Limestone County unincorporated']}
+  responseTime="30–45 minutes"
+  weatherSection={{
+    heading: "Why Madison's Climate Creates Ongoing Cleaning & Restoration Demand",
+    body: `
+      <p style="margin-bottom:20px;">Madison sits in the Tennessee Valley, where summer humidity regularly exceeds 85% and stays elevated from April through October. That sustained humidity doesn't just feel uncomfortable — it feeds mold growth in any space with limited airflow: crawlspaces, closets, behind appliances, inside HVAC systems. Homes with slab foundations on Madison's clay-heavy soil trap ground moisture against the foundation year-round. We inspect and remediate mold in Madison homes every month, not just after flood events — because the baseline humidity alone is sufficient to drive growth in improperly ventilated spaces.</p>
+      <p style="margin-bottom:20px;">Severe thunderstorm season runs March through November in North Alabama, with the most intense events concentrated in April and May. Madison's flat terrain and suburban drainage infrastructure — designed for typical rain events, not the 4–6 inch rainfall that accompanies a squall line — creates flooding risk in low-lying subdivisions and at the bases of cul-de-sacs. When those events hit, we respond. Water damage restoration requires immediate action, and our 30-to-45-minute response time to Madison means we're often on-site before the homeowner has finished their insurance company's hold music.</p>
+      <p style="margin-bottom:20px;">Winter ice storms — relatively rare but severe when they occur — have caused burst pipe events across Madison's newer subdivisions, where supply lines in exterior walls or uninsulated garage areas freeze during extended below-freezing stretches. February 2021 was a defining event: dozens of Madison homes sustained pipe burst damage. BamaClean responded to multiple calls during that week and performed water extraction and structural drying across the city.</p>
+      <p>Pollen season is its own category. Madison is surrounded by the hardwood forests and agricultural land that make North Alabama one of the highest pollen-load regions in the country during spring. Tree pollen from March through May, grass pollen from May through July, and ragweed from August through October keep allergen loads high in carpets and upholstered furniture throughout most of the year. Families with children and allergy sufferers in Madison call us for routine carpet and upholstery cleaning as a health maintenance practice — not just when the carpet looks dirty.</p>
+    `,
+  }}
+  employers={[
+    { name: "Redstone Arsenal (adjacent)", desc: "Thousands of Madison residents work at Redstone Arsenal and the federal agencies and defense contractors it hosts. BamaClean provides commercial carpet cleaning, tile care, and sanitation services to contractors operating facilities near Madison." },
+    { name: "ZEUS Industrial Products & Manufacturing Corridor", desc: "Madison's growing industrial presence along the 565 corridor brings manufacturing employees and their families into Madison subdivisions. We provide janitorial support and commercial cleaning to local industrial facilities." },
+    { name: "Madison City Schools", desc: "One of Alabama's highest-rated school systems, with nine campuses across Madison. BamaClean provides commercial carpet cleaning, tile & grout restoration, and sanitation services to school facilities." },
+    { name: "Madison Hospital / Huntsville Hospital System", desc: "Healthcare workers from the Huntsville Hospital system live throughout Madison. We serve their homes with health-forward, allergen-reducing cleaning services, and provide commercial sanitation to medical office facilities." },
+    { name: "Defense & Aerospace Contractors", desc: "Boeing, Northrop Grumman, Dynetics, and Leidos employees live and work throughout Madison. Many use BamaClean for home services and their Madison-area offices for commercial cleaning contracts." },
+    { name: "Retail & Commercial Growth (Madison Blvd / County Line Rd)", desc: "Madison's retail and commercial corridors have grown substantially. We serve restaurants, offices, and retail locations with regular commercial carpet cleaning, tile care, and emergency restoration." },
+  ]}
+  neighborhoodSection={{
+    heading: "Serving Madison's Neighborhoods — Block by Block",
+    body: `
+      <p style="margin-bottom:20px;">In <strong>Hunters Ridge and the subdivisions off Hughes Road</strong>, we work regularly with families who have pets, children in school, and wall-to-wall carpet in the bedrooms and living areas — the combination that drives carpet cleaning needs most. These are homes where the carpet was installed during construction 8–12 years ago, has been through multiple pets and multiple children, and responds dramatically to professional hot-water extraction. We know these subdivisions well enough to know where the clay soil drainage issues concentrate — and where mold calls are most likely to originate.</p>
+      <p style="margin-bottom:20px;"><strong>Providence and Traditions-area homes</strong> tend to be newer construction with more hard surface flooring mixed with carpet in bedrooms and bonus rooms. Hardwood floor cleaning and tile & grout services are as common as carpet calls in this part of Madison. These homes often have three-car garages with mudrooms that collect North Alabama red clay through the school year — tile and grout work that most homeowners don't know requires professional steam extraction to fully address.</p>
+      <p style="margin-bottom:20px;"><strong>Redstone Village and the neighborhoods adjacent to the Arsenal boundary</strong> include both owner-occupied homes and rental properties supporting the high rotation of military and government personnel assigned to Redstone. Rental properties cycle between occupants more frequently and need professional carpet cleaning and sanitation between tenants. We work with property managers and individual homeowners in this area regularly.</p>
+      <p>The <strong>Wall Triana Highway and Bob Wade Lane corridors</strong> include a mix of established neighborhoods and working farms that have transitioned to residential development over the past decade. These homes often sit on larger lots with older construction — and older construction in Madison means more likelihood of crawlspace moisture issues, older carpet that needs professional care to extend its life, and the kind of accumulated tile and grout discoloration that builds over 20+ years without professional intervention.</p>
+    `,
+  }}
+  services={[
+    { icon: "🧹", name: "Carpet Cleaning", href: "/services/carpet-cleaning/", desc: "Hot-water extraction in Madison homes, same-day availability most weeks." },
+    { icon: "💧", name: "Water Damage Restoration", href: "/services/water-flood-damage/", desc: "24/7 response to burst pipes, flooding, and storm damage across Madison zip codes." },
+    { icon: "🔬", name: "Mold Inspection & Remediation", href: "/services/mold-inspection/", desc: "IICRC-certified mold assessment and safe removal for Madison homes." },
+    { icon: "🔲", name: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/", desc: "Steam cleaning restores mudroom, kitchen, and bathroom tile in Madison homes." },
+    { icon: "🛋️", name: "Upholstery Cleaning", href: "/services/upholstery-cleaning/", desc: "Safe cleaning for every fabric type in Madison family rooms." },
+    { icon: "🔬", name: "Radon Testing", href: "/services/radon-testing/", desc: "EPA-protocol radon testing. Madison is in a moderate-to-high radon zone." },
+    { icon: "🌲", name: "Hardwood Floor Cleaning", href: "/services/hardwood-floor-cleaning/", desc: "Finish-safe deep cleaning for hardwood in Madison homes." },
+    { icon: "🔥", name: "Fire & Smoke Damage", href: "/services/fire-smoke-damage/", desc: "24/7 fire damage response with full insurance documentation." },
+  ]}
+  competitorSection={{
+    heading: "Why Madison Families Choose BamaClean Over National Chains",
+    body: `
+      <p style="margin-bottom:20px;">Madison has no shortage of cleaning options. Stanley Steemer runs ads on local radio. SERVPRO franchises cover the market from multiple directions. Groupon and Yelp surface a rotating cast of owner-operators with two trucks and a marketing budget. We've been watching this competitive landscape since 1993, and we'll tell you honestly what the differences are.</p>
+      <p style="margin-bottom:20px;"><strong>Stanley Steemer</strong> is a legitimate operation with real equipment — but it's a national franchise model with pricing designed for high volume and upsell revenue. The price on the phone is rarely the price on the invoice. Protection packages, deodorizers, and per-room add-ons are worked in systematically. Madison families who've used them come to us and tell us the same thing: the carpet looked clean but didn't feel clean, and the price was 40% higher than quoted. Our quote is our invoice.</p>
+      <p style="margin-bottom:20px;"><strong>SERVPRO</strong> is the dominant restoration brand nationally, and they do credible work in water and fire damage. But they're a franchise — the quality and response time vary by franchisee. In a genuine emergency, you're calling a call center that dispatches a local crew. BamaClean: you call us, we answer, and the crew that arrives is the crew that has worked Madison for decades.</p>
+      <p>Local operators on Groupon or Facebook: some are excellent, many are not IICRC-certified, and very few carry the equipment or insurance needed for mold remediation or water damage restoration. When something goes wrong — and sometimes it does — you want a company with 30+ years of local reputation on the line. That's what we bring.</p>
+    `,
+  }}
+  faqs={[
+    { q: "How quickly can BamaClean get to my home in Madison?", a: "For scheduled services, we typically offer same-week appointments and often same-day availability. For emergencies (water damage, flooding), we target arrival within 30–45 minutes across Madison's zip codes." },
+    { q: "Do you serve all of Madison's zip codes?", a: "Yes — 35756, 35757, 35758, and 35759, including Harvest and Toney. If you're in an adjacent unincorporated area, call us and we'll confirm coverage for your address." },
+    { q: "Is Madison in a high-radon zone?", a: "Madison County has documented elevated radon levels in a meaningful percentage of tested homes. EPA Zone designation for this area indicates moderate-to-elevated predicted radon potential. If your home has never been tested, we recommend a short-term test." },
+    { q: "Can you handle mold that developed after construction in a newer home?", a: "Yes — and newer homes in Madison aren't immune. Rapid construction on clay-heavy soil with tight moisture management tolerances means we see mold in homes less than five years old regularly. We inspect, identify the moisture source, and remediate." },
+    { q: "Do you work with commercial properties in Madison?", a: "Yes. We serve office buildings, school facilities, restaurants, and light industrial spaces throughout Madison with commercial carpet cleaning, tile & grout, sanitation, and emergency restoration." },
+  ]}
+  schema={schema}
+/>

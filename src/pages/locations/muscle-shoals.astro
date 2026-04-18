@@ -1,0 +1,91 @@
+---
+import LocationLayout from '../../components/LocationLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BamaClean",
+  "telephone": "+12563240492",
+  "areaServed": { "@type": "City", "name": "Muscle Shoals", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+  "url": "https://bamaclean.com/locations/muscle-shoals/",
+});
+---
+
+<LocationLayout
+  title="Carpet Cleaning & Restoration Services in Muscle Shoals, AL | BamaClean"
+  description="BamaClean serves Muscle Shoals, AL with carpet cleaning, water damage restoration, mold remediation, tile & grout, and radon testing. Local experts. (256) 324-0492."
+  canonical="/locations/muscle-shoals/"
+  city="Muscle Shoals"
+  responseTime="15–25 minutes"
+  hero={{
+    label: "Serving Muscle Shoals, Alabama Since 1993",
+    heading: "Muscle Shoals' Professional Cleaning & Restoration Company",
+    subheading: "From the neighborhoods off Jackson Highway to the residential areas near Wilson Dam — BamaClean has been Muscle Shoals' trusted cleaning and restoration partner since 1993. IICRC-certified. Upfront pricing. 15–25 minute response.",
+  }}
+  intro={`
+    <p style="margin-bottom:20px;">Muscle Shoals carries an outsized cultural reputation — the Muscle Shoals Sound Studio, FAME Recording Studios, and the musical legacy that gave this stretch of the Tennessee River a place in rock and soul history. But beyond the cultural identity, Muscle Shoals is a practical, working community of families, manufacturing employees, and small business owners who need reliable home services from a company they can trust. BamaClean has been that company in Muscle Shoals since 1993.</p>
+    <p style="margin-bottom:20px;">Muscle Shoals sits at the southern end of Wilson Reservoir, where the Tennessee River creates the distinctive shoals geography that gives the city its name. The TVA's Wilson Dam is one of the most significant engineering projects in regional history, and the reservoir it created has shaped Muscle Shoals' residential development — waterfront neighborhoods, areas adjacent to the dam's operational corridor, and the flat terrain that extends south toward the Colbert County interior. We know this geography and the cleaning and restoration challenges it creates.</p>
+    <p>Muscle Shoals homes tend toward the practical: well-maintained family residences, a mix of 1960s–1990s construction, and a homeowner base that has high expectations for service quality and zero tolerance for pricing surprises. We operate on a simple model in Muscle Shoals: quote accurately, arrive on time, deliver the result, leave no mess. Three decades of repeat customers in this city is the proof.</p>
+  `}
+  zipCodes={['35661', '35662']}
+  neighborhoods={[
+    'Jackson Highway corridor neighborhoods', 'Wilson Dam Road area',
+    'Woodward Avenue district', 'McFarland Park adjacent neighborhoods',
+    'Alabama Music Hall of Fame area', 'Avalon Avenue corridor',
+    'Executive Hills', 'Lakeview Estates', 'Northbrook',
+    'Second Street area', 'Colbert Heights adjacent',
+  ]}
+  surroundingCommunities={['Sheffield', 'Tuscumbia', 'Florence', 'Killen', 'Colbert County unincorporated', 'Cherokee', 'Littleville']}
+  responseTime="15–25 minutes"
+  weatherSection={{
+    heading: "Muscle Shoals Weather Patterns That Drive Cleaning & Restoration Needs",
+    body: `
+      <p style="margin-bottom:20px;">Muscle Shoals' position along Wilson Reservoir creates a humidity microclimate that exceeds even the broader North Alabama average. The open water of the reservoir moderates winter temperatures but contributes to elevated moisture in the surrounding air year-round — and that moisture finds its way into homes through crawlspaces, window seals, and the gaps in construction that develop over decades. Mold in crawlspace and basement-adjacent spaces is endemic in Muscle Shoals homes, particularly in the 1960s–1980s construction that dominates the residential stock.</p>
+      <p style="margin-bottom:20px;">The TVA's dam and lock system on the Tennessee River in the Shoals is designed to manage flood risk, but heavy rain events — particularly those that saturate the entire watershed simultaneously — can push water levels well beyond normal operational ranges. Muscle Shoals has experienced significant flood events, and properties near the reservoir and its drainage tributaries are not immune. We respond to water damage calls in Muscle Shoals regularly during and after major rain events.</p>
+      <p style="margin-bottom:20px;">Spring and fall pollen in Muscle Shoals is severe by any regional standard. The river bottomlands immediately north of the city, the agricultural fields to the south and west, and the hardwood forests of Colbert and Lauderdale Counties create one of the highest ambient pollen environments in North Alabama. Carpets and upholstered furniture in Muscle Shoals homes function as allergen traps from March through November, and families with allergy sufferers notice measurable air quality improvement following professional deep cleaning.</p>
+    `,
+  }}
+  employers={[
+    { name: "Reynolds Metals / Novelis (Sheffield/Muscle Shoals corridor)", desc: "Aluminum production has defined the Shoals industrial economy for generations. Reynolds Metals and its successor Novelis employ workers throughout the Muscle Shoals area — many of whom are long-term BamaClean residential customers." },
+    { name: "Harsco / Industrial Corridor (Muscle Shoals Industrial Park)", desc: "Muscle Shoals' industrial park hosts multiple manufacturing and processing operations. BamaClean provides commercial cleaning and emergency restoration to industrial park facilities." },
+    { name: "Colbert County Schools / Muscle Shoals City Schools", desc: "School facilities throughout Muscle Shoals and Colbert County. We provide commercial carpet cleaning, tile & grout services, and sanitation to educational facilities." },
+    { name: "Helen Keller Hospital (adjacent, Sheffield)", desc: "The region's primary acute care hospital serves Muscle Shoals residents. Healthcare workers live throughout Muscle Shoals and use BamaClean for home services." },
+    { name: "TVA (Wilson Dam Operations)", desc: "TVA's Wilson Dam facility employs operational and engineering staff in the Muscle Shoals area. We provide residential services to TVA employees and commercial services to TVA-adjacent facilities." },
+    { name: "Small Business & Retail Sector", desc: "Muscle Shoals' commercial sector along Jackson Highway and Avalon Avenue includes restaurants, medical offices, and retail operations that use BamaClean for commercial carpet cleaning, tile care, and sanitation." },
+  ]}
+  neighborhoodSection={{
+    heading: "Muscle Shoals Neighborhoods — What BamaClean Knows",
+    body: `
+      <p style="margin-bottom:20px;">The <strong>Jackson Highway corridor</strong> is Muscle Shoals' primary residential artery — a mix of mid-century homes and more recent subdivision development that stretches south from the Wilson Dam area. These are family homes, many with pets and children, where carpet cleaning is a regular maintenance need and tile and grout in kitchens and bathrooms accumulates the kind of red clay soil that North Alabama's outdoor environment deposits year-round. We're in this corridor constantly.</p>
+      <p style="margin-bottom:20px;">The <strong>Wilson Dam Road area</strong> and the neighborhoods adjacent to the reservoir have some of the highest humidity exposure in the region — proximity to open water means moisture infiltration is not a seasonal event but a year-round condition. Crawlspace mold in these homes is among the most persistent we encounter in the Shoals. Homeowners in this area who haven't had a mold inspection in the past five years are taking a significant risk with both their property value and their family's air quality.</p>
+      <p style="margin-bottom:20px;"><strong>Executive Hills and Lakeview Estates</strong> represent Muscle Shoals' established professional neighborhoods — larger lots, higher-end finishes, and homeowners who have been using the same service providers for years. These clients find BamaClean through word of mouth from neighbors who made the switch from a national franchise and never went back. The combination of our IICRC credentials, upfront pricing, and local accountability tends to convert trial clients into multi-decade customers.</p>
+      <p>The <strong>Colbert Heights adjacent area</strong> and the neighborhoods near the Muscle Shoals city limits interface with Sheffield and Tuscumbia in ways that make it practical to be a Shoals-wide provider. We don't draw hard lines between Muscle Shoals, Sheffield, and Tuscumbia — the communities flow into each other, and our service does too.</p>
+    `,
+  }}
+  services={[
+    { icon: "🧹", name: "Carpet Cleaning", href: "/services/carpet-cleaning/", desc: "Deep extraction for Muscle Shoals homes and businesses." },
+    { icon: "💧", name: "Water Damage Restoration", href: "/services/water-flood-damage/", desc: "24/7 emergency response — reservoir and flood-adjacent areas." },
+    { icon: "🔬", name: "Mold Inspection & Remediation", href: "/services/mold-inspection/", desc: "Endemic in Muscle Shoals crawlspaces — we find it and fix it." },
+    { icon: "🔲", name: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/", desc: "High-pressure steam restoration for all tile types." },
+    { icon: "🛋️", name: "Upholstery Cleaning", href: "/services/upholstery-cleaning/", desc: "Safe for all fabrics — allergen reduction for Shoals families." },
+    { icon: "🔬", name: "Radon Testing", href: "/services/radon-testing/", desc: "EPA-protocol testing with written reports." },
+    { icon: "🌲", name: "Hardwood Floor Cleaning", href: "/services/hardwood-floor-cleaning/", desc: "Low-moisture, finish-safe care for Muscle Shoals homes." },
+    { icon: "🛡️", name: "Sanitation Services", href: "/services/sanitation-services/", desc: "Commercial-grade disinfection for homes and businesses." },
+  ]}
+  competitorSection={{
+    heading: "Why Muscle Shoals Chooses Local Over National",
+    body: `
+      <p style="margin-bottom:20px;">The Shoals market is dominated by national franchise operations that serve the region from Huntsville and Florence-area hubs. These franchises bring brand recognition but lack the neighborhood-specific knowledge and response speed that a Shoals-rooted company provides. BamaClean's Florence headquarters puts us 15–25 minutes from Muscle Shoals — faster than any Huntsville-based operation can claim.</p>
+      <p style="margin-bottom:20px;">The pricing model is the other critical difference. National carpet cleaning franchises are designed around upsell revenue: the base price for a room gets you there, the actual invoice includes protection, deodorizer, pre-treatment, and per-stain charges that add 30–50% to the initial quote. Our Muscle Shoals customers know what they're paying before we start. Period.</p>
+      <p>We've built our Muscle Shoals customer base on referrals — neighbors telling neighbors about a company that showed up when it said it would, charged what it quoted, and delivered results that outlasted the franchise option's work. That model is harder to scale than a franchise system. It's also impossible to fake over three decades.</p>
+    `,
+  }}
+  faqs={[
+    { q: "Does BamaClean serve both Muscle Shoals and the surrounding Shoals communities?", a: "Yes — Muscle Shoals, Sheffield, Tuscumbia, Colbert County unincorporated, and nearby communities in Colbert and Lauderdale Counties are all within our regular service area." },
+    { q: "Is mold common in Muscle Shoals homes near the reservoir?", a: "Yes — homes within a mile of Wilson Reservoir have measurably higher crawlspace humidity than homes further from the water. Combined with North Alabama's baseline humidity, mold in crawlspaces and against foundation walls is extremely common. A professional inspection is the right first step." },
+    { q: "Can you clean a home in Muscle Shoals the same week I call?", a: "For standard cleaning services, we typically offer same-week scheduling and often same-day or next-day availability. For emergencies, we respond immediately." },
+    { q: "Do you provide commercial cleaning for businesses on Jackson Highway?", a: "Yes. We provide commercial carpet cleaning, tile & grout, and sanitation services to restaurants, retail locations, medical offices, and other commercial properties throughout Muscle Shoals." },
+    { q: "What's the difference between a mold inspection and mold testing?", a: "A mold inspection is a thorough visual assessment with moisture mapping — identifying active growth, moisture sources, and risk areas. Mold testing (air or surface sampling with lab analysis) adds quantitative data. We'll tell you when testing adds value and when the inspection alone gives you what you need." },
+  ]}
+  schema={schema}
+/>

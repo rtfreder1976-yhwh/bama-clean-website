@@ -1,0 +1,255 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  city: string;
+  state?: string;
+  hero: {
+    label: string;
+    heading: string;
+    subheading: string;
+  };
+  intro: string;          // 2–3 paragraph city-specific opening copy
+  zipCodes: string[];
+  neighborhoods: string[];
+  surroundingCommunities: string[];
+  responseTime: string;   // e.g. "30–45 minutes"
+  weatherSection: {
+    heading: string;
+    body: string;
+  };
+  employers: { name: string; desc: string }[];
+  neighborhoodSection: {
+    heading: string;
+    body: string;
+  };
+  services: { icon: string; name: string; href: string; desc: string }[];
+  competitorSection: {
+    heading: string;
+    body: string;
+  };
+  faqs: { q: string; a: string }[];
+  schema?: string;
+}
+
+import Layout from '../layouts/Layout.astro';
+
+const {
+  title, description, canonical, city, state = 'AL',
+  hero, intro, zipCodes, neighborhoods, surroundingCommunities,
+  responseTime, weatherSection, employers, neighborhoodSection,
+  services, competitorSection, faqs, schema,
+} = Astro.props;
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  {schema && <script type="application/ld+json" set:html={schema} />}
+
+  <!-- Hero -->
+  <section style="background:linear-gradient(135deg,#0F1B2D 0%,#1A2A42 100%);color:#fff;padding:80px 24px;">
+    <div style="max-width:900px;margin:0 auto;text-align:center;">
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#22C55E;margin-bottom:12px;">{hero.label}</p>
+      <h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(2rem,4.5vw,3.25rem);font-weight:800;line-height:1.1;margin-bottom:20px;">{hero.heading}</h1>
+      <p style="font-size:1.0625rem;color:rgba(255,255,255,.85);line-height:1.7;max-width:700px;margin:0 auto 36px;">{hero.subheading}</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:28px;">
+        <a href="/contact" style="background:#1B7A3D;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:15px 34px;border-radius:100px;font-size:1rem;">Get a Free Quote</a>
+        <a href="tel:+12563240492" style="background:transparent;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:15px 34px;border-radius:100px;border:2px solid rgba(255,255,255,.5);font-size:1rem;">📞 (256) 324-0492</a>
+      </div>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:8px 20px;">
+        <span style="color:#22C55E;font-size:1rem;">⚡</span>
+        <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.875rem;font-weight:600;color:rgba(255,255,255,.9);">Typical response time for {city}: <strong style="color:#22C55E;">{responseTime}</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro / City Story -->
+  <section style="padding:72px 24px;background:#fff;">
+    <div style="max-width:860px;margin:0 auto;">
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:12px;">Serving {city} Since 1993</p>
+      <div style="font-size:1.0625rem;color:#334155;line-height:1.8;" set:html={intro} />
+    </div>
+  </section>
+
+  <!-- Service Area Details -->
+  <section style="padding:72px 24px;background:#F1F5F9;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:10px;">Our Coverage Area</p>
+        <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;">Where We Serve in and Around {city}</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+
+        <!-- Zip Codes -->
+        <div style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+          <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;color:#0F1B2D;margin-bottom:16px;">📮 Zip Codes We Serve</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            {zipCodes.map(z => (
+              <span style="background:#E8F5EC;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.8125rem;padding:6px 14px;border-radius:100px;">{z}</span>
+            ))}
+          </div>
+        </div>
+
+        <!-- Neighborhoods -->
+        <div style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+          <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;color:#0F1B2D;margin-bottom:16px;">🏘️ Neighborhoods & Subdivisions</h3>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
+            {neighborhoods.map(n => (
+              <li style="display:flex;align-items:center;gap:10px;font-size:.9375rem;color:#334155;">
+                <span style="color:#1B7A3D;font-weight:700;font-size:.75rem;">✓</span>{n}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Surrounding Communities -->
+        <div style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+          <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;color:#0F1B2D;margin-bottom:16px;">📍 Surrounding Communities</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            {surroundingCommunities.map(c => (
+              <span style="background:#F1F5F9;color:#475569;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.8125rem;padding:6px 14px;border-radius:100px;border:1px solid #E2E8F0;">{c}, AL</span>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services We Offer Here -->
+  <section style="padding:72px 24px;background:#fff;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:10px;">What We Do in {city}</p>
+        <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;">Services Available in {city}, {state}</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;">
+        {services.map(s => (
+          <a href={s.href} style="display:block;background:#F8FAFB;border:1px solid #E2E8F0;border-radius:14px;padding:28px;text-decoration:none;transition:border-color .2s;">
+            <div style="font-size:2rem;margin-bottom:12px;">{s.icon}</div>
+            <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;color:#0F1B2D;margin-bottom:8px;">{s.name}</h3>
+            <p style="font-size:.9rem;color:#475569;line-height:1.6;margin-bottom:12px;">{s.desc}</p>
+            <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.875rem;font-weight:700;color:#1B7A3D;">Learn More →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Weather Challenges -->
+  <section style="padding:72px 24px;background:#0F1B2D;color:#fff;">
+    <div style="max-width:860px;margin:0 auto;">
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#22C55E;margin-bottom:12px;">Why {city} Homes Need This</p>
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;margin-bottom:28px;">{weatherSection.heading}</h2>
+      <div style="font-size:1.0625rem;color:rgba(255,255,255,.85);line-height:1.8;" set:html={weatherSection.body} />
+    </div>
+  </section>
+
+  <!-- Neighborhood-Specific Content -->
+  <section style="padding:72px 24px;background:#F8FAFB;">
+    <div style="max-width:860px;margin:0 auto;">
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:12px;">Who We Serve</p>
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;margin-bottom:28px;">{neighborhoodSection.heading}</h2>
+      <div style="font-size:1.0625rem;color:#334155;line-height:1.8;" set:html={neighborhoodSection.body} />
+    </div>
+  </section>
+
+  <!-- Major Employers We Serve -->
+  <section style="padding:72px 24px;background:#fff;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:10px;">Commercial Clients</p>
+        <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;">Major Employers & Industries We Serve in {city}</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;">
+        {employers.map(e => (
+          <div style="background:#F8FAFB;border:1px solid #E2E8F0;border-radius:14px;padding:24px;">
+            <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.9375rem;font-weight:700;color:#0F1B2D;margin-bottom:8px;">{e.name}</h3>
+            <p style="font-size:.9rem;color:#475569;line-height:1.6;">{e.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Competitor Comparison -->
+  <section style="padding:72px 24px;background:#F1F5F9;">
+    <div style="max-width:860px;margin:0 auto;">
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:12px;">Why BamaClean vs. The Alternatives</p>
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;margin-bottom:28px;">{competitorSection.heading}</h2>
+      <div style="font-size:1.0625rem;color:#334155;line-height:1.8;" set:html={competitorSection.body} />
+    </div>
+  </section>
+
+  <!-- Competitor Table -->
+  <section style="padding:0 24px 72px;background:#F1F5F9;">
+    <div style="max-width:900px;margin:0 auto;">
+      <div style="overflow-x:auto;border-radius:14px;box-shadow:0 2px 16px rgba(0,0,0,.08);">
+        <table style="width:100%;border-collapse:collapse;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;">
+          <thead>
+            <tr style="background:#0F1B2D;color:#fff;">
+              <th style="padding:16px 20px;text-align:left;font-weight:700;">Feature</th>
+              <th style="padding:16px 20px;text-align:center;font-weight:700;color:#22C55E;">BamaClean</th>
+              <th style="padding:16px 20px;text-align:center;font-weight:700;">Stanley Steemer</th>
+              <th style="padding:16px 20px;text-align:center;font-weight:700;">SERVPRO</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Local, owner-operated', '✓', '✗ National franchise', '✗ National franchise'],
+              ['Price confirmed before work starts', '✓', '✗ On-site upsells common', '✓'],
+              ['IICRC-certified technicians', '✓', '✓', '✓'],
+              ['30+ years serving North Alabama', '✓', '✗', '✗'],
+              ['Radon testing available', '✓', '✗', '✗'],
+              ['Works directly with your insurer', '✓', '✗', '✓'],
+              ['24/7 emergency restoration', '✓', '✗', '✓'],
+              ['Locally known neighborhoods & zip codes', '✓', '✗', '✗'],
+            ].map((row, i) => (
+              <tr style={`background:${i % 2 === 0 ? '#F8FAFB' : '#fff'}`}>
+                <td style="padding:14px 20px;color:#334155;font-weight:500;">{row[0]}</td>
+                <td style="padding:14px 20px;text-align:center;color:#1B7A3D;font-weight:700;">{row[1]}</td>
+                <td style="padding:14px 20px;text-align:center;color:#94A3B8;">{row[2]}</td>
+                <td style="padding:14px 20px;text-align:center;color:#94A3B8;">{row[3]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section style="padding:72px 24px;background:#fff;">
+    <div style="max-width:800px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:10px;">Questions From {city} Customers</p>
+        <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;">Frequently Asked Questions</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        {faqs.map(f => (
+          <details style="background:#F8FAFB;border:1px solid #E2E8F0;border-radius:12px;padding:0;overflow:hidden;">
+            <summary style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.9375rem;color:#0F1B2D;padding:20px 24px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              {f.q}
+              <span style="color:#1B7A3D;font-size:1.25rem;flex-shrink:0;margin-left:12px;">+</span>
+            </summary>
+            <div style="padding:0 24px 20px;font-size:.9375rem;color:#475569;line-height:1.7;border-top:1px solid #E2E8F0;">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section style="background:linear-gradient(135deg,#1B7A3D 0%,#145C2E 100%);color:#fff;padding:72px 24px;text-align:center;">
+    <div style="max-width:680px;margin:0 auto;">
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;margin-bottom:14px;">Ready to Book Your {city} Appointment?</h2>
+      <p style="font-size:1.0625rem;color:rgba(255,255,255,.88);margin-bottom:36px;">Free quote. Upfront pricing. Typical arrival in {responseTime}. No national franchise — just your North Alabama neighbors since 1993.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="/contact" style="background:#fff;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;padding:15px 34px;border-radius:100px;font-size:1rem;">Get a Free Quote</a>
+        <a href="tel:+12563240492" style="background:transparent;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:15px 34px;border-radius:100px;border:2px solid rgba(255,255,255,.5);font-size:1rem;">Call (256) 324-0492</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,89 @@
+---
+import LocationLayout from '../../components/LocationLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BamaClean",
+  "telephone": "+12563240492",
+  "areaServed": { "@type": "City", "name": "Sheffield", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+  "url": "https://bamaclean.com/locations/sheffield/",
+});
+---
+
+<LocationLayout
+  title="Carpet Cleaning & Restoration Services in Sheffield, AL | BamaClean"
+  description="BamaClean serves Sheffield, AL with carpet cleaning, water damage restoration, mold remediation, tile & grout, and more. IICRC-certified. Fast response. (256) 324-0492."
+  canonical="/locations/sheffield/"
+  city="Sheffield"
+  responseTime="15–25 minutes"
+  hero={{
+    label: "Serving Sheffield, Alabama Since 1993",
+    heading: "Sheffield's Trusted Cleaning & Restoration Partner",
+    subheading: "Sheffield is home — part of the Quad Cities community BamaClean has served since 1993. From the neighborhoods near Helen Keller Hospital to the residential areas off Montgomery Avenue — we know Sheffield, and we're 15 minutes away.",
+  }}
+  intro={`
+    <p style="margin-bottom:20px;">Sheffield is one of the Quad Cities — the four Tennessee River communities of Florence, Sheffield, Tuscumbia, and Muscle Shoals that form the Shoals' urban core. BamaClean is headquartered in Florence, which puts us 15–25 minutes from Sheffield at virtually any time of day. We've cleaned carpets, restored flood-damaged homes, and inspected crawlspaces in Sheffield neighborhoods since our founding — and we know the city's residential character as well as we know any market we serve.</p>
+    <p style="margin-bottom:20px;">Sheffield's housing stock has a distinctive character: a high proportion of mid-century brick homes on established lots, neighborhoods that were developed during the postwar manufacturing boom when Reynolds Metals and other Shoals industrial employers were at their peak workforce, and a community culture that values durability, practicality, and honest dealing. Those are values we share. Sheffield customers who've been using BamaClean for 20 years aren't using us because we have the best marketing — they're using us because we deliver what we quote and we show up when we say we will.</p>
+    <p>Sheffield also includes a growing number of younger families who've discovered the city's proximity to Huntsville employment corridors while offering the affordability and community character that the Madison-Huntsville suburbs can't match. These newer Sheffield residents are discovering what the long-term residents already know: BamaClean is the local cleaning and restoration company for the Shoals, and we're close enough to respond to any need within minutes.</p>
+  `}
+  zipCodes={['35660']}
+  neighborhoods={[
+    'Downtown Sheffield', 'Montgomery Avenue corridor', 'Helen Keller Hospital area',
+    'Woodmont', 'Sheffield Heights', 'Avalon neighborhood',
+    'Cox Avenue corridor', 'Jackson Avenue area', 'Colbert Heights',
+    'Redmont', 'Sheffield High School area neighborhoods',
+    'Veterans Memorial corridor', 'Alabama Music Hall of Fame adjacent',
+  ]}
+  surroundingCommunities={['Florence', 'Tuscumbia', 'Muscle Shoals', 'Colbert County unincorporated', 'Cherokee', 'Leighton']}
+  responseTime="15–25 minutes"
+  weatherSection={{
+    heading: "Sheffield's Tennessee River Climate Drives Year-Round Demand",
+    body: `
+      <p style="margin-bottom:20px;">Sheffield sits directly on the Tennessee River's south bank, between the Wilson Dam reservoir and the Muscle Shoals area. This riverfront position creates the same high-humidity microclimate that affects all of the Quad Cities — summer humidity regularly above 85%, year-round moisture in the air that finds its way into crawlspaces, under sinks, and behind the walls of Sheffield's aging housing stock. Mold in Sheffield's mid-century homes is not rare — it's endemic in homes that haven't had professional moisture assessment and crawlspace inspection in the past five years.</p>
+      <p style="margin-bottom:20px;">Sheffield's low-lying terrain along the river creates flooding risk that extends beyond the riverfront itself. The storm drainage infrastructure in Sheffield's older neighborhoods was designed for routine rainfall — not the 3–5 inch events that the Tennessee Valley receives multiple times per year. When those events hit, water backs up in basements, at the bases of foundations, and through crawlspace vents in ways that cause real structural damage. We've responded to flood events in Sheffield homes from multiple rain events over three decades.</p>
+      <p>The Shoals' industrial environment — aluminum smelting, chemical processing, and manufacturing operations that have operated in this river corridor for generations — has historically contributed to particulate matter in the Sheffield air. Combined with North Alabama's high natural pollen loads, Sheffield homes accumulate allergen concentrations in carpet and upholstery that make professional cleaning as much a health issue as a cosmetic one.</p>
+    `,
+  }}
+  employers={[
+    { name: "Helen Keller Hospital", desc: "The Shoals' primary acute care hospital, located in Sheffield. Healthcare workers throughout Sheffield and the Quad Cities use BamaClean for residential services. We provide commercial sanitation to medical office facilities." },
+    { name: "Novelis / Reynolds Metals Legacy (Shoals corridor)", desc: "The aluminum industry has defined Sheffield's industrial character for generations. Current and retired Novelis workers throughout Sheffield are long-term BamaClean residential customers." },
+    { name: "Colbert County Schools / Sheffield City Schools", desc: "Multiple school campuses throughout Sheffield and Colbert County. Commercial carpet cleaning, tile & grout, and sanitation services on scheduled agreements." },
+    { name: "Retail & Commercial Sector (Hatch Blvd / Montgomery Ave)", desc: "Sheffield's commercial corridor hosts businesses that use BamaClean for commercial carpet cleaning, tile care, and sanitation services." },
+    { name: "Shoals Manufacturing & Industrial Corridor", desc: "Sheffield's industrial base on the Tennessee River employs workers throughout the city. We serve manufacturing employees' homes and provide commercial cleaning to industrial facilities." },
+  ]}
+  neighborhoodSection={{
+    heading: "Sheffield Neighborhoods — Close Enough to Know by Name",
+    body: `
+      <p style="margin-bottom:20px;">The <strong>Montgomery Avenue corridor and downtown Sheffield</strong> neighborhoods contain Sheffield's core residential character — mid-century brick homes on established lots, many with original hardwood floors under carpet that was installed in the 1980s, and crawlspaces that have been managing North Alabama humidity for 50–60 years without modern vapor barriers. These are the homes where professional carpet cleaning reveals original hardwood in excellent condition underneath, and where a crawlspace inspection almost always turns up moisture that the homeowner wasn't aware of. We know what to expect before we arrive.</p>
+      <p style="margin-bottom:20px;">The <strong>Sheffield Heights and Woodmont neighborhoods</strong> are Sheffield's established family residential areas — post-WWII brick construction, large lots, and the kind of neighborhood character that attracts both long-term residents and younger families discovering Sheffield's quality-of-life value. We clean carpets in these neighborhoods regularly, and our clients in Sheffield Heights tend toward long-term relationships — they find us, we do the job right, and they call us again every 12–18 months without shopping alternatives.</p>
+      <p>The <strong>Colbert Heights area</strong>, at the interface between Sheffield and Muscle Shoals, is characterized by mixed residential development — some older homes with crawlspaces, some mid-century slab construction, and the full range of cleaning and restoration needs that come with that variety. We serve Colbert Heights as part of our Shoals coverage without distinguishing between Sheffield and Muscle Shoals addresses — these communities flow together, and so does our service.</p>
+    `,
+  }}
+  services={[
+    { icon: "🧹", name: "Carpet Cleaning", href: "/services/carpet-cleaning/", desc: "15–25 min from our Florence HQ — Sheffield's fastest option." },
+    { icon: "💧", name: "Water Damage Restoration", href: "/services/water-flood-damage/", desc: "24/7 emergency response to all Sheffield addresses." },
+    { icon: "🔬", name: "Mold Inspection & Remediation", href: "/services/mold-inspection/", desc: "IICRC-certified — critical for Sheffield's riverfront humidity." },
+    { icon: "🔲", name: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/", desc: "Steam restoration for kitchens, baths, and all tile types." },
+    { icon: "🛋️", name: "Upholstery Cleaning", href: "/services/upholstery-cleaning/", desc: "Fabric-safe cleaning for Sheffield homes." },
+    { icon: "🌲", name: "Hardwood Floor Cleaning", href: "/services/hardwood-floor-cleaning/", desc: "Finish-specific care for Sheffield's mid-century homes." },
+    { icon: "🔥", name: "Fire & Smoke Damage", href: "/services/fire-smoke-damage/", desc: "24/7 response with full insurance documentation." },
+    { icon: "🛡️", name: "Sanitation Services", href: "/services/sanitation-services/", desc: "EPA-registered disinfection for homes and commercial spaces." },
+  ]}
+  competitorSection={{
+    heading: "Sheffield Knows the Difference Between Local and Franchise",
+    body: `
+      <p style="margin-bottom:20px;">Sheffield residents have been comparing local and national cleaning options long enough to know the difference. National franchise brands reach Sheffield from both Florence and Huntsville — the response times are longer, the local knowledge is absent, and the pricing includes the franchise overhead that local companies don't carry. BamaClean's Florence headquarters means we're 15–25 minutes from Sheffield — faster than any Huntsville-dispatched crew can claim.</p>
+      <p style="margin-bottom:20px;">The pricing difference matters to Sheffield homeowners. A national franchise quote for a 3-bedroom home arrives on the phone at one number and appears on the invoice at another — protection packages, deodorizers, and per-stain charges are built into the revenue model. BamaClean quotes by square footage before we start and that's the number on your invoice.</p>
+      <p>Most of our Sheffield customers came to us from a national franchise. Almost none of them have gone back.</p>
+    `,
+  }}
+  faqs={[
+    { q: "How fast can BamaClean reach Sheffield?", a: "15–25 minutes from our Florence headquarters to most Sheffield addresses. We're the closest professional cleaning and restoration company to Sheffield in the Shoals." },
+    { q: "Do you serve the Helen Keller Hospital area and adjacent neighborhoods?", a: "Yes — we serve all Sheffield zip code 35660 addresses, including neighborhoods adjacent to Helen Keller Hospital and throughout the city." },
+    { q: "Is mold common in Sheffield homes?", a: "Yes — particularly in homes with crawlspace foundations near the river. Sheffield's riverfront humidity exposure is among the highest in the Shoals. If your home is more than 20 years old and hasn't had a crawlspace inspection, it's worth scheduling one." },
+    { q: "Can you clean hardwood floors in older Sheffield homes?", a: "Yes — and we identify finish type before any chemistry is applied. Sheffield's mid-century homes often have original oak or pine floors with finishes that require specific treatment. We handle these correctly." },
+    { q: "Do you cover Colbert County communities outside Sheffield?", a: "Yes — Cherokee, Leighton, and unincorporated Colbert County are within our service area. Call to confirm coverage for specific addresses." },
+  ]}
+  schema={schema}
+/>

@@ -1,0 +1,96 @@
+---
+import LocationLayout from '../../components/LocationLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BamaClean",
+  "telephone": "+12563240492",
+  "areaServed": { "@type": "City", "name": "Huntsville", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+  "url": "https://bamaclean.com/locations/huntsville/",
+});
+---
+
+<LocationLayout
+  title="Carpet Cleaning & Restoration Services in Huntsville, AL | BamaClean"
+  description="BamaClean serves Huntsville, AL — from Twickenham to Hampton Cove. IICRC-certified carpet cleaning, water damage, mold remediation. Free quote: (256) 324-0492."
+  canonical="/locations/huntsville/"
+  city="Huntsville"
+  responseTime="25–40 minutes"
+  hero={{
+    label: "Serving Huntsville, Alabama Since 1993",
+    heading: "Huntsville's IICRC-Certified Cleaning & Restoration Company",
+    subheading: "From historic Twickenham to Hampton Cove, Jones Valley to South Huntsville — BamaClean has served Huntsville's neighborhoods for over 30 years. Rocket City's engineering culture expects precision. That's exactly what we deliver.",
+  }}
+  intro={`
+    <p style="margin-bottom:20px;">Huntsville is not a typical mid-sized Southern city. It is home to NASA's Marshall Space Flight Center, Redstone Arsenal — one of the largest military installations in the country — and a defense and aerospace contractor ecosystem that employs tens of thousands of engineers, scientists, and support professionals. The workforce that built Rocket City is exacting. They read the data, research the options, and expect a service provider to deliver what they promise. BamaClean has been earning that trust since 1993.</p>
+    <p style="margin-bottom:20px;">We know Huntsville's neighborhoods the way only a local company can: the crawlspace moisture patterns in Jones Valley's older ranches, the hardwood floors in Twickenham's historic homes that require finish-specific care, the carpet in the Hampton Cove townhomes and mid-century houses in Blossomwood that needs professional extraction rather than rental-machine attention. We've restored homes in Five Points after pipe bursts, handled mold remediation in South Huntsville after the 2019 flood events, and cleaned carpets in the condominiums off Airport Road after tenant turnover for property managers who needed same-week turnaround.</p>
+    <p>Huntsville's explosive growth — consistently ranking as one of America's fastest-growing metro areas — has also brought an influx of newer construction in the 72117 and 35803 zip codes, where developers moved fast and moisture management in crawlspaces and around foundations was not always adequate. We inspect and remediate new-construction mold regularly. If your home is less than five years old and you have a musty smell in the basement or crawlspace, don't assume it's normal. It isn't.</p>
+  `}
+  zipCodes={['35801', '35802', '35803', '35805', '35806', '35810', '35811', '35816', '35824', '35898']}
+  neighborhoods={[
+    'Twickenham Historic District', 'Five Points', 'Blossomwood', 'Jones Valley',
+    'Hampton Cove', 'South Huntsville', 'Research Park / Cummings Research Park area',
+    'Monte Sano', 'Old Town', 'Weatherly', 'MidCity District area',
+    'Providence (Huntsville)', 'Airport Road corridor', 'Drake Avenue / Bob Wallace Ave',
+    'Governors Drive corridor', 'Mastin Lake', 'Hazel Green adjacent',
+  ]}
+  surroundingCommunities={['Madison', 'Hampton Cove', 'Meridianville', 'Harvest', 'Owens Cross Roads', 'Gurley', 'New Market']}
+  responseTime="25–40 minutes"
+  weatherSection={{
+    heading: "Huntsville's Weather Creates Year-Round Cleaning & Restoration Demand",
+    body: `
+      <p style="margin-bottom:20px;">Huntsville's location in the Tennessee Valley makes it one of the most storm-vulnerable cities in the Southeast. The valley topography accelerates and channels severe weather, and the area has been struck by significant tornadoes in 1974, 1989, and 2011 — the April 27, 2011 outbreak remains one of the deadliest in Alabama history, and BamaClean responded to water and structural damage calls for weeks following that event. Storm preparedness is real here, and so is the restoration need when those storms arrive.</p>
+      <p style="margin-bottom:20px;">Huntsville's summer humidity rivals the Gulf Coast, sustained above 80% for months at a time. The combination of elevated humidity, the heavy clay soil that surrounds much of the city's residential development, and the older housing stock in neighborhoods like Five Points and Blossomwood creates near-constant mold risk in crawlspaces and basement-adjacent spaces. We inspect homes in these neighborhoods regularly — and find active mold growth in the majority of homes that haven't had a professional inspection in the past five years.</p>
+      <p style="margin-bottom:20px;">Winter freeze events in Huntsville are infrequent but consequential. When temperatures drop below 15°F for more than 24 hours — as happened in December 2022 and February 2021 — supply lines in exterior walls, garages, and uninsulated crawlspaces freeze and burst. We responded to burst pipe water damage in dozens of Huntsville homes during those events, often arriving within an hour of the call.</p>
+      <p>Spring pollen season in Huntsville is severe. The hardwood forests on Monte Sano Mountain, the green corridors along Little Cove Creek, and the agricultural land surrounding the city produce pollen loads that settle into carpet and upholstery throughout March, April, and May. Huntsville residents with asthma and seasonal allergies report measurable symptom reduction following professional carpet extraction — not just appearance improvement but air quality improvement.</p>
+    `,
+  }}
+  employers={[
+    { name: "NASA Marshall Space Flight Center", desc: "One of NASA's largest field centers, employing thousands of engineers and scientists — many of whom live in Huntsville's established neighborhoods and use BamaClean for home cleaning and emergency restoration." },
+    { name: "Redstone Arsenal", desc: "The Army's largest missile and rocket center, hosting dozens of government agencies and thousands of military and civilian personnel. BamaClean provides commercial services to contractors and agency facilities on and around the Arsenal." },
+    { name: "Boeing (Huntsville)", desc: "Boeing's Huntsville operations support multiple defense and space programs. Boeing employees are among BamaClean's long-term residential customers in neighborhoods like Hampton Cove and South Huntsville." },
+    { name: "Northrop Grumman (Huntsville)", desc: "A major Huntsville employer in defense systems and missile programs. We serve Northrop employees' homes and provide commercial cleaning to Northrop-associated facilities in the Research Park corridor." },
+    { name: "Dynetics / Leidos (Huntsville)", desc: "Huntsville-founded engineering firm now operating as a Leidos company. Dynetics and Leidos employees live throughout Huntsville's established neighborhoods and are among our regular residential clients." },
+    { name: "Huntsville Hospital System", desc: "One of Alabama's largest hospital systems with multiple campuses. We provide commercial sanitation, carpet cleaning, and emergency restoration to healthcare facilities and serve the homes of healthcare workers throughout the city." },
+    { name: "Cummings Research Park Tenants", desc: "America's second-largest research park hosts 300+ companies employing 26,000+ people. BamaClean provides commercial services to multiple Research Park tenants and residential services to their employees." },
+    { name: "UAH (University of Alabama in Huntsville)", desc: "A major STEM university with growing enrollment. We serve campus facilities for commercial cleaning and student/faculty residences for residential services." },
+  ]}
+  neighborhoodSection={{
+    heading: "Huntsville's Neighborhoods — What We Know, What We Do There",
+    body: `
+      <p style="margin-bottom:20px;"><strong>Twickenham Historic District</strong> is Huntsville at its most architecturally significant — antebellum homes, Federal-style townhouses, and craftsman-era residences that require care well beyond what a franchise crew can provide. Hardwood floors that predate the Civil War, plaster walls that hold moisture differently than modern drywall, wool area rugs that have been in families for generations — these require the kind of fiber-specific, finish-aware cleaning expertise we've developed over 30 years. We treat every Twickenham job as a preservation project.</p>
+      <p style="margin-bottom:20px;"><strong>Five Points and Blossomwood</strong> are Huntsville's quintessential in-town neighborhoods: mid-century ranch homes, young professional families, dogs, and the kind of carpet that was installed in 1988 and has survived four owners. We work in these neighborhoods constantly. The crawlspaces in Five Points ranches are some of the highest-mold-risk spaces in the city — clay soil, limited ventilation, and decades of deferred maintenance create the conditions we find in inspection after inspection.</p>
+      <p style="margin-bottom:20px;"><strong>Hampton Cove</strong> is Huntsville's signature planned community — a golf course community in the foothills of the Appalachian outliers east of the city, with an HOA-governed appearance standard that extends to the interiors of its homes. Hampton Cove residents expect professional results. We provide carpet cleaning, tile and grout work, hardwood care, and restoration services to Hampton Cove homes regularly, and our turnaround and quality meet the standard these homeowners hold.</p>
+      <p style="margin-bottom:20px;"><strong>Jones Valley</strong> homes tend to be larger, older, and on larger lots — with more carpet, more tile, and more complex mold-risk profiles in their crawlspaces. We've done some of our most significant mold remediation work in Jones Valley: multiple-room jobs following extended moisture intrusion, crawlspace remediation after the drainage issues that come with the valley's natural topography.</p>
+      <p><strong>South Huntsville and the Airport Road corridor</strong> are heavily populated with defense-contractor employees, rental properties near Redstone's main gates, and a mix of 1970s–2000s construction. High tenant turnover in the rental market means property managers need fast, reliable carpet cleaning and sanitation between occupants. We service multiple property management companies in South Huntsville and have same-week availability for between-tenant turnovers.</p>
+    `,
+  }}
+  services={[
+    { icon: "🧹", name: "Carpet Cleaning", href: "/services/carpet-cleaning/", desc: "Truck-mounted extraction serving all Huntsville neighborhoods." },
+    { icon: "💧", name: "Water Damage Restoration", href: "/services/water-flood-damage/", desc: "24/7 emergency response — targeting 25–40 min arrival in Huntsville." },
+    { icon: "🔬", name: "Mold Inspection & Remediation", href: "/services/mold-inspection/", desc: "IICRC AMRT-certified. We find what you can't see." },
+    { icon: "🔲", name: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/", desc: "High-pressure steam restoration for all Huntsville tile types." },
+    { icon: "🛋️", name: "Upholstery Cleaning", href: "/services/upholstery-cleaning/", desc: "Fabric-code matched cleaning for Huntsville homes and offices." },
+    { icon: "🌲", name: "Hardwood Floor Cleaning", href: "/services/hardwood-floor-cleaning/", desc: "Finish-specific care including historic Twickenham homes." },
+    { icon: "🔬", name: "Radon Testing", href: "/services/radon-testing/", desc: "EPA-protocol testing — Madison and Limestone Counties have elevated risk." },
+    { icon: "🔥", name: "Fire & Smoke Damage", href: "/services/fire-smoke-damage/", desc: "24/7 response with full insurance documentation and adjuster coordination." },
+  ]}
+  competitorSection={{
+    heading: "What Huntsville Homeowners Discover When They Compare Options",
+    body: `
+      <p style="margin-bottom:20px;">Huntsville's size means it has more cleaning and restoration competition than anywhere else in North Alabama. Two or three Stanley Steemer franchises cover the market. SERVPRO operates multiple franchises. A rotating roster of owner-operators advertise on Nextdoor, Google, and Yelp. Here's what the Huntsville engineering mindset — with its comfort with data and skepticism of marketing — tends to conclude after doing the research.</p>
+      <p style="margin-bottom:20px;"><strong>National franchises</strong> offer brand recognition and standardized processes — but they route calls through central scheduling, price for upsell margin, and deploy crews who cover the entire metro area without the neighborhood-specific knowledge that makes a real difference in mold inspection, water damage scoping, and targeted cleaning. The technician who cleans your Hampton Cove carpet may have never driven through the neighborhood before. Our crew has cleaned on your street.</p>
+      <p style="margin-bottom:20px;"><strong>Low-cost operators</strong> exist in Huntsville in volume — particularly on Groupon and Facebook Marketplace. Many are legitimate small businesses. Very few are IICRC-certified. Almost none carry the commercial equipment or liability insurance required for mold remediation or structural drying. When the job goes sideways, the coverage isn't there. With BamaClean, there's 30 years of local accountability on the line — and full commercial insurance on every job.</p>
+      <p>What Huntsville's research-minded homeowners consistently find: BamaClean's pricing is competitive with nationals, our certification credentials match theirs, and our local knowledge and accountability are structural advantages that no franchise can replicate.</p>
+    `,
+  }}
+  faqs={[
+    { q: "Do you serve all of Huntsville — including south Huntsville and Hampton Cove?", a: "Yes. We cover all Huntsville zip codes — 35801 through 35824 — including South Huntsville, Hampton Cove, Monte Sano, Twickenham, Five Points, and the Research Park corridor. If you're in an adjacent unincorporated area, call us." },
+    { q: "Can you clean historic hardwood floors in Twickenham or Five Points homes?", a: "Yes — and we approach these carefully. We identify finish type first (shellac, wax, early polyurethane, or oil) before selecting chemistry. Historic hardwood gets low-moisture, finish-specific treatment. We do not use steam mops or high-moisture methods on these floors." },
+    { q: "How quickly can you respond to water damage in Huntsville?", a: "We target 25–40 minutes from call to arrival for Huntsville addresses. We're available 24/7, every day of the year — not just business hours." },
+    { q: "Do you provide commercial cleaning for Cummings Research Park tenants?", a: "Yes. We provide commercial carpet cleaning, tile & grout, sanitation, and emergency restoration to multiple Research Park tenants. Contact us to discuss scheduled commercial service contracts." },
+    { q: "Is mold common in Huntsville's older neighborhoods?", a: "Yes — particularly in Five Points, Blossomwood, and Jones Valley, where mid-century homes with crawlspaces sit on clay soil with limited natural drainage. We find active mold in the majority of these crawlspaces that haven't had a professional inspection in five or more years. It's worth knowing what's under your home." },
+  ]}
+  schema={schema}
+/>

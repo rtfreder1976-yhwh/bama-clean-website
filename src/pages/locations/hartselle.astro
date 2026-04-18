@@ -1,0 +1,88 @@
+---
+import LocationLayout from '../../components/LocationLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BamaClean",
+  "telephone": "+12563240492",
+  "areaServed": { "@type": "City", "name": "Hartselle", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+  "url": "https://bamaclean.com/locations/hartselle/",
+});
+---
+
+<LocationLayout
+  title="Carpet Cleaning & Restoration Services in Hartselle, AL | BamaClean"
+  description="BamaClean serves Hartselle, AL and Morgan County with carpet cleaning, water damage restoration, mold remediation, and tile & grout cleaning. IICRC-certified. (256) 324-0492."
+  canonical="/locations/hartselle/"
+  city="Hartselle"
+  responseTime="50–65 minutes"
+  hero={{
+    label: "Serving Hartselle & South Morgan County Since 1993",
+    heading: "Hartselle's Professional Cleaning & Restoration Company",
+    subheading: "BamaClean serves Hartselle and south Morgan County with the same IICRC-certified standards, upfront pricing, and professional results we deliver across North Alabama. Your home deserves the best — and we make the drive.",
+  }}
+  intro={`
+    <p style="margin-bottom:20px;">Hartselle sits at the southern end of Morgan County, positioned between Decatur to the north and Cullman County to the south — a community of established families, Decatur commuters, and the growing retirement population that has discovered Hartselle's quality of life and relative affordability. BamaClean has served Hartselle since 1993, making the drive from our Florence headquarters consistently because the demand is real and the community has rewarded our commitment with the referral relationships that have kept us in the Morgan County market for three decades.</p>
+    <p style="margin-bottom:20px;">Hartselle's housing stock reflects its growth history: older craftsman and colonial-revival homes near the downtown core, mid-century ranch construction in the established residential neighborhoods, and newer subdivision development that has extended the city's footprint south and east as the Decatur commuter market has grown. Each era of construction presents different cleaning and restoration needs, and we've encountered all of them in Hartselle homes over 30 years of service to the community.</p>
+    <p>Hartselle is at the outer edge of our primary service radius, and we're honest about that: emergency response times to Hartselle run 50–65 minutes from Florence. For scheduled services, we plan Hartselle visits efficiently and often combine them with Morgan County service routes. For water damage emergencies, we dispatch immediately regardless of distance, because the cost of delayed response — measured in additional water absorption, additional mold risk, and additional restoration scope — always exceeds the value of whatever we were doing instead.</p>
+  `}
+  zipCodes={['35640']}
+  neighborhoods={[
+    'Downtown Hartselle / Historic District', 'Hartselle High School area',
+    'US-31 corridor neighborhoods', 'Gilmore Bridge Road area',
+    'Hillsborough', 'Deer Creek area', 'Mountain Lakes area',
+    'Priceville adjacent neighborhoods', 'South Morgan County residential communities',
+  ]}
+  surroundingCommunities={['Priceville', 'Trinity', 'Decatur', 'Falkville', 'Lacey\'s Spring', 'Morgan County unincorporated south']}
+  responseTime="50–65 minutes"
+  weatherSection={{
+    heading: "Morgan County South — Weather Challenges for Hartselle Homes",
+    body: `
+      <p style="margin-bottom:20px;">Hartselle's position at the southern end of Morgan County places it in a terrain transition zone — where the flat Tennessee Valley floor begins to give way to the ridge-and-valley country of the Appalachian foothills. This position affects drainage: Hartselle's terrain channels rainfall into concentrated flow patterns that can overwhelm local drainage infrastructure during significant rain events. Flooding in low-lying residential areas and at the bases of hills is a recurring issue in Hartselle, and we've responded to water damage calls in these neighborhoods following multiple significant rain events over our 30 years in the Morgan County market.</p>
+      <p style="margin-bottom:20px;">Hartselle's older housing stock — particularly the homes near the historic downtown and the established neighborhoods that developed in the 1950s through 1970s — has the crawlspace foundation profiles that create persistent mold risk in North Alabama's climate. These homes sit on clay soil with moderate drainage, and their original vapor barriers (if they have them at all) are inadequate by modern standards. Professional mold inspection in Hartselle's older homes regularly reveals crawlspace growth that has been building quietly for years.</p>
+      <p>Spring and fall pollen in Hartselle is substantial. The Appalachian foothills south and east of the city contribute tree pollen from March through May, while the agricultural land in south Morgan County adds grass and ragweed pollen through summer and fall. Families with allergy sufferers in Hartselle see measurable symptom improvement following professional carpet and upholstery cleaning — not just from the removal of visible soil but from the reduction of the allergen reservoir that accumulates in carpet pile over months of high-pollen seasons.</p>
+    `,
+  }}
+  employers={[
+    { name: "Decatur Commuter Employment Base", desc: "Many Hartselle residents commute to Decatur's industrial and commercial base — GE Appliances, Daikin, 3M, and other Morgan County employers. These professional families use BamaClean for residential services." },
+    { name: "Hartselle City Schools", desc: "One of Alabama's consistently high-performing school systems. BamaClean provides commercial carpet cleaning, tile & grout, and sanitation to Hartselle school facilities." },
+    { name: "Local Healthcare (Hartselle Medical Center)", desc: "Healthcare providers serving south Morgan County. We serve healthcare workers' homes and provide commercial sanitation to medical facilities in Hartselle." },
+    { name: "US-31 Commercial Corridor", desc: "Hartselle's commercial corridor along US-31 hosts restaurants, retail, and service businesses that use BamaClean for commercial carpet cleaning, tile care, and sanitation." },
+    { name: "Agriculture (South Morgan County)", desc: "South Morgan County's agricultural operations employ workers throughout the Hartselle area. Farm families use BamaClean for residential cleaning services." },
+  ]}
+  neighborhoodSection={{
+    heading: "Hartselle Neighborhoods — Service That Comes to You",
+    body: `
+      <p style="margin-bottom:20px;">The <strong>historic downtown Hartselle neighborhoods</strong> reflect the city's small-town character at its best — established homes on tree-lined streets, maintained by families who take pride in them and hold their service providers to a high standard. These are not homes where a franchise crew's upsell tactics or schedule unpredictability are tolerated. BamaClean's model — quote before we start, show up on time, deliver the result — fits this customer perfectly. Many of our downtown Hartselle clients have been with us since the 1990s.</p>
+      <p style="margin-bottom:20px;"><strong>Mountain Lakes and the newer subdivisions</strong> on Hartselle's eastern edge represent the Decatur commuter population — professional families who chose Hartselle for its school system, its community character, and its relative affordability compared to the Madison-Huntsville corridor. These are new-construction homes with carpet in the bedrooms, tile in the kitchens and bathrooms, and the full range of cleaning needs that a young family with children and pets generates. We see these clients for initial carpet and tile work within the first couple of years of occupancy, and then on regular schedules thereafter.</p>
+      <p>The <strong>Deer Creek and Gilmore Bridge Road area</strong> neighborhoods include a mix of rural residential properties and semi-rural subdivision development — larger lots, older construction in many cases, and the crawlspace profiles that we inspect for mold regularly in south Morgan County. If your home in this part of Hartselle is more than 20 years old and hasn't had a crawlspace inspection, it's a prudent step.</p>
+    `,
+  }}
+  services={[
+    { icon: "🧹", name: "Carpet Cleaning", href: "/services/carpet-cleaning/", desc: "Professional extraction for Hartselle and south Morgan County." },
+    { icon: "💧", name: "Water Damage Restoration", href: "/services/water-flood-damage/", desc: "24/7 emergency response — we dispatch immediately regardless of distance." },
+    { icon: "🔬", name: "Mold Inspection & Remediation", href: "/services/mold-inspection/", desc: "IICRC-certified — older Hartselle homes carry real risk." },
+    { icon: "🔲", name: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/", desc: "Steam restoration for Hartselle kitchens and bathrooms." },
+    { icon: "🛋️", name: "Upholstery Cleaning", href: "/services/upholstery-cleaning/", desc: "Allergen-reducing fabric cleaning for Hartselle families." },
+    { icon: "🌲", name: "Hardwood Floor Cleaning", href: "/services/hardwood-floor-cleaning/", desc: "Finish-safe care for Hartselle's older and historic homes." },
+    { icon: "🔬", name: "Radon Testing", href: "/services/radon-testing/", desc: "EPA-protocol testing with written reports." },
+    { icon: "🛡️", name: "Sanitation Services", href: "/services/sanitation-services/", desc: "EPA-registered disinfection for homes and businesses." },
+  ]}
+  competitorSection={{
+    heading: "BamaClean in Hartselle — Local Accountability at South Morgan County Distance",
+    body: `
+      <p style="margin-bottom:20px;">Hartselle is served by both north-facing (Decatur/Huntsville) and south-facing (Cullman) cleaning operations, none of which have local offices in the city. BamaClean comes from Florence — a longer drive than the Decatur-dispatched options, but bringing the same IICRC credentials, the same truck-mounted equipment, and the same upfront pricing guarantee that we provide across our entire service area.</p>
+      <p style="margin-bottom:20px;">The alternative cleaning operations that serve Hartselle from Decatur and Huntsville are primarily franchise operations with the pricing structures those models require. BamaClean's independent operation means we price to scope, not to franchise margin. Our Hartselle customers have consistently told us that our quotes are more accurate and our final invoices more predictable than what they experienced with franchise operators.</p>
+      <p>For Hartselle homeowners considering their options: the drive time from Florence is real, and we acknowledge it. What we offer in return is 30 years of consistent, certified, accountable service — and a pricing model that doesn't change between the phone quote and the invoice. For many Hartselle customers, that trade is worth it.</p>
+    `,
+  }}
+  faqs={[
+    { q: "Is the drive from Florence worth it for Hartselle carpet cleaning?", a: "Our Hartselle customers think so — we've served this community for 30 years on repeat-customer relationships. We bring truck-mounted extraction, IICRC certification, and upfront pricing that holds on the invoice. If that's what you're looking for, we think the answer is yes." },
+    { q: "What's the emergency response time for Hartselle water damage?", a: "50–65 minutes from our Florence headquarters, dispatching immediately on the call. We don't delay emergency response for distance." },
+    { q: "Do you serve Priceville and Trinity in north Morgan County as well?", a: "Yes — Priceville and Trinity are served from both our Florence-to-Decatur route and as extensions of our Hartselle coverage. Call to confirm availability for your specific address." },
+    { q: "Can you clean hardwood floors in historic Hartselle homes?", a: "Yes. We identify finish type before any chemistry is applied and use low-moisture, finish-specific methods. Historic Hartselle homes with original hardwood floors are handled the same way we handle Twickenham or Florence historic home floors — with care and the right chemistry." },
+    { q: "Do you offer commercial cleaning to Hartselle City Schools?", a: "Yes. We provide commercial carpet cleaning, tile & grout, and sanitation services to Hartselle school facilities on scheduled service agreements. Contact us to discuss a commercial service contract." },
+  ]}
+  schema={schema}
+/>

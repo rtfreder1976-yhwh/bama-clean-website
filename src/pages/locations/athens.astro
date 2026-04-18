@@ -1,0 +1,92 @@
+---
+import LocationLayout from '../../components/LocationLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BamaClean",
+  "telephone": "+12563240492",
+  "areaServed": { "@type": "City", "name": "Athens", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+  "url": "https://bamaclean.com/locations/athens/",
+});
+---
+
+<LocationLayout
+  title="Carpet Cleaning & Restoration Services in Athens, AL | BamaClean"
+  description="BamaClean serves Athens, AL with carpet cleaning, water damage restoration, mold remediation, and Mazda Toyota Manufacturing area services. IICRC-certified. (256) 324-0492."
+  canonical="/locations/athens/"
+  city="Athens"
+  responseTime="30–45 minutes"
+  hero={{
+    label: "Serving Athens, Alabama Since 1993",
+    heading: "Athens' Trusted Cleaning & Restoration Company",
+    subheading: "From the historic downtown square to the growing subdivisions south of I-65 — BamaClean has served Athens families and businesses for over 30 years. IICRC-certified. Upfront pricing. Fast response across Limestone County.",
+  }}
+  intro={`
+    <p style="margin-bottom:20px;">Athens is Limestone County's seat and one of North Alabama's most rapidly evolving communities. The city that once moved at the pace of an agricultural county seat has been transformed by I-65's positioning as a development corridor, the arrival of Mazda Toyota Manufacturing USA, and the influx of residents who have followed the jobs and the quality of life that Limestone County offers. BamaClean has been part of Athens' story since 1993 — from the quieter decades to the current growth wave.</p>
+    <p style="margin-bottom:20px;">Athens presents a genuine range of residential cleaning and restoration challenges. The historic neighborhoods around the downtown square and Athens State University have homes built in the 1920s through 1960s with crawlspace foundations, original hardwood floors, and the moisture management challenges that predate modern construction standards. The new subdivisions south of I-65 and along the US-72 corridor represent the other end of the spectrum — rapidly built homes on clay-heavy soil where moisture management and mold risk are factors from the first year of occupancy. We serve both ends of this spectrum with equal competence.</p>
+    <p>Limestone County's position in the Tennessee Valley makes it one of the highest-radon-risk counties in North Alabama, a fact that most Athens homeowners don't know. We provide more radon testing in Limestone County than anywhere else in our service area — and we find elevated levels (above the EPA's 4 pCi/L action threshold) in a significant percentage of homes we test. If you've never had your Athens home tested for radon, the data says you should.</p>
+  `}
+  zipCodes={['35611', '35612', '35613']}
+  neighborhoods={[
+    'Downtown Athens / Courthouse Square area', 'Athens State University corridor',
+    'Forrest Hills', 'Peppertree', 'Stone Bridge', 'Ashley Park',
+    'Limestone Springs', 'Elk River area neighborhoods', 'US-72 corridor subdivisions',
+    'I-65 / Pryor Field Road area', 'Mooresville Road neighborhoods',
+    'Sanderfer Road subdivisions', 'West Limestone County neighborhoods',
+  ]}
+  surroundingCommunities={['Tanner', 'Lester', 'Elkmont', 'Mooresville', 'Madison', 'Harvest', 'Limestone County unincorporated']}
+  responseTime="30–45 minutes"
+  weatherSection={{
+    heading: "Limestone County's Climate Creates Persistent Cleaning & Restoration Demand",
+    body: `
+      <p style="margin-bottom:20px;">Athens and Limestone County sit in the western Tennessee Valley, where flat terrain and agricultural land create open exposure to the severe weather systems that move through North Alabama from the southwest. The county has been struck by significant tornadoes and storm systems multiple times in recent decades — these events create water and structural damage that requires professional restoration, and BamaClean has responded to Athens and Limestone County events repeatedly.</p>
+      <p style="margin-bottom:20px;">Limestone County's soil is some of the most moisture-retentive in North Alabama — high clay content that expands and contracts with moisture cycles, shrinks during dry spells, and creates foundation movement and gap formation in homes built on slab and crawlspace foundations alike. These gaps become pathways for moisture intrusion, and the crawlspaces and foundation edges of Athens homes accumulate water during rain events in ways that aren't always visible from inside the home. Mold follows.</p>
+      <p style="margin-bottom:20px;">Limestone County has documented elevated radon levels in a significant percentage of tested homes — driven by the uranium-bearing limestone geology that gives the county its name. Radon is produced as uranium in limestone bedrock decays, and that gas migrates upward through soil and foundation into homes. We test more homes for radon in Athens and Limestone County than anywhere else we serve, and we find actionable levels regularly. If you're buying a home in Athens or have lived in one that's never been tested, this is not an abstract risk.</p>
+      <p>Pollen season in Limestone County is extended — tree pollen from March through May, grass pollen from May through July, ragweed from August through October — due to the county's agricultural land and its position in the Tennessee Valley. Athens families with allergy sufferers need professional carpet and upholstery cleaning as part of their seasonal health management, not just as periodic aesthetic maintenance.</p>
+    `,
+  }}
+  employers={[
+    { name: "Mazda Toyota Manufacturing USA (Huntsville/Athens area)", desc: "MTMUS's massive manufacturing facility near Athens employs thousands of production and support staff who live throughout Limestone County. These families are a core part of BamaClean's Athens residential market." },
+    { name: "Athens State University", desc: "One of Alabama's distinctive upper-division universities, serving transfer students from across the region. Athens State faculty, staff, and family members in Athens neighborhoods use BamaClean for residential services." },
+    { name: "Limestone County Schools", desc: "A high-performing school system with multiple campuses throughout Athens and Limestone County. We provide commercial carpet cleaning, tile care, and sanitation to Limestone County school facilities." },
+    { name: "Athens-Limestone Hospital", desc: "Athens' primary hospital facility. Healthcare workers live throughout Athens and Limestone County. We provide residential services to healthcare employees and commercial sanitation to medical facilities." },
+    { name: "Redstone Arsenal Commuters", desc: "A substantial share of Athens and Limestone County residents commute to Redstone Arsenal and the defense contractor complex surrounding it. These professional families are among our most consistent residential clients." },
+    { name: "Pryor Field / Limestone County Industrial Corridor", desc: "The industrial corridor along I-65 and Pryor Field hosts manufacturing and distribution operations. BamaClean provides commercial cleaning and emergency restoration to industrial facilities in this corridor." },
+  ]}
+  neighborhoodSection={{
+    heading: "Athens Neighborhoods — What BamaClean Knows About Where You Live",
+    body: `
+      <p style="margin-bottom:20px;">The <strong>historic neighborhoods around the Athens courthouse square and Athens State University</strong> contain some of the most architecturally interesting homes in Limestone County — 1920s–1950s construction with original hardwood floors, crawlspace foundations, and the moisture history that comes with seven decades of North Alabama humidity. We've cleaned hardwood floors in Athens that predate World War II, inspected crawlspaces with mold that has been growing for years without the homeowner's knowledge, and restored historic homes after plumbing failures that would have caused catastrophic damage without rapid response. This is work that requires experience — not a franchise crew on its first visit to the neighborhood.</p>
+      <p style="margin-bottom:20px;"><strong>Forrest Hills, Peppertree, Ashley Park, and the established subdivisions</strong> north and west of downtown Athens are the core of BamaClean's Athens residential business — family homes from the 1980s and 1990s with wall-to-wall carpet in bedrooms and living areas, tile in kitchens and bathrooms that has accumulated years of grout discoloration, and the kind of accumulated allergen load in carpet that builds when a family with pets lives in a home for a decade without professional cleaning. These are our most common Athens jobs, and we know these neighborhoods well.</p>
+      <p style="margin-bottom:20px;">The <strong>newer subdivisions south of I-65 and along US-72</strong> — Stone Bridge, Limestone Springs, and the developments that have grown rapidly with the MTMUS workforce — present a different profile. Newer construction, slab foundations in many cases, and the rapid buildout pace that doesn't always allow adequate moisture management. We're seeing mold in Athens homes built in 2018–2022 that results from construction moisture that wasn't properly dried before finishes were applied. If your new Athens home has a musty smell, it's worth investigating.</p>
+      <p>The <strong>Elk River and rural Limestone County communities</strong> south and west of Athens — Tanner, Elkmont, and the agricultural areas of the county — have homes with the highest radon risk in our entire service area. Limestone bedrock is close to the surface in these areas, and radon levels in homes on slab foundations with limited sub-slab barriers can be substantially above the EPA action level. We test and document these levels for homeowners who want to understand their exposure.</p>
+    `,
+  }}
+  services={[
+    { icon: "🧹", name: "Carpet Cleaning", href: "/services/carpet-cleaning/", desc: "Deep extraction for Athens homes, from historic to new construction." },
+    { icon: "🔬", name: "Radon Testing", href: "/services/radon-testing/", desc: "Limestone County has the highest radon risk in our service area." },
+    { icon: "💧", name: "Water Damage Restoration", href: "/services/water-flood-damage/", desc: "24/7 emergency response to Athens and Limestone County addresses." },
+    { icon: "🔬", name: "Mold Inspection & Remediation", href: "/services/mold-inspection/", desc: "IICRC-certified. Critical in both old and new Athens homes." },
+    { icon: "🔲", name: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/", desc: "Steam restoration — high demand in MTMUS workforce homes." },
+    { icon: "🛋️", name: "Upholstery Cleaning", href: "/services/upholstery-cleaning/", desc: "Pet-safe, allergen-reducing cleaning for Athens families." },
+    { icon: "🌲", name: "Hardwood Floor Cleaning", href: "/services/hardwood-floor-cleaning/", desc: "Finish-specific care including Athens' historic home stock." },
+    { icon: "🛡️", name: "Sanitation Services", href: "/services/sanitation-services/", desc: "EPA-registered disinfection for homes and businesses." },
+  ]}
+  competitorSection={{
+    heading: "Why Athens Homeowners Are Switching to BamaClean",
+    body: `
+      <p style="margin-bottom:20px;">Athens is served by national franchise operations from both the Huntsville and Decatur directions — close enough to reach, far enough that local knowledge doesn't exist. When a Stanley Steemer or SERVPRO franchise crew comes to Athens, they're following GPS directions to your street. When BamaClean comes to Athens, we're visiting a community we've worked in since 1993 — we know which neighborhoods have the highest crawlspace mold risk, which subdivisions have drainage issues that cause recurring water intrusion, and which historic homes have floors that require specific handling.</p>
+      <p style="margin-bottom:20px;">The radon testing differentiation is particularly meaningful in Athens. No national carpet cleaning franchise offers radon testing. BamaClean does — and we do it with EPA-protocol methodology and accredited lab analysis. For Athens homeowners buying or selling homes in Limestone County's limestone-bedrock geology, this is a service no competitor in the market provides.</p>
+      <p>For the MTMUS workforce families who've relocated to Athens from other parts of the country — many from regions where national franchise brands are the default — BamaClean is often a discovery: a local company with IICRC credentials that matches or beats the nationals on quality, beats them on local knowledge, and undercuts the upsell-based pricing model entirely. Most of them don't go back to the franchise option once they've tried us.</p>
+    `,
+  }}
+  faqs={[
+    { q: "Is Athens really in a high-radon zone?", a: "Yes. Limestone County's limestone bedrock geology — the same geology that gives the county its name — is one of the primary radon source formations in North Alabama. The EPA's radon zone mapping places Limestone County in Zone 2 (moderate predicted potential), but actual tested levels in individual homes frequently exceed the 4 pCi/L action threshold. We strongly recommend testing if your Athens home has never been measured." },
+    { q: "How quickly can BamaClean reach Athens in a water emergency?", a: "We target 30–45 minutes from call to arrival for Athens addresses. We're 24/7 every day of the year." },
+    { q: "Do you serve Tanner, Elkmont, and other Limestone County communities?", a: "Yes — all of Limestone County is within our regular service area, including Tanner, Elkmont, Lester, Mooresville, and unincorporated areas. Call us to confirm response time for your specific address." },
+    { q: "Can you clean homes near MTMUS that have been recently built?", a: "Yes — we see new construction homes regularly. Newer homes aren't immune to carpet, tile, or mold needs. In fact, construction moisture trapped during rapid buildout can create mold in homes less than 2 years old." },
+    { q: "Do you work with property managers in Athens?", a: "Yes. With Athens' growth in rental properties serving the MTMUS workforce, we work with multiple property managers in Limestone County for between-tenant carpet cleaning, sanitation, and restoration." },
+  ]}
+  schema={schema}
+/>

@@ -1,0 +1,85 @@
+---
+import LocationLayout from '../../components/LocationLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BamaClean",
+  "telephone": "+12563240492",
+  "areaServed": { "@type": "City", "name": "Leighton", "containedInPlace": { "@type": "State", "name": "Alabama" } },
+  "url": "https://bamaclean.com/locations/leighton/",
+});
+---
+
+<LocationLayout
+  title="Carpet Cleaning & Restoration Services in Leighton, AL | BamaClean"
+  description="BamaClean serves Leighton, AL and Colbert County with professional carpet cleaning, water damage restoration, mold inspection, and tile & grout cleaning. (256) 324-0492."
+  canonical="/locations/leighton/"
+  city="Leighton"
+  responseTime="20–35 minutes"
+  hero={{
+    label: "Serving Leighton & Colbert County Since 1993",
+    heading: "Leighton's Trusted Professional Cleaning & Restoration Company",
+    subheading: "BamaClean has served Leighton and the Colbert County communities along the Tennessee River since 1993. IICRC-certified technicians, honest pricing, and the same professional standards we apply in every market we serve.",
+  }}
+  intro={`
+    <p style="margin-bottom:20px;">Leighton is a small Colbert County community on the Tennessee River, connected to the broader Shoals market by US-72 and the river corridor that has defined this part of Alabama for generations. It's a community of working families, agricultural landowners, and retirees who've lived in Colbert County their entire lives — a customer base that responds to dependability, honest dealing, and a company that doesn't treat a smaller market as a second priority.</p>
+    <p style="margin-bottom:20px;">Leighton and the surrounding Colbert County communities — Cherokee, Barton, the unincorporated areas between the Shoals cities — have homes that are largely crawlspace construction from the 1950s through 1990s, sitting on the river valley clay soil that creates persistent moisture management challenges. These are the homes where we find the most significant crawlspace mold on inspection — not because the homeowners are negligent, but because the construction era, the soil type, and the regional humidity create conditions that build toward mold growth over decades, quietly and invisibly.</p>
+    <p>For Leighton residents, BamaClean is 20–35 minutes away — not the abstract "same day or next day" promise of a national franchise dispatching from a hub city. When water damage happens in Leighton, we're there in under an hour. When a homeowner wants their carpet cleaned before a family gathering this weekend, we typically have availability. Proximity matters, and our position in the Shoals is a genuine advantage for Colbert County communities.</p>
+  `}
+  zipCodes={['35646']}
+  neighborhoods={[
+    'Leighton town center area', 'Highway 157 corridor', 'US-72 adjacent neighborhoods',
+    'Tennessee River road communities', 'Colbert County rural residential',
+    'Cherokee adjacent communities', 'Barton area neighborhoods',
+  ]}
+  surroundingCommunities={['Cherokee', 'Barton', 'Sheffield', 'Tuscumbia', 'Muscle Shoals', 'Colbert County unincorporated', 'East Lawrence County']}
+  responseTime="20–35 minutes"
+  weatherSection={{
+    heading: "Tennessee River Valley Climate — What It Means for Leighton Homes",
+    body: `
+      <p style="margin-bottom:20px;">Leighton's position along the Tennessee River places it in the highest-humidity part of the Shoals microclimate. The open water of Wilson Lake and the river corridor contribute to elevated atmospheric moisture that exceeds even the North Alabama average — and that moisture drives mold growth, allergen accumulation, and the slow deterioration of materials in homes that aren't actively managed for moisture. We address these consequences in Leighton homes every month.</p>
+      <p style="margin-bottom:20px;">The Tennessee River's flood potential is real in communities like Leighton that sit near the water. TVA's dam system manages most routine flood risk, but extreme events — the kind that overwhelm even managed systems — have affected the river corridor communities multiple times in living memory. Homeowners in Leighton who are within half a mile of the river or its tributaries carry genuine flood risk that standard homeowner's insurance may not cover without a separate flood policy. When these events occur, BamaClean responds.</p>
+      <p>Winter ice and freeze events affect Leighton similarly to the rest of the Shoals — infrequently but with real consequence when they occur. The February 2021 freeze affected Colbert County homes throughout the area, and we responded to multiple pipe burst calls in communities like Leighton and Cherokee during that event. Supply lines in older construction, garages, and uninsulated exterior walls are the points of failure — and rapid response limits the scope of water damage dramatically.</p>
+    `,
+  }}
+  employers={[
+    { name: "Shoals Area Commuter Workforce", desc: "Leighton residents commute throughout the Shoals — to Tuscumbia, Sheffield, Muscle Shoals, and Florence. These working families are BamaClean's core Leighton residential market." },
+    { name: "Agriculture & Livestock (Colbert County)", desc: "Colbert County's agricultural economy employs workers throughout the Leighton area. Farm families and agricultural workers make up a significant portion of BamaClean's Colbert County residential client base." },
+    { name: "Colbert County Schools", desc: "School facilities serving Leighton and surrounding Colbert County communities. Commercial cleaning and sanitation services." },
+    { name: "Cherokee area industrial employers", desc: "Small manufacturing and industrial operations in the Cherokee/Leighton corridor provide employment in the area. We serve these operations with commercial cleaning services." },
+  ]}
+  neighborhoodSection={{
+    heading: "Colbert County Communities — Consistent Service Regardless of Size",
+    body: `
+      <p style="margin-bottom:20px;">Leighton and the surrounding Colbert County communities don't generate the call volume of Huntsville or even Florence — but BamaClean has served these communities with the same equipment, the same certified technicians, and the same pricing standards since 1993. We don't have a small-market service tier. A Leighton homeowner who calls BamaClean gets the same truck-mounted extraction system, the same IICRC-certified crew, and the same satisfaction guarantee that a Madison or Huntsville customer gets.</p>
+      <p style="margin-bottom:20px;">The most consistent need we address in Leighton is crawlspace mold inspection and remediation in older homes. The combination of Tennessee River humidity, older crawlspace construction, and clay soil that holds moisture against foundation walls creates conditions that build toward mold growth over 20–40 years without visible interior symptoms. Homeowners in Leighton who schedule a crawlspace inspection often discover they had a mold issue they weren't aware of — and that the remediation we complete materially improves the indoor air quality of their home.</p>
+      <p>Carpet cleaning in Leighton tends toward whole-house jobs — larger rural homes with wall-to-wall carpet throughout, pets, and the kind of soil loading that comes with living in an agricultural environment. These are among our most satisfying jobs to complete because the before-and-after difference is visible to the homeowner within minutes of our arrival.</p>
+    `,
+  }}
+  services={[
+    { icon: "🧹", name: "Carpet Cleaning", href: "/services/carpet-cleaning/", desc: "Full extraction for Leighton and Colbert County homes." },
+    { icon: "🔬", name: "Mold Inspection & Remediation", href: "/services/mold-inspection/", desc: "IICRC-certified — highest priority in river-adjacent homes." },
+    { icon: "💧", name: "Water Damage Restoration", href: "/services/water-flood-damage/", desc: "24/7 emergency response — we come regardless of distance." },
+    { icon: "🔲", name: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/", desc: "Steam restoration for kitchen and bathroom tile." },
+    { icon: "🛋️", name: "Upholstery Cleaning", href: "/services/upholstery-cleaning/", desc: "Pet-safe allergen removal for Colbert County homes." },
+    { icon: "🔬", name: "Radon Testing", href: "/services/radon-testing/", desc: "EPA-protocol testing with written reports." },
+    { icon: "🌲", name: "Hardwood Floor Cleaning", href: "/services/hardwood-floor-cleaning/", desc: "Low-moisture, finish-safe deep cleaning." },
+    { icon: "🔥", name: "Fire & Smoke Damage", href: "/services/fire-smoke-damage/", desc: "24/7 response with insurance documentation." },
+  ]}
+  competitorSection={{
+    heading: "Why Leighton Trusts BamaClean Over National Options",
+    body: `
+      <p style="margin-bottom:20px;">National franchise cleaning companies don't maintain local operations in Leighton — they dispatch from Florence or Tuscumbia, which means they're covering the same geographic distance we are but without the 30 years of local familiarity that BamaClean brings. The response time advantage is essentially zero; the local knowledge advantage is entirely ours.</p>
+      <p style="margin-bottom:20px;">For Leighton homeowners, the most meaningful differentiator is not brand recognition but reliability and accountability. When a national franchise crew comes to Leighton, there's no local ownership with a reputation in the community at stake. When BamaClean comes to Leighton, we're representing 30 years of Shoals-area reputation on every job. That accountability is real, and it produces different behavior than a franchise system where individual technicians have no personal stake in community perception.</p>
+    `,
+  }}
+  faqs={[
+    { q: "Does BamaClean really serve Leighton and the smaller Colbert County communities?", a: "Yes — 20–35 minutes from our Florence headquarters. We serve Leighton, Cherokee, Barton, and unincorporated Colbert County with the same service standards as our highest-density markets." },
+    { q: "Is there a travel surcharge for Leighton service calls?", a: "No travel surcharge. Our pricing is based on scope of work — square footage and service type. Distance within our service area doesn't add to your quote." },
+    { q: "Can you handle mold in a Tennessee River-adjacent home in Colbert County?", a: "Yes — and river-adjacent homes in Colbert County are among the highest-risk for crawlspace mold in our entire service area. We inspect, contain, and remediate per IICRC S520 protocol, and we address the moisture source so the mold doesn't return." },
+    { q: "How do I know if my Leighton home needs radon testing?", a: "If your home has never been tested, the answer is yes — you should test it. Colbert County's geology creates moderate-to-elevated radon potential, and the only way to know your specific home's level is to measure it. Short-term tests take 48–96 hours; we provide written results and next-step guidance." },
+    { q: "What carpet cleaning method do you use in Leighton homes?", a: "We use truck-mounted hot-water extraction — the IICRC's recommended standard for residential carpet cleaning. We don't use portable units or low-moisture methods for carpet cleaning (though we do use low-moisture methods for appropriate hard-surface floors). Truck-mounted extraction delivers more heat, more suction, and faster drying than portable alternatives." },
+  ]}
+  schema={schema}
+/>
