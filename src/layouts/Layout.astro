@@ -1,12 +1,15 @@
 ---
 import '../styles/global.css';
+
+const SITE = 'https://bamaclean.com';
+
 export interface Props {
   title: string;
   description?: string;
-  canonical?: string;
+  canonical: string;
 }
 const { title, description = "Professional carpet cleaning, tile & grout cleaning, upholstery cleaning, water damage restoration, and mold inspection in Madison, Huntsville & North Alabama. Call (256) 324-0492.", canonical } = Astro.props;
-const canonicalURL = canonical ?? new URL(Astro.url.pathname, 'https://bamaclean.com').toString();
+const canonicalURL = `${SITE}${canonical}`;
 ---
 <!doctype html>
 <html lang="en">
@@ -35,15 +38,18 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname, 'https://bamaclean
     gtag('config', 'G-GTGLLFNDXW');
   </script>
 
-  <!-- LocalBusiness Schema -->
+  <!-- LocalBusiness + Service Catalog Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "BamaClean",
-    "description": "Professional carpet cleaning, tile & grout cleaning, upholstery cleaning, water damage restoration, and mold inspection in North Alabama.",
+    "legalName": "BamaClean, Inc.",
+    "description": "Professional carpet cleaning, tile & grout cleaning, upholstery cleaning, water damage restoration, mold inspection and remediation, and fire & smoke damage cleanup in North Alabama.",
     "url": "https://bamaclean.com",
     "telephone": "+12563240492",
+    "email": "info@bamaclean.com",
+    "foundingDate": "1993",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "205 S Seminary St",
@@ -57,14 +63,106 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname, 'https://bamaclean
       "latitude": 34.7998,
       "longitude": -87.6773
     },
-    "areaServed": ["Madison AL","Huntsville AL","Florence AL","Muscle Shoals AL","Decatur AL","Athens AL","Russellville AL"],
-    "openingHours": "Mo-Su 00:00-23:59",
+    "areaServed": [
+      {"@type":"City","name":"Madison","containedInPlace":{"@type":"State","name":"Alabama"}},
+      {"@type":"City","name":"Huntsville","containedInPlace":{"@type":"State","name":"Alabama"}},
+      {"@type":"City","name":"Florence","containedInPlace":{"@type":"State","name":"Alabama"}},
+      {"@type":"City","name":"Muscle Shoals","containedInPlace":{"@type":"State","name":"Alabama"}},
+      {"@type":"City","name":"Decatur","containedInPlace":{"@type":"State","name":"Alabama"}},
+      {"@type":"City","name":"Athens","containedInPlace":{"@type":"State","name":"Alabama"}},
+      {"@type":"City","name":"Tuscumbia","containedInPlace":{"@type":"State","name":"Alabama"}},
+      {"@type":"City","name":"Sheffield","containedInPlace":{"@type":"State","name":"Alabama"}},
+      {"@type":"City","name":"Russellville","containedInPlace":{"@type":"State","name":"Alabama"}}
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "07:00",
+        "closes": "22:00"
+      }
+    ],
     "priceRange": "$$",
-    "image": "/images/logo.webp",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Check, Credit Card",
+    "image": "https://bamaclean.com/images/logo.webp",
+    "logo": "https://bamaclean.com/images/logo.webp",
     "sameAs": [
       "https://www.facebook.com/people/BamaCleancom-Cleaning-Sanitation-Services/100063969132518/",
       "https://www.instagram.com/bamacleanteam/"
-    ]
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "BamaClean Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Carpet Cleaning",
+            "description": "Professional hot-water extraction carpet cleaning for residential and commercial properties. Removes dirt, allergens, pet stains, and odors.",
+            "url": "https://bamaclean.com/services#carpet",
+            "serviceType": "Carpet Cleaning",
+            "areaServed": "North Alabama"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Tile & Grout Cleaning",
+            "description": "High-pressure steam cleaning that restores tile and grout to like-new condition. Kitchen, bathroom, floor, and shower tile.",
+            "url": "https://bamaclean.com/services#tile",
+            "serviceType": "Tile Cleaning",
+            "areaServed": "North Alabama"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Upholstery Cleaning",
+            "description": "Safe, fabric-tested upholstery cleaning for sofas, chairs, sectionals, and ottomans. Pet odor and stain removal.",
+            "url": "https://bamaclean.com/services#upholstery",
+            "serviceType": "Upholstery Cleaning",
+            "areaServed": "North Alabama"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Water Damage Restoration",
+            "description": "24/7 emergency water extraction, structural drying, and full restoration. Fast response across North Alabama.",
+            "url": "https://bamaclean.com/services#water",
+            "serviceType": "Water Damage Restoration",
+            "areaServed": "North Alabama"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mold Inspection & Remediation",
+            "description": "Certified mold inspection, air quality testing, and professional mold remediation for homes and businesses.",
+            "url": "https://bamaclean.com/services#mold",
+            "serviceType": "Mold Remediation",
+            "areaServed": "North Alabama"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Fire & Smoke Damage Cleanup",
+            "description": "Comprehensive fire and smoke damage cleanup including soot removal, odor elimination, and structural restoration.",
+            "url": "https://bamaclean.com/services#fire",
+            "serviceType": "Fire Damage Restoration",
+            "areaServed": "North Alabama"
+          }
+        }
+      ]
+    }
   }
   </script>
 

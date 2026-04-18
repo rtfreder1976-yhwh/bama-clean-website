@@ -1,0 +1,15 @@
+# BamaClean robots.txt
+# https://bamaclean.com
+
+User-agent: *
+Allow: /
+
+# Block any admin or form submission paths
+Disallow: /api/
+Disallow: /_astro/
+
+# Crawl delay (courteous to servers)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://bamaclean.com/sitemap.xml
