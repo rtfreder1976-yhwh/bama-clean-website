@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import QuoteForm from '../components/QuoteForm.astro';
+import SocialProof from '../components/SocialProof.astro';
 
 const SITE = 'https://bamaclean.com';
 
@@ -285,6 +286,8 @@ const canonicalURL = `${SITE}${canonical}`;
   </script>
 
   <slot />
+
+  <SocialProof />
 
   <QuoteForm />
 
