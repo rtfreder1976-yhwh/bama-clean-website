@@ -1,0 +1,67 @@
+---
+import ServiceLayout from '../../components/ServiceLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Tile and Grout Cleaning",
+  "provider": { "@type": "LocalBusiness", "name": "BamaClean", "telephone": "+12563240492" },
+  "areaServed": ["Madison, AL", "Huntsville, AL", "Florence, AL", "Decatur, AL", "Athens, AL"],
+  "description": "Professional tile and grout cleaning in North Alabama. High-pressure steam cleaning restores grout to original color. Sealing available.",
+});
+---
+
+<ServiceLayout
+  title="Tile & Grout Cleaning Madison AL | Grout Restoration | BamaClean"
+  description="Professional tile and grout cleaning in Madison, Huntsville & North Alabama. High-pressure steam cleaning restores grout to original color. Sealing available. Free quote: (256) 324-0492."
+  canonical="/services/tile-grout-cleaning/"
+  hero={{
+    label: "Tile & Grout Cleaning — North Alabama",
+    heading: "Grout So Clean You'll Think It Was Regrouted",
+    subheading: "Grout is porous. Mopping pushes dirt deeper in. Professional high-pressure steam extraction is the only method that actually removes embedded soil from grout channels — and the results are dramatic. Serving Madison, Huntsville, Florence & all of North Alabama.",
+  }}
+  included={[
+    "Pre-treatment of grout lines with alkaline or acid cleaner (based on soil type)",
+    "High-pressure steam cleaning of tile and grout",
+    "Scrubbing of grout channels with rotary brush system",
+    "Immediate extraction of dirty water — no mess left behind",
+    "Tile surface cleaning and buffing",
+    "Grout sealing (clear or color seal) — optional add-on",
+    "Edge and corner detail cleaning",
+    "Post-clean inspection and walk-through",
+    "Works on floors, shower walls, backsplashes, and counters",
+    "Safe for ceramic, porcelain, natural stone (with appropriate chemistry)",
+  ]}
+  problems={[
+    { title: "Grout Lines That Are Brown or Black No Matter How Much You Mop", desc: "Mopping is largely ineffective on grout. It pushes dirty water into the porous grout, where it dries as embedded stain. High-pressure steam extraction is the only method that removes it." },
+    { title: "Shower Grout With Mildew That Keeps Coming Back", desc: "Shower grout stays damp and is a perfect environment for mildew. We use antimicrobial chemistry appropriate for shower environments, followed by sealing to slow future colonization." },
+    { title: "Kitchen Tile That Looks Dull and Greasy", desc: "Kitchen tile accumulates airborne grease that bonds to the tile surface and grout. We use degreasing pre-treatments before steam cleaning to cut through cooking residue." },
+    { title: "Grout Color That Varies Across the Floor", desc: "Uneven grout color is almost always differential soil loading — clean areas vs. heavily trafficked areas. After professional cleaning, the grout returns to a uniform color." },
+    { title: "Tile Floor That Looks Dirty Minutes After Mopping", desc: "If tile looks clean briefly and then looks dirty again quickly, the grout is re-releasing trapped soil when wet. Deep extraction removes the reservoir — the cycle stops." },
+    { title: "Natural Stone That Was Cleaned With the Wrong Product", desc: "Acidic cleaners (including many commercial bathroom cleaners) etch marble, travertine, and limestone. We use pH-neutral chemistry on natural stone and can assess etching damage." },
+  ]}
+  process={[
+    { step: "1", title: "Pre-Inspection & Chemistry Selection", desc: "We assess tile type, grout condition, and soil type. Alkaline degreasers are used for organic soil (kitchens, high-traffic floors). Mild acid cleaners address mineral deposits in hard-water areas. Natural stone gets pH-neutral chemistry only." },
+    { step: "2", title: "Pre-Treatment Application", desc: "We apply the appropriate pre-treatment to grout lines and tile surfaces and allow dwell time to break the bond between soil and grout before mechanical cleaning begins." },
+    { step: "3", title: "High-Pressure Steam Extraction", desc: "Our rotary jet steam tool delivers high-pressure hot water directly into grout channels while simultaneously extracting the dirty water. This is what makes the difference — the suction removes what the steam loosens." },
+    { step: "4", title: "Edge and Detail Work", desc: "We hand-scrub edges, corners, and areas the rotary tool can't reach to ensure complete coverage. Shower niches and transitions are cleaned individually." },
+    { step: "5", title: "Sealing (Optional but Recommended)", desc: "Clean grout is the perfect time to apply sealer. Clear sealer protects existing color; color sealer can restore or change grout color. Sealed grout resists future soil penetration and is dramatically easier to maintain." },
+  ]}
+  whyUs={[
+    { icon: "💧", title: "High-Pressure Steam — The Only Method That Works", desc: "We use commercial-grade rotary steam tools that deliver the pressure and temperature needed to actually clean grout, not just wet it." },
+    { icon: "🏅", title: "IICRC-Certified Technicians", desc: "Our team's training covers hard-surface cleaning chemistry and methods — including natural stone, which requires different products than ceramic or porcelain." },
+    { icon: "🔒", title: "Grout Sealing Included as an Option", desc: "We offer clear and color grout sealing as an add-on. Sealed grout stays cleaner longer and is easy to maintain with routine mopping." },
+    { icon: "💰", title: "Upfront Pricing Confirmed Before We Start", desc: "Pricing is based on square footage, measured and confirmed before work begins. No surprises." },
+    { icon: "📅", title: "30+ Years Serving North Alabama", desc: "Since 1993, BamaClean has restored tile and grout in thousands of North Alabama homes and commercial spaces. We've seen every soil type and tile condition imaginable." },
+    { icon: "✅", title: "Results You Can See Immediately", desc: "Tile and grout cleaning results are visible as we work. You'll see the grout lines returning to their original color in real time. If you're not satisfied, we keep cleaning." },
+  ]}
+  faqs={[
+    { q: "How is professional tile cleaning different from mopping?", a: "Mopping spreads cleaning solution and removes surface-level dirt — it does almost nothing for grout. Professional cleaning uses high-pressure steam to physically break soil out of the grout's porous surface and then extracts it. The visual difference is usually dramatic." },
+    { q: "Can you change my grout color?", a: "Yes — with color sealer. Color grout sealer is applied over clean grout and bonds to create a uniform, durable colored finish. It's a cost-effective alternative to regrouting for grout that's in good structural condition but discolored." },
+    { q: "Is your cleaning safe for marble or travertine?", a: "Yes, with the appropriate chemistry. Natural stone must be cleaned with pH-neutral products — not the alkaline or acidic cleaners used on ceramic tile. We identify stone type before selecting any chemistry." },
+    { q: "How often should I have tile and grout professionally cleaned?", a: "Most household tile benefits from professional cleaning every 12–24 months. High-traffic areas (kitchens, main bathrooms) benefit from annual cleaning. Sealed grout extends the interval significantly." },
+    { q: "How long until I can walk on the floor after cleaning?", a: "Typically 30–60 minutes after we finish. Sealed floors need 2–4 hours before normal use and 24 hours before wet mopping." },
+    { q: "Can you clean shower walls and the shower floor?", a: "Yes. Shower tile and grout are some of the most common and most satisfying jobs we do. We clean walls, floors, curbs, niches, and fixtures — and can seal shower grout to resist future mildew growth." },
+  ]}
+  schema={schema}
+/>

@@ -1,0 +1,67 @@
+---
+import ServiceLayout from '../../components/ServiceLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Sanitation Services",
+  "provider": { "@type": "LocalBusiness", "name": "BamaClean", "telephone": "+12563240492" },
+  "areaServed": ["Madison, AL", "Huntsville, AL", "Florence, AL", "Decatur, AL", "Athens, AL"],
+  "description": "Professional sanitation and disinfection services in North Alabama. EPA-registered disinfectants, electrostatic application, illness prevention for homes and businesses.",
+});
+---
+
+<ServiceLayout
+  title="Sanitation & Disinfection Services Madison AL | BamaClean"
+  description="Professional sanitation and disinfection services in Madison, Huntsville & North Alabama. EPA-registered disinfectants, electrostatic spray, for homes and businesses. Call (256) 324-0492."
+  canonical="/services/sanitation-services/"
+  hero={{
+    label: "Sanitation Services — North Alabama",
+    heading: "Deep Sanitization That Goes Beyond What Janitorial Service Provides",
+    subheading: "Standard cleaning removes visible soil. Professional sanitation eliminates pathogens — bacteria, viruses, and mold spores — from all surfaces using EPA-registered disinfectants and electrostatic application technology. For homes, businesses, and facilities across North Alabama.",
+  }}
+  included={[
+    "Full-surface application of EPA-registered, hospital-grade disinfectants",
+    "Electrostatic spray application for complete surface coverage (including backs and undersides)",
+    "High-touch point focus: doorknobs, light switches, handles, remotes, keyboards",
+    "Floor sanitization — all hard surfaces",
+    "Upholstered surface treatment with fabric-safe antimicrobial",
+    "Bathroom and kitchen surface sanitization",
+    "HVAC vent and return sanitization (surface-accessible)",
+    "Child- and pet-safe disinfectant options available",
+    "Commercial and residential applications",
+    "Certificate of sanitation available upon request",
+  ]}
+  problems={[
+    { title: "Illness Circulating Through Your Household or Office", desc: "When one person gets sick and others follow, the pathogen load on shared surfaces is the transmission vector. Professional sanitization of high-touch points and shared spaces interrupts the cycle." },
+    { title: "Post-Illness Deep Clean Before Vulnerable Family Members Return", desc: "After a household illness, surfaces remain contaminated for hours to days. Professional sanitization before immunocompromised or elderly family members return reduces re-exposure risk." },
+    { title: "Rental Property Between Tenants", desc: "Standard turnover cleaning doesn't address pathogen contamination from the previous tenant. Professional sanitization gives incoming tenants a genuinely clean environment and reduces your liability." },
+    { title: "Office or Retail Space After COVID or Flu Outbreak", desc: "We provide documented, EPA-protocol disinfection with a certificate of treatment — appropriate for communicating to customers, employees, or required by a health authority." },
+    { title: "Daycare, School, or Healthcare Facility", desc: "Facilities serving children, elderly, or immunocompromised populations require disinfection protocols beyond what janitorial staff provide. Our EPA-registered applications meet commercial facility requirements." },
+    { title: "Home With Pet or Wildlife Contamination", desc: "Animal waste, rodent infestations, or bird intrusion leave pathogen contamination on surfaces and in air. We sanitize affected areas with appropriate disinfectants and provide odor neutralization." },
+  ]}
+  process={[
+    { step: "1", title: "Scope Assessment", desc: "We confirm the space to be sanitized, the contamination concern, and appropriate disinfectant selection. Some applications (food-prep surfaces, child environments) require specific EPA List N disinfectants — we confirm suitability before application." },
+    { step: "2", title: "Pre-Clean (If Needed)", desc: "Disinfectants work on clean surfaces — soil and organic matter deactivate many active ingredients. If surfaces need pre-cleaning, we clean first, then disinfect. Sanitation without pre-cleaning is common marketing but bad science." },
+    { step: "3", title: "Electrostatic Application", desc: "Our electrostatic sprayers charge the disinfectant droplets, causing them to wrap around and adhere to all sides of surfaces — including backs of chairs, undersides of desks, and irregular surfaces that spray-and-wipe misses entirely." },
+    { step: "4", title: "High-Touch Point Focus", desc: "We pay particular attention to the surfaces touched most frequently: door handles, light switches, faucets, cabinet pulls, elevator buttons, shared electronics, and seating surfaces. These are the primary transmission vectors." },
+    { step: "5", title: "Dwell Time Verification", desc: "EPA-registered disinfectants require specific contact time to achieve their listed kill rates. We ensure surfaces remain wet for the required dwell time — not just sprayed and immediately wiped." },
+  ]}
+  whyUs={[
+    { icon: "🔬", title: "EPA-Registered Disinfectants — Not Consumer Products", desc: "We use commercial-grade, EPA-registered disinfectants proven effective against the pathogens relevant to your situation. Not store-brand bleach solution." },
+    { icon: "⚡", title: "Electrostatic Application — No Surface Missed", desc: "Our electrostatic sprayers provide complete surface coverage, including areas that spray-and-wipe misses entirely. This is the same technology used in hospital and aircraft disinfection." },
+    { icon: "📋", title: "Certificate of Sanitation Available", desc: "We provide a written certificate documenting the products applied, surfaces treated, and application date — appropriate for regulatory requirements, tenant communications, or business documentation." },
+    { icon: "🌿", title: "Child- and Pet-Safe Options", desc: "We offer EPA-registered disinfectants that are safe for occupied spaces once dry — appropriate for daycares, schools, and homes with children and pets." },
+    { icon: "📅", title: "30+ Years Serving North Alabama Homes and Businesses", desc: "Since 1993, BamaClean has provided sanitation services to residential and commercial clients throughout North Alabama. We understand both the science and the practical requirements of different environments." },
+    { icon: "🏢", title: "Residential and Commercial Applications", desc: "We sanitize single-family homes, apartments, offices, retail spaces, daycare facilities, and commercial kitchens. One company, all settings." },
+  ]}
+  faqs={[
+    { q: "What's the difference between cleaning, sanitizing, and disinfecting?", a: "Cleaning removes visible soil. Sanitizing reduces bacteria to safe levels (required for food contact surfaces). Disinfecting eliminates a defined percentage of pathogens including viruses. Professional disinfection requires EPA-registered products applied at correct concentration and dwell time — not spray-and-wipe with consumer products." },
+    { q: "Is the disinfectant safe for children and pets?", a: "We select disinfectants appropriate for your environment. Many EPA-registered disinfectants are safe for re-entry once surfaces have dried (typically 10–15 minutes). We'll confirm the specific product and re-entry interval before we start." },
+    { q: "How long does sanitation service take?", a: "A typical residential application (3–4 bedrooms) takes 1–2 hours. Commercial spaces vary by square footage and complexity. We'll provide a time estimate at scheduling." },
+    { q: "Do I need to leave during the service?", a: "During application, the space should be unoccupied. Re-entry is typically safe 15–30 minutes after application is complete, once surfaces are dry. We'll confirm timing based on the specific product and application." },
+    { q: "Can you sanitize a space after someone was sick with COVID or flu?", a: "Yes. We use EPA List N disinfectants effective against SARS-CoV-2 and influenza. Our electrostatic application ensures complete surface coverage. We can provide a certificate of treatment for documentation purposes." },
+    { q: "Do you offer recurring sanitization service?", a: "Yes. We offer scheduled sanitization for commercial facilities, daycares, medical offices, and residential clients who want regular professional disinfection. Contact us to discuss frequency and pricing." },
+  ]}
+  schema={schema}
+/>

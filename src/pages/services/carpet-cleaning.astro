@@ -1,0 +1,67 @@
+---
+import ServiceLayout from '../../components/ServiceLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Carpet Cleaning",
+  "provider": { "@type": "LocalBusiness", "name": "BamaClean", "telephone": "+12563240492" },
+  "areaServed": ["Madison, AL", "Huntsville, AL", "Florence, AL", "Decatur, AL", "Athens, AL"],
+  "description": "Professional hot-water extraction carpet cleaning in North Alabama. IICRC-certified technicians, upfront pricing, 30+ years serving the region.",
+});
+---
+
+<ServiceLayout
+  title="Carpet Cleaning Madison AL | IICRC-Certified | BamaClean"
+  description="Professional carpet cleaning in Madison, Huntsville & North Alabama. Hot-water extraction, IICRC-certified techs, upfront pricing — no bait-and-switch. Free quote: (256) 324-0492."
+  canonical="/services/carpet-cleaning/"
+  hero={{
+    label: "Carpet Cleaning — North Alabama",
+    heading: "Deep Carpet Cleaning That Actually Delivers",
+    subheading: "IICRC-certified hot-water extraction removes embedded dirt, pet odors, and allergens your vacuum can't touch. Upfront pricing. No surprises at the door. Serving Madison, Huntsville, Florence & all of North Alabama since 1993.",
+  }}
+  included={[
+    "Full pre-inspection & fiber identification",
+    "Pre-treatment of traffic lanes and stains",
+    "Hot-water extraction (truck-mounted for maximum suction)",
+    "Grooming to restore carpet pile direction",
+    "Deodorizer application (pet, smoke, musty)",
+    "Post-cleaning walk-through with you",
+    "Spot treatment for stubborn stains (included, not upsold)",
+    "Dry time estimate and care instructions",
+    "Carpet protection spray available (optional add-on)",
+    "Moving of small to medium furniture included",
+  ]}
+  problems={[
+    { title: "Pet Urine Odor That Returns After Cleaning", desc: "Most carpet cleaners mask pet odors temporarily. We use enzyme-based treatments that break down uric acid crystals at the source — the smell doesn't come back." },
+    { title: "Dingy High-Traffic Lanes That Won't Come Clean", desc: "Rental machines lack the heat and suction to pull deep-set soil. Our truck-mounted system operates at 200°F+ and removes what portable machines leave behind." },
+    { title: "Prices That Change When the Tech Arrives", desc: "National chains quote one price on the phone and upsell heavily on-site. Our estimate is your final price — we confirm square footage before we start." },
+    { title: "Carpets That Stay Wet for Days", desc: "Over-wetting causes mold and mildew. Our high-powered extraction leaves carpets 80–90% dry. Most homes dry in 6–8 hours." },
+    { title: "Residue Left Behind That Re-Soils Fast", desc: "Some cleaners leave soapy residue that attracts dirt like a magnet. We use low-residue solutions and a thorough rinse pass to eliminate sticky buildup." },
+    { title: "Allergies That Don't Improve After Cleaning", desc: "Dust mites, dander, and pollen live deep in carpet fibers. Our HEPA-filtered extraction system physically removes allergens rather than just agitating them." },
+  ]}
+  process={[
+    { step: "1", title: "Free Estimate — Confirmed Upfront", desc: "We measure your rooms and confirm pricing before any work begins. No surprises. You approve the scope, then we start." },
+    { step: "2", title: "Pre-Inspection & Pre-Treatment", desc: "We identify fiber type (nylon, polyester, wool, olefin) and apply targeted pre-treatment to high-traffic lanes, pet spots, and stains — letting dwell time do the heavy lifting." },
+    { step: "3", title: "Hot-Water Extraction", desc: "Our truck-mounted system injects 200°F+ water deep into the pile and immediately extracts it — pulling soil, bacteria, allergens, and most of the moisture in one pass." },
+    { step: "4", title: "Spot Treatment & Grooming", desc: "Stubborn spots get targeted treatment. We then groom the pile to restore a uniform appearance and accelerate drying." },
+    { step: "5", title: "Deodorize & Walk-Through", desc: "We apply deodorizer where needed, then walk through the results with you before we leave. If anything isn't right, we re-clean it on the spot." },
+  ]}
+  whyUs={[
+    { icon: "🏅", title: "IICRC-Certified Technicians", desc: "Every tech on our team holds current IICRC certification — the gold standard for carpet and restoration. Not a claim. A credential." },
+    { icon: "💰", title: "What We Quote Is What You Pay", desc: "We've heard the horror stories about national chains. With BamaClean, the price you approve before we start is the price on your invoice. Full stop." },
+    { icon: "📅", title: "30+ Years Serving North Alabama", desc: "Since 1993, we've cleaned carpets in thousands of North Alabama homes. We're not a franchise — we're your neighbors." },
+    { icon: "🌿", title: "Pet- and Child-Safe Solutions", desc: "We use eco-friendly, biodegradable cleaning agents throughout. Safe for your kids and pets to be back on the carpet same day." },
+    { icon: "🚛", title: "Truck-Mounted Equipment Only", desc: "We don't use portable units. Our truck-mounted systems produce more heat, more suction, and faster drying than any portable machine on the market." },
+    { icon: "✅", title: "100% Satisfaction Guarantee", desc: "If you're not happy with the results after we're done, we come back and re-clean at no charge. We stand behind every job." },
+  ]}
+  faqs={[
+    { q: "How long does carpet cleaning take?", a: "Most average-sized rooms take 20–30 minutes each. A whole-house clean typically runs 2–4 hours depending on square footage, soil level, and number of rooms." },
+    { q: "How long until my carpets are dry?", a: "With our truck-mounted extraction, most carpets are dry in 6–8 hours. You can walk on them immediately in clean socks or shoe covers, which we provide." },
+    { q: "Do I need to move furniture before you arrive?", a: "We move small to medium furniture (sofas, chairs, side tables) as part of the service. For large items (pianos, heavy dressers, beds), we clean around them or can coordinate access with you ahead of time." },
+    { q: "Can you remove pet stains and urine odor completely?", a: "In most cases, yes — especially with our enzyme treatment and hot-water extraction. Severe sub-floor contamination may require additional treatment. We'll tell you honestly during the pre-inspection what's achievable." },
+    { q: "How often should I have my carpets professionally cleaned?", a: "IICRC recommends every 12–18 months for most households, or every 6–12 months with pets, children, or allergy sufferers. High-traffic areas may benefit from more frequent maintenance cleaning." },
+    { q: "Is your carpet cleaning safe for wool or delicate fibers?", a: "Yes. We identify fiber type during the pre-inspection and adjust chemistry and temperature accordingly. Wool and delicate carpets receive pH-neutral, low-moisture treatment." },
+  ]}
+  schema={schema}
+/>

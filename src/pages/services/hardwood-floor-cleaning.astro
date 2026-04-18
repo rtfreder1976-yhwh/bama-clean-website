@@ -1,0 +1,67 @@
+---
+import ServiceLayout from '../../components/ServiceLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Hardwood Floor Cleaning",
+  "provider": { "@type": "LocalBusiness", "name": "BamaClean", "telephone": "+12563240492" },
+  "areaServed": ["Madison, AL", "Huntsville, AL", "Florence, AL", "Decatur, AL", "Athens, AL"],
+  "description": "Professional hardwood floor cleaning in North Alabama. Safe pH-neutral cleaning, finish-compatible products, deep cleaning without moisture damage.",
+});
+---
+
+<ServiceLayout
+  title="Hardwood Floor Cleaning Madison AL | Safe, Deep Clean | BamaClean"
+  description="Professional hardwood floor cleaning in Madison, Huntsville & North Alabama. pH-neutral, finish-safe cleaning restores shine without moisture damage. Free quote: (256) 324-0492."
+  canonical="/services/hardwood-floor-cleaning/"
+  hero={{
+    label: "Hardwood Floor Cleaning — North Alabama",
+    heading: "Hardwood Floors Restored — Without the Risk of DIY Damage",
+    subheading: "Steam mops, wet mops, and most consumer products damage hardwood finishes over time. Professional hardwood cleaning uses pH-neutral, finish-compatible solutions and low-moisture methods to deep-clean without swelling, clouding, or residue. Serving Madison, Huntsville, Florence & all of North Alabama.",
+  }}
+  included={[
+    "Pre-inspection of finish type (polyurethane, wax, oil) and condition",
+    "Dry dust extraction before any liquid is applied",
+    "pH-neutral, finish-compatible cleaning solution",
+    "Low-moisture application — no puddles, no swelling",
+    "Scrubbing of heavy soil in traffic lanes",
+    "Immediate extraction and buffing to a streak-free finish",
+    "Grout line cleaning between plank bevels",
+    "Edge and baseboard cleaning",
+    "Post-clean protection application (optional add-on)",
+    "Safe for solid, engineered, and hand-scraped hardwood",
+  ]}
+  problems={[
+    { title: "Floors That Look Dull and Cloudy Despite Regular Mopping", desc: "Most consumer floor cleaners leave residue that builds up over time, creating a cloudy film. Our professional extraction process removes the residue layer along with the embedded soil underneath." },
+    { title: "Sticky Residue That Attracts Dirt Fast After Mopping", desc: "Soap-based cleaners leave a sticky film that acts as a dirt magnet. Within hours of mopping, the floor looks dirty again. Professional no-residue cleaning breaks this cycle." },
+    { title: "Steam Mop Damage — Clouded or Lifting Finish", desc: "Steam mops force moisture and heat into hardwood seams, causing finish cloudiness, raised grain, and board swelling over time. We use carefully controlled low-moisture methods." },
+    { title: "Pet Paw Print Patterns in High-Traffic Areas", desc: "Pet oils and paw traffic create concentrated soil patterns that don't respond to regular mopping. Targeted pre-treatment and scrubbing lifts embedded oils without damaging the finish." },
+    { title: "Finish Wearing Thin in Traffic Lanes", desc: "If you're seeing bare wood in heavy traffic areas, the finish has worn through. Professional cleaning removes soil that accelerates finish wear — extending the life of your floors before refinishing is needed." },
+    { title: "Black Staining Around Boards or at Seams", desc: "Black staining between planks is usually oxidized pet urine that has penetrated through the finish. This requires specialized treatment — and an honest assessment of whether cleaning or refinishing is the right next step." },
+  ]}
+  process={[
+    { step: "1", title: "Finish Identification", desc: "We determine your finish type — polyurethane (most common), wax, or penetrating oil — because each requires different chemistry. Wax-finished floors, for example, cannot be cleaned with water-based solutions." },
+    { step: "2", title: "Dry Extraction First", desc: "Before any liquid is applied, we remove loose soil, grit, and debris with a professional dry extraction system. Grit acts as sandpaper on hardwood finishes — removing it first protects the floor during cleaning." },
+    { step: "3", title: "pH-Neutral Solution Application", desc: "We apply a pH-neutral, finish-compatible cleaning solution in controlled amounts — never pooling, never flooding. The solution is worked into traffic lane soil with soft-bristle agitation." },
+    { step: "4", title: "Extraction and Buffing", desc: "Solution and loosened soil are immediately extracted, then the surface is buffed to a streak-free, residue-free finish. The difference between professional buffing and mopping is visible." },
+    { step: "5", title: "Edge Work and Detail Cleaning", desc: "We clean along baseboards and in the bevels between planks where most consumer cleaning misses. These areas are often the most visually impactful because the contrast with clean plank surfaces is obvious." },
+  ]}
+  whyUs={[
+    { icon: "🌲", title: "Finish-Specific Cleaning — No Damage", desc: "We identify your finish before selecting any chemistry. The wrong product on the wrong finish causes permanent damage. We've been doing this long enough to know the difference." },
+    { icon: "💧", title: "Low-Moisture Methods — No Swelling, No Warping", desc: "We never flood hardwood floors. Our low-moisture application delivers thorough cleaning without the moisture that causes board swelling and finish damage." },
+    { icon: "🏅", title: "IICRC-Certified Technicians", desc: "Our IICRC training includes hard-surface cleaning — not just carpet. We understand hardwood chemistry, finish compatibility, and moisture thresholds." },
+    { icon: "💰", title: "Upfront Pricing by Square Footage", desc: "We measure your hardwood area and confirm pricing before we start. No surprises at the invoice." },
+    { icon: "📅", title: "30+ Years Serving North Alabama Homes", desc: "Since 1993, BamaClean has cleaned hardwood floors in thousands of North Alabama homes — from original pine floors in older homes to engineered hardwood in new construction." },
+    { icon: "✅", title: "Satisfaction Guaranteed", desc: "If the floors don't look dramatically better than when we arrived, we make it right before we leave." },
+  ]}
+  faqs={[
+    { q: "Is professional hardwood cleaning safe for my floors?", a: "Yes — when done correctly. The risk comes from using the wrong products or too much moisture. We use finish-compatible, pH-neutral chemistry in controlled amounts. We've never damaged a floor with our cleaning process." },
+    { q: "How often should hardwood floors be professionally cleaned?", a: "Most hardwood floors benefit from professional cleaning once a year. High-traffic areas or homes with pets may benefit from twice-yearly cleaning. Regular professional cleaning extends the time between expensive refinishing." },
+    { q: "Can you remove scratches from hardwood floors?", a: "Professional cleaning removes soil that makes scratches more visible. Light surface scratches can sometimes be minimized with appropriate products. Deep scratches and finish wear require refinishing — we'll tell you honestly which category yours fall into." },
+    { q: "What's the difference between cleaning and refinishing?", a: "Cleaning removes soil from the existing finish. Refinishing involves sanding the floor down to bare wood and applying new finish — a much more involved and expensive process. Regular professional cleaning delays the need for refinishing significantly." },
+    { q: "Can you clean engineered hardwood?", a: "Yes. Engineered hardwood has a real wood veneer over a plywood core. It cleans similarly to solid hardwood but requires careful moisture control because the veneer layer is thinner. We adjust our approach accordingly." },
+    { q: "How long does hardwood floor cleaning take to dry?", a: "With our low-moisture method, most hardwood floors are fully dry and ready for normal use within 1–2 hours. We'll confirm timing based on your specific floor and ambient conditions." },
+  ]}
+  schema={schema}
+/>

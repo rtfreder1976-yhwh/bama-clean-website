@@ -1,0 +1,70 @@
+---
+import ServiceLayout from '../../components/ServiceLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Fire and Smoke Damage Restoration",
+  "provider": { "@type": "LocalBusiness", "name": "BamaClean", "telephone": "+12563240492" },
+  "areaServed": ["Madison, AL", "Huntsville, AL", "Florence, AL", "Decatur, AL", "Athens, AL"],
+  "description": "24/7 fire and smoke damage restoration in North Alabama. IICRC-certified, insurance documentation, odor elimination. Call immediately after a fire.",
+});
+---
+
+<ServiceLayout
+  title="Fire & Smoke Damage Restoration Madison AL | 24/7 Emergency | BamaClean"
+  description="24/7 fire and smoke damage restoration in Madison, Huntsville & North Alabama. IICRC-certified, insurance documentation, complete odor elimination. Call now: (256) 324-0492."
+  canonical="/services/fire-smoke-damage/"
+  emergency={true}
+  hero={{
+    label: "Fire & Smoke Damage Restoration — North Alabama",
+    heading: "Fire Damage Gets Worse Every Hour You Wait",
+    subheading: "Smoke residue becomes permanent within days. Soot oxidizes surfaces. Odor embeds deeper into porous materials. After a fire, immediate professional response saves contents, reduces replacement costs, and protects your insurance claim. BamaClean responds 24/7 across North Alabama.",
+    emergency: true,
+  }}
+  included={[
+    "24/7 emergency response — we mobilize within hours",
+    "Full damage assessment and photo documentation",
+    "Smoke and soot residue removal from all surfaces",
+    "Structural surface cleaning (walls, ceilings, floors)",
+    "Content inventory — salvageable vs. total loss determination",
+    "Content cleaning and pack-out for off-site restoration",
+    "Ozone and thermal fogging for deep odor elimination",
+    "Air scrubbing with HEPA filtration during restoration",
+    "Deodorization of HVAC system and ductwork",
+    "Complete insurance documentation and adjuster coordination",
+  ]}
+  problems={[
+    { title: "Smoke Odor That Persists Weeks After the Fire Is Out", desc: "Smoke odor molecules penetrate deeply into drywall, insulation, wood, fabrics, and HVAC systems. Surface cleaning doesn't reach them. We use thermal fogging and ozone treatment to neutralize odor compounds in every porous material throughout the structure." },
+    { title: "Soot Smearing and Spreading During Cleanup Attempts", desc: "Soot is oily and smears easily. Wiping it with the wrong method drives it deeper into surfaces. Proper soot removal requires dry sponge techniques before any wet cleaning — a sequencing most homeowners don't know." },
+    { title: "Insurance Adjuster Disputes About Scope", desc: "We document everything — before, during, and after. Our IICRC-certified technicians can communicate directly with your adjuster and provide the technical documentation needed to support your claim scope." },
+    { title: "Contents You're Not Sure Are Salvageable", desc: "We conduct a professional contents inventory, separating items that can be restored from those that cannot. Salvageable items are packed out, professionally cleaned, and stored until your home is ready." },
+    { title: "Smoke Damage in Rooms That Weren't on Fire", desc: "Smoke travels through HVAC systems, under doors, and through wall cavities. Rooms far from the fire origin often have significant residue and odor that require treatment." },
+    { title: "Acidic Soot Etching Surfaces Over Time", desc: "Soot is acidic and continues to cause damage long after the fire. Metal oxidizes, finishes etch, and plastics yellow. Time is working against you — early response reduces permanent damage." },
+  ]}
+  process={[
+    { step: "1", title: "Emergency Response — 24/7", desc: "Call us immediately after the fire is extinguished and the structure is cleared by the fire department. We respond within hours. Early arrival means more contents saved and less permanent damage." },
+    { step: "2", title: "Assessment & Documentation", desc: "We document all damage with photographs before touching anything. This creates the baseline record your insurance company requires. We assess structural damage, content condition, and restoration scope." },
+    { step: "3", title: "Secure & Stabilize", desc: "If the structure has compromised openings from firefighting, we arrange board-up and tarping to prevent weather intrusion and unauthorized entry while restoration is underway." },
+    { step: "4", title: "Soot & Smoke Residue Removal", desc: "Dry sponge cleaning is applied to loose soot before any wet cleaning. Surfaces are then cleaned with appropriate chemistry by surface type (painted drywall, wood, metal, tile). Sequence matters — we follow IICRC fire restoration protocol." },
+    { step: "5", title: "Contents Pack-Out & Restoration", desc: "Salvageable contents are inventoried, packed, and transported to our facility for professional cleaning. Upholstered furniture, clothing, artwork, and electronics are assessed individually." },
+    { step: "6", title: "Odor Elimination", desc: "Thermal fogging delivers deodorizing agents into every porous surface throughout the structure, mimicking the dispersal pattern of smoke. Ozone treatment is applied where appropriate. HVAC ductwork is deodorized separately." },
+  ]}
+  whyUs={[
+    { icon: "🚨", title: "24/7 Emergency Response — We Answer When It Happens", desc: "Fire doesn't follow business hours. Neither do we. Call us at any hour and we mobilize immediately — not the next morning." },
+    { icon: "🏅", title: "IICRC Fire & Smoke Restoration Certified", desc: "Our technicians hold IICRC certification in fire and smoke restoration. We follow IICRC S700 protocol — the standard insurance companies and attorneys recognize." },
+    { icon: "📋", title: "Complete Insurance Claim Documentation", desc: "We provide everything your insurer needs: damage documentation, scope of work, methods used, before-and-after photos, and a written remediation report. We coordinate with adjusters directly." },
+    { icon: "🏠", title: "We Treat Your Contents Like They're Ours", desc: "We know your belongings aren't just possessions — they're irreplaceable. We take a conservative approach to contents: restore if possible, replace only if necessary." },
+    { icon: "📅", title: "30+ Years Responding to North Alabama Disasters", desc: "Since 1993, BamaClean has restored hundreds of North Alabama homes after fire events. We understand what insurance companies need and what homeowners are going through." },
+    { icon: "💰", title: "We Work With Your Insurance — Not Against It", desc: "We're experienced in the insurance restoration process. Our documentation is designed to support your claim, not complicate it. We can discuss scope directly with your adjuster." },
+  ]}
+  faqs={[
+    { q: "How soon after a fire should I call for restoration?", a: "Immediately — within hours if possible. Soot begins permanently etching surfaces within days. The longer you wait, the more materials become non-restorable. Call us before you call anyone else except your insurer." },
+    { q: "Will my insurance cover fire and smoke restoration?", a: "In most cases, yes. Standard homeowner's and renter's insurance policies cover fire damage restoration including smoke remediation. We can help you understand your coverage and provide the documentation your insurer requires." },
+    { q: "Can you get smoke smell completely out of my house?", a: "In most cases, yes. Thermal fogging and ozone treatment neutralize odor molecules in porous materials throughout the structure. Severely compromised materials (drywall, insulation) may need to be removed. We'll give you an honest assessment." },
+    { q: "Can you save my furniture, clothing, and electronics?", a: "Often yes — even items that smell heavily of smoke can be restored. Electronics require assessment by a specialist. Clothing and textiles respond well to professional ozone and cleaning treatment. We'll give you an item-by-item evaluation." },
+    { q: "What should I NOT do after a fire?", a: "Don't attempt to clean soot yourself — wiping spreads it and causes permanent staining. Don't run HVAC systems — they spread smoke odor to clean areas. Don't throw anything away before it's inventoried for insurance purposes. Call us first." },
+    { q: "How long does fire restoration take?", a: "Small kitchen fires with limited smoke spread may take 3–7 days. Larger events involving multiple rooms, structural damage, or extensive contents restoration may take several weeks. We'll give you a realistic timeline after the initial assessment." },
+  ]}
+  schema={schema}
+/>

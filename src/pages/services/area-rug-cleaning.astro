@@ -1,0 +1,68 @@
+---
+import ServiceLayout from '../../components/ServiceLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Area Rug Cleaning",
+  "provider": { "@type": "LocalBusiness", "name": "BamaClean", "telephone": "+12563240492" },
+  "areaServed": ["Madison, AL", "Huntsville, AL", "Florence, AL", "Decatur, AL", "Athens, AL"],
+  "description": "Professional area rug cleaning in North Alabama. Safe for wool, silk, Persian, and synthetic rugs. Pickup and delivery available.",
+});
+---
+
+<ServiceLayout
+  title="Area Rug Cleaning Madison AL | Wool, Persian & Synthetic Rugs | BamaClean"
+  description="Professional area rug cleaning in Madison, Huntsville & North Alabama. Safe for wool, silk, Persian, and all rug types. Pickup & delivery available. Call (256) 324-0492."
+  canonical="/services/area-rug-cleaning/"
+  hero={{
+    label: "Area Rug Cleaning — North Alabama",
+    heading: "Expert Cleaning for Every Rug — Including the One You Love Most",
+    subheading: "Wool, silk, Persian, Turkish, synthetic, braided — area rugs need specialized care that carpet cleaning machines can damage. We clean rugs properly, by fiber type, using methods that protect dyes and structure. Serving Madison, Huntsville, Florence & all of North Alabama.",
+  }}
+  included={[
+    "Full inspection — fiber, dye stability, construction type",
+    "Dry soil removal before wet cleaning (critical first step)",
+    "Dye and pH testing before any chemistry is applied",
+    "Fiber-appropriate wash method (immersion, low-moisture, or dry)",
+    "Fringe cleaning and detailing",
+    "Controlled drying in the correct orientation",
+    "Deodorizing for pet and musty odors",
+    "Post-clean inspection for missed spots or bleed",
+    "Pickup and delivery available in our service area",
+    "Rug pad cleaning and replacement available",
+  ]}
+  problems={[
+    { title: "Rug That Bled or Faded After Previous Cleaning", desc: "Wool and vegetable-dyed rugs are pH-sensitive. The wrong chemistry causes dye migration and permanent color loss. We test dye stability and select chemistry accordingly before we start." },
+    { title: "Pet Odor Embedded Deep in the Rug Pile", desc: "Urine wicks down through the pile and into the foundation. Surface extraction alone doesn't reach it. Immersion washing, when appropriate, flushes contamination out from all directions." },
+    { title: "Fringe That's Gray, Matted, or Deteriorating", desc: "Fringe is often cotton or wool and requires separate attention. We hand-clean fringe, preventing the tangling and discoloration that happens when it's run through standard carpet machines." },
+    { title: "Rug Wrinkles and Bumps After Home Cleaning", desc: "Wool rugs shrink unevenly when dried flat with moisture in the wrong direction. We dry rugs in controlled conditions with consistent airflow to maintain shape and lay flat." },
+    { title: "Gritty Texture Even After Vacuuming", desc: "Sand and dry soil accumulate at the base of the pile and act as an abrasive, cutting fibers over time. The critical first step is thorough dry soil extraction before any moisture is introduced." },
+    { title: "Heirloom or High-Value Rug You're Afraid to Clean", desc: "Persian, Turkish, and hand-knotted rugs represent real investment. We take a conservative approach to these: full inspection, spot testing, and appropriate method selection before anything happens." },
+  ]}
+  process={[
+    { step: "1", title: "Pickup or Drop-Off", desc: "We can pick up your rug from your home and return it when it's done — or you can drop it at our location. Most rugs are turned around in 3–5 business days." },
+    { step: "2", title: "Inspection & Fiber Testing", desc: "We identify construction type, fiber content, and dye stability. Heirloom rugs get extra time here. We document condition before we touch anything." },
+    { step: "3", title: "Dry Soil Extraction", desc: "Before any water or chemistry is introduced, we remove dry particulate from the pile. This step protects fibers and dramatically improves cleaning results." },
+    { step: "4", title: "Wash — Matched to Fiber Type", desc: "Synthetic rugs are cleaned with hot-water extraction. Wool rugs may receive immersion washing or low-moisture treatment based on construction. Silk and delicate rugs get dry or low-moisture methods only." },
+    { step: "5", title: "Controlled Drying", desc: "Rugs are dried with consistent airflow in the correct orientation to prevent shrinkage, wicking, and pile distortion. We don't rush drying — it's one of the most critical steps." },
+    { step: "6", title: "Final Inspection & Return", desc: "We inspect the finished rug under good light, clean the fringe, and document results. Pickup delivery is scheduled or you're notified for drop-off collection." },
+  ]}
+  whyUs={[
+    { icon: "🧶", title: "Fiber-Specific Cleaning — Not One-Size", desc: "Wool, silk, synthetic, hand-knotted — each requires different chemistry, temperature, and method. We don't run every rug through the same process." },
+    { icon: "🚚", title: "Pickup & Delivery in North Alabama", desc: "We'll collect your rug and return it clean. No hauling a heavy rug into your vehicle — we handle the logistics." },
+    { icon: "🏅", title: "IICRC-Certified Technicians", desc: "Our team's IICRC training covers specialty textiles, not just wall-to-wall carpet. We understand rug construction and how to clean it without damage." },
+    { icon: "🔬", title: "Dye Testing Before Every Job", desc: "We test dye stability before applying any chemistry. If your rug is at risk of bleeding, we know before we start — not after." },
+    { icon: "📅", title: "30+ Years of Textile Experience in North Alabama", desc: "Since 1993, BamaClean has cleaned everything from machine-made area rugs to hand-knotted Persian heirlooms. We treat every rug with the care it deserves." },
+    { icon: "✅", title: "Satisfaction Guaranteed", desc: "Your rug comes back clean and in the same or better condition than when we picked it up. If something isn't right, we make it right." },
+  ]}
+  faqs={[
+    { q: "Can you clean a Persian or hand-knotted rug?", a: "Yes — and we take extra care with these. Hand-knotted rugs require dye testing, conservative chemistry, and careful drying to preserve color and structure. We clean them regularly." },
+    { q: "How do I know if my rug needs cleaning?", a: "Hold one end up and give it a shake. If dust or dirt falls out, it's time. Other signs: dull or flattened pile, persistent odor, or visible staining." },
+    { q: "Do you clean large rugs that are hard to move?", a: "Yes. We offer pickup and delivery. For very large rugs, we'll assess whether in-home cleaning is appropriate or recommend plant cleaning for best results." },
+    { q: "How long does rug cleaning take?", a: "Most rugs are returned in 3–5 business days. Heavy soiling, delicate fibers, or special treatment may extend this to 5–7 days. We'll give you an estimate at pickup." },
+    { q: "Will cleaning restore color to a faded rug?", a: "Cleaning removes soil that obscures the original color, which often appears to 'restore' vibrancy. True dye fading from sun exposure cannot be reversed by cleaning — but the improvement after removing soil buildup is often dramatic." },
+    { q: "Is rug cleaning worth it versus replacing the rug?", a: "For synthetic rugs under $200, replacement may make sense. For quality wool, Persian, or hand-knotted rugs, professional cleaning is always the better investment — often making a 10-year-old rug look like new." },
+  ]}
+  schema={schema}
+/>

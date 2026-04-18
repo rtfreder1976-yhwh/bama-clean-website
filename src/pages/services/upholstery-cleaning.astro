@@ -1,0 +1,67 @@
+---
+import ServiceLayout from '../../components/ServiceLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Upholstery Cleaning",
+  "provider": { "@type": "LocalBusiness", "name": "BamaClean", "telephone": "+12563240492" },
+  "areaServed": ["Madison, AL", "Huntsville, AL", "Florence, AL", "Decatur, AL", "Athens, AL"],
+  "description": "Professional upholstery cleaning for sofas, sectionals, and chairs in North Alabama. IICRC-certified, fabric-safe, no shrinkage.",
+});
+---
+
+<ServiceLayout
+  title="Upholstery Cleaning Madison AL | Sofa & Chair Cleaning | BamaClean"
+  description="Professional upholstery cleaning in Madison, Huntsville & North Alabama. Safe for all fabrics — microfiber, velvet, linen. IICRC-certified. Free quote: (256) 324-0492."
+  canonical="/services/upholstery-cleaning/"
+  hero={{
+    label: "Upholstery Cleaning — North Alabama",
+    heading: "Bring Your Furniture Back to Life",
+    subheading: "Body oils, pet dander, food spills, and allergens build up in your sofa and chairs over months of daily use. Our fabric-safe upholstery cleaning removes what you can see — and what you can't. Serving Madison, Huntsville, Florence & all of North Alabama.",
+  }}
+  included={[
+    "Pre-inspection of fabric type and condition",
+    "Fabric-coded cleaning method (W, S, WS, or X coded textiles)",
+    "Pre-treatment of stains and soiled areas",
+    "Hot-water extraction or dry-solvent cleaning (based on fabric code)",
+    "Cushion cleaning — all sides, including removable inserts",
+    "Deodorizing treatment for pet and food odors",
+    "Arm, back, and base panel cleaning",
+    "Post-clean pile grooming and inspection with you",
+    "Fabric protector application available (optional add-on)",
+    "Safe for microfiber, velvet, linen, cotton, and most synthetic blends",
+  ]}
+  problems={[
+    { title: "Sofa That Smells Like Pets No Matter What You Spray", desc: "Fabric fresheners mask odors for days. Our enzyme-based treatments break down pet dander and urine compounds at the molecular level so the smell is actually gone." },
+    { title: "Grease and Body Oil Rings That Won't Wipe Off", desc: "Armrests and headrests accumulate skin oil that oxidizes into a grayish ring. We use targeted degreasers formulated for upholstery fabrics to lift this without damaging the textile." },
+    { title: "Furniture That Shrank or Warped After DIY Cleaning", desc: "Over-wetting natural fibers causes shrinkage and warping. We match the cleaning method to your fabric's care code — never a one-size approach." },
+    { title: "Cushions That Look Clean but Still Smell Off", desc: "Cushion foam traps odors even when the cover looks clean. We clean all sides of every cushion and treat the foam core where accessible." },
+    { title: "Kids' Food Stains That Set Over Time", desc: "Juice, chocolate, and food stains bond to fibers if left untreated. We pre-treat with enzymatic spotters before extraction to break the bond before cleaning." },
+    { title: "Allergy Flare-Ups Near the Couch", desc: "Sofas harbor dust mites, pet dander, and pollen at concentrations higher than most carpets. Deep extraction removes the allergen load — not just surface dust." },
+  ]}
+  process={[
+    { step: "1", title: "Fabric Inspection & Care Code Identification", desc: "Every upholstered piece has a care tag: W (water-based), S (solvent only), WS (either), or X (vacuum only). We read it and choose chemistry accordingly — no guessing." },
+    { step: "2", title: "Pre-Treatment of Problem Areas", desc: "Stains, armrest grime, and pet spots get enzyme pre-treatment and targeted spotters. We let them dwell while we set up equipment." },
+    { step: "3", title: "Upholstery Extraction or Dry Clean", desc: "W and WS fabrics get low-moisture hot-water extraction using upholstery-specific wands. S-coded fabrics get solvent-based dry cleaning. We never use water on solvent-only textiles." },
+    { step: "4", title: "Cushion Deep-Clean", desc: "Cushion covers and all accessible sides of cushion inserts are cleaned. If covers are removable, we clean inside and out." },
+    { step: "5", title: "Deodorize & Walk-Through", desc: "We apply deodorizer, groom the fabric to a uniform finish, then walk through results with you. If any spot remains, we treat it again before leaving." },
+  ]}
+  whyUs={[
+    { icon: "🏅", title: "IICRC-Certified Upholstery Specialists", desc: "Our technicians are trained and certified in upholstery cleaning — not just carpet techs moonlighting with a wand attachment." },
+    { icon: "🧵", title: "Fabric-Code Trained", desc: "We match the cleaning process to your specific fabric type. No shrinkage, no water marks, no damage — just clean." },
+    { icon: "🌿", title: "Child- and Pet-Safe Chemistry", desc: "Every product we use is biodegradable and safe for your family. No harsh solvents that off-gas in your living room." },
+    { icon: "💰", title: "Upfront Pricing Before We Touch Anything", desc: "We inspect and quote before we start. The price we confirm is what you pay — nothing added at the invoice." },
+    { icon: "📅", title: "30+ Years, Thousands of Pieces Cleaned", desc: "Since 1993, BamaClean has cleaned everything from rental-grade microfiber to antique velvet settees. We've seen it all and cleaned most of it." },
+    { icon: "✅", title: "Satisfaction Guaranteed", desc: "Not happy with how your furniture looks? We come back. Every job is backed by our full satisfaction guarantee." },
+  ]}
+  faqs={[
+    { q: "Can you clean microfiber sofas?", a: "Yes. Microfiber is typically W or WS coded and responds very well to hot-water extraction when done correctly with low moisture and proper suction. We clean microfiber regularly." },
+    { q: "How long does upholstery take to dry?", a: "Most upholstered pieces are dry in 2–6 hours depending on fabric thickness and humidity. We keep moisture levels as low as possible during cleaning to speed drying." },
+    { q: "Will cleaning change the color or texture of my fabric?", a: "No — when matched to the correct care code, cleaning restores the fabric's appearance without color shift or texture change. We always test a hidden area first if there's any doubt." },
+    { q: "Can you clean a sectional?", a: "Absolutely. We clean full sectionals piece by piece. Quote is based on total seating surface area — we'll measure and confirm before we start." },
+    { q: "Do you clean leather furniture?", a: "We focus on fabric upholstery. For leather, we recommend a specialist leather conditioning service. Ask us — we can refer you to the right provider." },
+    { q: "Is it worth cleaning old furniture instead of replacing it?", a: "Usually yes. A professional cleaning can make a 5-year-old sofa look 2 years old for a fraction of replacement cost. If the furniture has structural issues, we'll tell you honestly during the inspection." },
+  ]}
+  schema={schema}
+/>

@@ -1,0 +1,70 @@
+---
+import ServiceLayout from '../../components/ServiceLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Mold Inspection and Remediation",
+  "provider": { "@type": "LocalBusiness", "name": "BamaClean", "telephone": "+12563240492" },
+  "areaServed": ["Madison, AL", "Huntsville, AL", "Florence, AL", "Decatur, AL", "Athens, AL"],
+  "description": "IICRC-certified mold inspection and remediation in North Alabama. Safe removal, moisture source elimination, insurance documentation.",
+});
+---
+
+<ServiceLayout
+  title="Mold Inspection & Remediation Madison AL | IICRC-Certified | BamaClean"
+  description="IICRC-certified mold inspection and removal in Madison, Huntsville & North Alabama. Find the source. Remove it safely. Prevent recurrence. Free assessment: (256) 324-0492."
+  canonical="/services/mold-inspection/"
+  emergency={true}
+  hero={{
+    label: "Mold Inspection & Remediation — North Alabama",
+    heading: "Mold Found. Source Identified. Safely Removed.",
+    subheading: "Mold isn't just ugly — it's a health risk and a structural threat. Our IICRC-certified mold specialists find the moisture source, contain the affected area, remove mold safely, and give you documentation for your insurance company. Serving Madison, Huntsville, Florence & all of North Alabama.",
+    emergency: true,
+  }}
+  included={[
+    "Full visual mold inspection — all accessible areas",
+    "Moisture mapping with professional moisture meters",
+    "Identification of the moisture intrusion source",
+    "Containment setup to prevent cross-contamination",
+    "HEPA air filtration during remediation",
+    "Safe removal of affected materials per IICRC S520 protocol",
+    "Antimicrobial treatment of affected surfaces",
+    "Post-remediation cleaning and HEPA vacuuming",
+    "Written remediation report for insurance claims",
+    "Recommendations to prevent future mold growth",
+  ]}
+  problems={[
+    { title: "Musty Smell That Won't Go Away No Matter What You Clean", desc: "A persistent musty odor is often mold growing inside walls, under flooring, or in the HVAC system — places you can't see or clean with household products. We find it." },
+    { title: "Black Spots Reappearing After You Clean Them", desc: "Surface-cleaning mold with bleach kills visible growth but leaves the root structure (hyphae) intact. Within weeks it's back. We remove the affected material and treat the substrate." },
+    { title: "Family Members With Unexplained Respiratory Issues", desc: "Mold spores and mycotoxins trigger asthma, allergy flare-ups, and chronic sinusitis. If symptoms improve when family members leave the house, mold is a probable cause worth investigating." },
+    { title: "Recent Water Damage That Wasn't Fully Dried", desc: "Mold begins colonizing within 24–48 hours of a water event. If you had a leak, flood, or plumbing failure and didn't dry it professionally, mold is likely growing behind your walls right now." },
+    { title: "Visible Mold Before a Real Estate Transaction", desc: "Mold discovered during a home inspection can kill a sale. We provide remediation and a written clearance report — giving buyers and lenders the documentation they need." },
+    { title: "Insurance Claim That Requires Mold Documentation", desc: "Most insurers require an IICRC-certified remediation report to process mold-related claims. We provide complete written documentation from inspection through clearance." },
+  ]}
+  process={[
+    { step: "1", title: "Inspection & Moisture Mapping", desc: "We inspect all accessible areas — crawlspaces, attics, behind appliances, under sinks — with professional moisture meters and thermal imaging. We find what you can't see." },
+    { step: "2", title: "Source Identification", desc: "Treating mold without stopping the moisture source means it comes back. We identify the leak, condensation point, or vapor intrusion driving the growth before any remediation begins." },
+    { step: "3", title: "Containment", desc: "Affected areas are isolated with polyethylene sheeting and negative air pressure to prevent spores from spreading to clean areas of your home during removal." },
+    { step: "4", title: "Safe Removal Per IICRC S520", desc: "Affected porous materials (drywall, insulation, framing) are removed following IICRC S520 protocol. Non-porous surfaces are treated with EPA-registered antimicrobials." },
+    { step: "5", title: "HEPA Cleanup & Post-Treatment", desc: "We HEPA vacuum all surfaces, apply antimicrobial coating to the remediated area, and run air scrubbers to clear spore counts before reopening containment." },
+    { step: "6", title: "Written Report & Clearance", desc: "You receive a full written remediation report documenting scope, methods, and results — usable for insurance claims, real estate disclosure, or your own records." },
+  ]}
+  whyUs={[
+    { icon: "🏅", title: "IICRC Certified Mold Remediation Specialists", desc: "Our team holds current IICRC certification in mold remediation (AMRT). We follow S520 protocol — the industry standard insurers and attorneys recognize." },
+    { icon: "📋", title: "Insurance Documentation Included", desc: "We provide the written reports your insurance company needs. We can work directly with adjusters — you don't have to navigate that alone." },
+    { icon: "🔍", title: "We Find the Source — Not Just the Symptom", desc: "Surface mold treatment without moisture source correction is temporary. We find the leak or vapor source and give you a remediation plan that actually lasts." },
+    { icon: "🛡️", title: "Containment to Protect the Rest of Your Home", desc: "We set up professional containment before removal begins. Spores don't spread to clean areas — your family is protected throughout the process." },
+    { icon: "📅", title: "30+ Years in North Alabama", desc: "Since 1993, BamaClean has handled mold cases from small bathroom patches to full-house contaminations following flood events. Local knowledge. Real experience." },
+    { icon: "✅", title: "Honest Assessment — No Scare Tactics", desc: "We tell you what we actually find. If it's minor, we say so. If it's serious, we explain why. No inflating scopes to generate revenue." },
+  ]}
+  faqs={[
+    { q: "How do I know if I have a mold problem?", a: "Common signs: musty odor, visible dark spots on walls or ceilings, unexplained allergy symptoms, a recent water intrusion event, or condensation problems. If you're not sure, an inspection is the right first step." },
+    { q: "Is mold testing (air sampling) necessary?", a: "Not always. In most cases, a thorough visual inspection and moisture mapping is sufficient to identify and scope the problem. We'll tell you when air sampling adds value — and when it's an unnecessary expense." },
+    { q: "Can I stay in my home during mold remediation?", a: "For small, contained areas — yes. For larger remediations or cases with confirmed elevated airborne spore counts, temporary relocation during the active work phase may be advisable. We'll give you a specific recommendation based on your situation." },
+    { q: "Will you work with my insurance company?", a: "Yes. We provide full written documentation and can coordinate directly with your adjuster. Coverage varies by policy and cause of loss — we'll help you understand what documentation is needed." },
+    { q: "What's the difference between mold and mildew?", a: "Mildew is a surface fungus that grows on damp surfaces and is easier to remove. Mold penetrates porous materials and requires professional remediation. Both indicate a moisture problem that needs to be addressed." },
+    { q: "How long does mold remediation take?", a: "Small, localized jobs (bathroom, under a sink) typically take 1–2 days. Larger remediations involving multiple rooms or structural materials may take 3–7 days. We'll give you a timeline after the inspection." },
+  ]}
+  schema={schema}
+/>

@@ -1,0 +1,66 @@
+---
+import ServiceLayout from '../../components/ServiceLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Radon Testing",
+  "provider": { "@type": "LocalBusiness", "name": "BamaClean", "telephone": "+12563240492" },
+  "areaServed": ["Madison, AL", "Huntsville, AL", "Florence, AL", "Decatur, AL", "Athens, AL"],
+  "description": "Professional radon testing in North Alabama. EPA-recommended short-term and long-term tests. Written report for real estate transactions and homeowners.",
+});
+---
+
+<ServiceLayout
+  title="Radon Testing Madison AL | EPA-Protocol Radon Testing | BamaClean"
+  description="Professional radon testing in Madison, Huntsville & North Alabama. EPA-protocol testing, written reports for real estate transactions. North Alabama's only cleaning company offering radon testing. Call (256) 324-0492."
+  canonical="/services/radon-testing/"
+  hero={{
+    label: "Radon Testing — North Alabama",
+    heading: "The Invisible Risk Most North Alabama Homeowners Haven't Tested For",
+    subheading: "Radon is a colorless, odorless radioactive gas that seeps from the ground into homes — and it's the second leading cause of lung cancer in the US. North Alabama has elevated radon risk. BamaClean offers EPA-protocol radon testing with written reports. Serving Madison, Huntsville, Florence & all of North Alabama.",
+  }}
+  included={[
+    "Short-term radon test (2–7 days) using EPA-approved charcoal canisters",
+    "Long-term test option (90+ days) for most accurate annual average",
+    "Placement in lowest livable level per EPA protocol",
+    "Lab analysis by accredited laboratory",
+    "Written test report with measured level and EPA action threshold comparison",
+    "Explanation of results and next steps if levels are elevated",
+    "Real estate-ready documentation (buyer, seller, or agent)",
+    "Re-test after mitigation to confirm effectiveness",
+    "Consultation on mitigation options if levels exceed 4 pCi/L",
+  ]}
+  problems={[
+    { title: "Buying or Selling a Home and Radon Testing Is Required", desc: "Radon testing is increasingly required or requested in North Alabama real estate transactions. We provide EPA-protocol tests with written reports that satisfy buyer, seller, and lender requirements." },
+    { title: "Living in a Home That's Never Been Tested", desc: "Most North Alabama homes have never been tested. The EPA estimates 1 in 15 homes nationwide has elevated radon levels. With North Alabama's geology, local risk is real and worth verifying." },
+    { title: "Basement or Slab Foundation — Higher Exposure Risk", desc: "Homes with basements, crawlspaces, or slab foundations have more contact with the soil where radon originates. Lower levels of the home typically have higher concentrations." },
+    { title: "Prior Test Was Years Ago", desc: "Radon levels can change as the home settles, HVAC systems change, or new openings develop. EPA recommends re-testing every 2 years and after major renovations." },
+    { title: "Existing Mitigation System — Is It Still Working?", desc: "Radon mitigation systems can lose effectiveness over time. A post-mitigation radon test confirms your system is still reducing levels below the 4 pCi/L EPA action threshold." },
+    { title: "Radon Concern After Lung Cancer Diagnosis in a Nonsmoker", desc: "Radon exposure is the #1 cause of lung cancer in nonsmokers. If a family member has been diagnosed, testing the home is a critical step in understanding environmental risk." },
+  ]}
+  process={[
+    { step: "1", title: "Schedule & Site Consultation", desc: "We schedule a convenient time and confirm the test type (short-term for real estate, long-term for baseline home testing). We review any closed-house conditions required for accurate results." },
+    { step: "2", title: "EPA-Protocol Placement", desc: "Canisters are placed in the lowest livable level of the home per EPA protocol — typically the basement or first floor. Placement location and closed-house conditions affect result validity." },
+    { step: "3", title: "Test Period", desc: "Short-term tests run 48–96 hours (or up to 7 days). Long-term tests run 90+ days. Closed-house conditions (windows/doors closed except for normal entry/exit) must be maintained during short-term tests." },
+    { step: "4", title: "Canister Retrieval & Lab Submission", desc: "We retrieve the canisters and submit them to an accredited laboratory. Most short-term results are returned within 24–48 hours of lab receipt." },
+    { step: "5", title: "Written Report Delivery", desc: "You receive a written report with the measured radon level, the EPA action threshold (4 pCi/L), and clear guidance on next steps. Real estate reports are formatted for transaction use." },
+  ]}
+  whyUs={[
+    { icon: "🔬", title: "EPA-Protocol Testing, Accredited Lab Analysis", desc: "We follow EPA test placement and procedure guidelines. All samples are analyzed by an accredited laboratory — not a mail-in kit you interpret yourself." },
+    { icon: "📋", title: "Written Reports for Real Estate Transactions", desc: "Our reports are formatted to satisfy buyer, seller, and lender documentation requirements for residential real estate transactions in Alabama." },
+    { icon: "🏘️", title: "North Alabama's Local Radon Testing Provider", desc: "BamaClean is the only North Alabama cleaning and restoration company offering radon testing. Local scheduling, local knowledge, local accountability." },
+    { icon: "📅", title: "30+ Years Serving North Alabama Homeowners", desc: "Since 1993, BamaClean has been the region's trusted name in home safety services. Radon testing is a natural extension of our commitment to healthier homes." },
+    { icon: "🤝", title: "Honest Guidance — No Mitigation Upsell", desc: "We test. We report. We explain results. We don't sell mitigation systems — so our test results are unbiased. If you need mitigation, we refer you to qualified contractors." },
+    { icon: "⚡", title: "Fast Turnaround for Real Estate Deadlines", desc: "We understand closing timelines. Short-term tests can be placed and results returned within a week — fast enough for most transaction timelines." },
+  ]}
+  faqs={[
+    { q: "What is radon and why is it dangerous?", a: "Radon is a naturally occurring radioactive gas that forms from the decay of uranium in soil and rock. It seeps into buildings through foundation cracks and openings. Long-term radon exposure is the second leading cause of lung cancer in the US, responsible for about 21,000 deaths per year according to the EPA." },
+    { q: "What radon level requires action?", a: "The EPA recommends taking action to reduce radon levels if your home tests at 4 pCi/L or higher. The average indoor radon level in the US is 1.3 pCi/L. Levels between 2–4 pCi/L are worth monitoring." },
+    { q: "How long does a radon test take?", a: "Short-term tests run 48–96 hours (required minimum for real estate is typically 48 hours). Long-term tests run 90 days or more for a more accurate annual average. We recommend the test type based on your situation." },
+    { q: "Does my house need to be closed up during the test?", a: "For short-term tests, yes — the EPA requires closed-house conditions (windows and exterior doors closed, except for normal entry/exit) to ensure accurate results. Normal HVAC operation is fine." },
+    { q: "Is North Alabama considered a high-radon area?", a: "Parts of North Alabama fall within EPA Zone 1 and Zone 2 (highest and moderate predicted radon potential). Madison County, Limestone County, and surrounding areas have documented elevated radon levels in a meaningful percentage of tested homes." },
+    { q: "If my home tests high, what do I do?", a: "We provide guidance on next steps. Radon mitigation typically involves a sub-slab depressurization system installed by a certified mitigation contractor. Mitigation can reduce indoor radon levels by up to 99%. We can refer you to qualified local mitigation contractors." },
+  ]}
+  schema={schema}
+/>

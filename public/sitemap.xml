@@ -4,7 +4,7 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Homepage - highest priority -->
+  <!-- Homepage -->
   <url>
     <loc>https://bamaclean.com/</loc>
     <lastmod>2026-04-17</lastmod>
@@ -12,7 +12,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Services - high priority, core conversion page -->
+  <!-- Services hub -->
   <url>
     <loc>https://bamaclean.com/services/</loc>
     <lastmod>2026-04-17</lastmod>
@@ -20,7 +20,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Locations - high priority for local SEO -->
+  <!-- Locations -->
   <url>
     <loc>https://bamaclean.com/locations/</loc>
     <lastmod>2026-04-17</lastmod>
@@ -28,7 +28,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Contact - high priority conversion page -->
+  <!-- Contact -->
   <url>
     <loc>https://bamaclean.com/contact/</loc>
     <lastmod>2026-04-17</lastmod>
@@ -36,9 +36,80 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- About - supporting page -->
+  <!-- About -->
   <url>
     <loc>https://bamaclean.com/about/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Service pages - high commercial value -->
+  <url>
+    <loc>https://bamaclean.com/services/carpet-cleaning/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://bamaclean.com/services/water-flood-damage/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://bamaclean.com/services/fire-smoke-damage/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://bamaclean.com/services/mold-inspection/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://bamaclean.com/services/tile-grout-cleaning/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bamaclean.com/services/upholstery-cleaning/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bamaclean.com/services/hardwood-floor-cleaning/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bamaclean.com/services/area-rug-cleaning/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bamaclean.com/services/sanitation-services/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bamaclean.com/services/radon-testing/</loc>
     <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

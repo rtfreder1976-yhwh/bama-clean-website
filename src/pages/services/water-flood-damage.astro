@@ -1,0 +1,70 @@
+---
+import ServiceLayout from '../../components/ServiceLayout.astro';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Water and Flood Damage Restoration",
+  "provider": { "@type": "LocalBusiness", "name": "BamaClean", "telephone": "+12563240492" },
+  "areaServed": ["Madison, AL", "Huntsville, AL", "Florence, AL", "Decatur, AL", "Athens, AL"],
+  "description": "24/7 water and flood damage restoration in North Alabama. IICRC-certified, water extraction, structural drying, mold prevention, insurance documentation.",
+});
+---
+
+<ServiceLayout
+  title="Water & Flood Damage Restoration Madison AL | 24/7 Emergency | BamaClean"
+  description="24/7 water damage restoration in Madison, Huntsville & North Alabama. IICRC-certified water extraction, structural drying, mold prevention. We work with your insurance. Call now: (256) 324-0492."
+  canonical="/services/water-flood-damage/"
+  emergency={true}
+  hero={{
+    label: "Water & Flood Damage Restoration — North Alabama",
+    heading: "Water Damage Is a 24-Hour Emergency. We Respond 24/7.",
+    subheading: "Every hour water sits in your home, it wicks further into walls, flooring, and framing — and mold begins within 24–48 hours. Our IICRC-certified water damage team extracts water, sets structural drying equipment, and documents everything for your insurance company. Serving Madison, Huntsville, Florence & all of North Alabama.",
+    emergency: true,
+  }}
+  included={[
+    "24/7 emergency response — we're on the way within the hour",
+    "Water source identification and stoppage coordination",
+    "High-powered water extraction from all floor types",
+    "Moisture mapping of all affected areas (walls, subfloor, ceiling)",
+    "Commercial dehumidifier and air mover placement",
+    "Daily moisture monitoring and equipment adjustment",
+    "Antimicrobial treatment to prevent mold growth",
+    "Damaged material removal (carpet, pad, drywall) as needed",
+    "Structural drying verification with documentation",
+    "Complete insurance documentation and adjuster coordination",
+  ]}
+  problems={[
+    { title: "Burst Pipe or Supply Line — Water Spreading Fast", desc: "A burst pipe can release hundreds of gallons before it's stopped. We extract standing water with truck-mounted equipment, then set industrial drying equipment to dry the structure — not just the surface." },
+    { title: "Sewage Backup in the Basement", desc: "Sewage water is Category 3 — the most contaminated. Standard wet-vac cleanup is inadequate and dangerous. We handle Category 3 extraction with appropriate PPE, antimicrobial treatment, and material removal per IICRC S500." },
+    { title: "Washing Machine or Dishwasher Overflow", desc: "Appliance overflows saturate subfloor quickly. We extract visible water and monitor moisture levels in the subfloor and walls with meters — not visual inspection." },
+    { title: "Roof Leak or Window Leak During Heavy Rain", desc: "Water intrusion from above saturates insulation and ceiling drywall before you see it on the floor. We trace moisture migration and set targeted drying to prevent hidden mold growth." },
+    { title: "Flooding From Outside — Yard, Storm Drain, or Crawlspace", desc: "Exterior water events often involve groundwater with elevated contamination levels. We assess water category, extract, treat, and dry according to contamination level." },
+    { title: "HVAC Condensate Line Backup — Slow Leak for Weeks", desc: "Condensate line backups are easy to miss until ceiling tiles stain or drywall softens. Slow, prolonged moisture is often more damaging than a fast event — mold is usually already present when we arrive." },
+  ]}
+  process={[
+    { step: "1", title: "Emergency Response — On-Site Within the Hour", desc: "Call us immediately. We dispatch within minutes and arrive with truck-mounted extraction equipment and commercial drying gear. The faster we arrive, the less material needs to be removed." },
+    { step: "2", title: "Water Category Assessment", desc: "We determine water category: Category 1 (clean supply line), Category 2 (gray water — appliance, toilet overflow without solids), or Category 3 (black water — sewage, groundwater). Category determines protocol, PPE, and material salvageability." },
+    { step: "3", title: "Water Extraction", desc: "Truck-mounted extractors remove standing water far faster and more completely than portable units. We extract from all affected floor types — carpet, hardwood, tile, concrete — and from wall cavities where water has wicked up." },
+    { step: "4", title: "Moisture Mapping", desc: "We map moisture content in all affected materials — walls, subfloor, ceiling — using calibrated meters. This defines the true drying scope and documents baseline moisture for insurance." },
+    { step: "5", title: "Structural Drying Equipment Placement", desc: "Commercial dehumidifiers and high-velocity air movers are placed per IICRC S500 drying science. We calculate equipment placement based on affected area — not guesswork." },
+    { step: "6", title: "Daily Monitoring & Verification", desc: "We return daily to monitor moisture levels, adjust equipment, and document progress. Drying is verified with readings — not visual inspection. Your insurance company gets a daily drying log." },
+  ]}
+  whyUs={[
+    { icon: "🚨", title: "24/7 Response — We Answer at 2 AM", desc: "Water events don't wait for business hours. We're available around the clock, every day of the year. Call us and someone answers — not an answering service." },
+    { icon: "🏅", title: "IICRC Water Damage Restoration Certified (WRT)", desc: "Our technicians hold current IICRC WRT certification. We follow IICRC S500 — the standard insurers, attorneys, and courts recognize for water damage restoration." },
+    { icon: "📋", title: "Insurance Documentation from Day One", desc: "We document everything from arrival: moisture readings, photos, equipment logs, daily progress. Your adjuster gets everything they need. We can work directly with your insurer." },
+    { icon: "🔬", title: "Moisture Mapping — We Find Hidden Water", desc: "We use calibrated moisture meters throughout the affected area. Water travels. We find it behind walls and under floors before it becomes a mold problem." },
+    { icon: "📅", title: "30+ Years of Disaster Response in North Alabama", desc: "Since 1993, BamaClean has responded to floods, pipe failures, sewage backups, and storm events across North Alabama. We've seen every scenario and know how to handle it." },
+    { icon: "🛡️", title: "Mold Prevention Built Into Every Job", desc: "Antimicrobial treatment is applied as part of every water damage job. We don't just dry — we actively prevent the mold growth that follows improper drying." },
+  ]}
+  faqs={[
+    { q: "How quickly can you be on-site after a water event?", a: "We target arrival within 1–2 hours of your call anywhere in our North Alabama service area. For flood events affecting multiple households, we prioritize and communicate arrival windows honestly." },
+    { q: "Will my homeowner's insurance cover water damage restoration?", a: "It depends on the cause. Sudden and accidental damage (burst pipes, appliance failures) is typically covered. Flooding from outside requires separate flood insurance. Gradual leaks are often excluded. We help you document the cause and timing to support your claim." },
+    { q: "How long does structural drying take?", a: "Most residential water damage dries in 3–5 days with proper commercial equipment. Concrete slabs, thick subfloor assemblies, and heavily saturated walls may take 5–10 days. We monitor daily and communicate timeline throughout." },
+    { q: "Can you save my hardwood floors?", a: "Often yes — if we arrive quickly. Hardwood responds well to rapid extraction and targeted drying. Floors that have been wet for more than 48–72 hours may have started cupping or buckling, which affects salvageability. Early response is critical." },
+    { q: "Do I need to leave my home during restoration?", a: "For Category 1 and 2 events (clean or gray water), occupancy is usually fine. For Category 3 (sewage, groundwater) or events with significant material removal, temporary relocation may be advisable. We'll give you a specific recommendation." },
+    { q: "What do I do while waiting for you to arrive?", a: "Stop the water source if it's safe to do so. Remove standing water with towels or a wet-vac if available. Move valuables and electronics out of the affected area. Don't use fans or HVAC to dry — improper airflow can spread contamination. Call your insurance company to open a claim." },
+  ]}
+  schema={schema}
+/>

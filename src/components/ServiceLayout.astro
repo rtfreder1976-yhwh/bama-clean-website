@@ -1,0 +1,196 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  hero: {
+    label: string;
+    heading: string;
+    subheading: string;
+    emergency?: boolean;
+  };
+  included: string[];
+  problems: { title: string; desc: string }[];
+  process: { step: string; title: string; desc: string }[];
+  whyUs: { icon: string; title: string; desc: string }[];
+  faqs: { q: string; a: string }[];
+  emergency?: boolean;
+  cities?: string[];
+  schema?: string;
+}
+
+import Layout from '../layouts/Layout.astro';
+
+const {
+  title, description, canonical, hero, included, problems,
+  process, whyUs, faqs, emergency = false,
+  cities = ['Madison','Huntsville','Florence','Muscle Shoals','Decatur','Athens','Tuscumbia','Sheffield','Russellville'],
+  schema,
+} = Astro.props;
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  {schema && <script type="application/ld+json" set:html={schema} />}
+
+  <!-- Emergency banner -->
+  {emergency && (
+    <div style="background:#DC2626;color:#fff;text-align:center;padding:14px 24px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1rem;">
+      🚨 24/7 Emergency Service Available — Call Now: <a href="tel:+12563240492" style="color:#fff;text-decoration:underline;">(256) 324-0492</a>
+    </div>
+  )}
+
+  <!-- Hero -->
+  <section style="background:linear-gradient(135deg,#0F1B2D 0%,#1A2A42 100%);color:#fff;padding:80px 24px;">
+    <div style="max-width:900px;margin:0 auto;text-align:center;">
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#22C55E;margin-bottom:12px;">{hero.label}</p>
+      <h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(2rem,4.5vw,3.25rem);font-weight:800;line-height:1.1;margin-bottom:20px;">{hero.heading}</h1>
+      <p style="font-size:1.0625rem;color:rgba(255,255,255,.85);line-height:1.7;max-width:680px;margin:0 auto 36px;">{hero.subheading}</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="/contact" style="background:#1B7A3D;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:15px 34px;border-radius:100px;font-size:1rem;">Get a Free Quote</a>
+        <a href="tel:+12563240492" style="background:transparent;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:15px 34px;border-radius:100px;border:2px solid rgba(255,255,255,.5);font-size:1rem;">
+          {emergency ? '🚨 Call 24/7: (256) 324-0492' : '📞 (256) 324-0492'}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section style="padding:72px 24px;background:#fff;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:10px;">Everything Covered</p>
+        <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;">What's Included</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;">
+        {included.map(item => (
+          <div style="display:flex;align-items:flex-start;gap:12px;background:#F8FAFB;border:1px solid #E2E8F0;border-radius:10px;padding:16px;">
+            <span style="min-width:22px;height:22px;background:#E8F5EC;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#1B7A3D;font-weight:700;margin-top:1px;">✓</span>
+            <span style="font-size:.9375rem;color:#334155;font-weight:500;line-height:1.5;">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems We Solve -->
+  <section style="padding:72px 24px;background:#F1F5F9;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:10px;">Sound Familiar?</p>
+        <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;">Common Problems We Solve</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;">
+        {problems.map(p => (
+          <div style="background:#fff;border-radius:14px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.06);border:1px solid #E2E8F0;">
+            <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;color:#0F1B2D;margin-bottom:8px;">{p.title}</h3>
+            <p style="font-size:.9375rem;color:#475569;line-height:1.6;">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section style="padding:72px 24px;background:#fff;">
+    <div style="max-width:900px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:10px;">How It Works</p>
+        <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;">Our Step-by-Step Process</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        {process.map((s, i) => (
+          <div style="display:flex;gap:24px;align-items:flex-start;padding:28px 0;border-bottom:1px solid #F1F5F9;">
+            <div style="min-width:52px;height:52px;background:linear-gradient(135deg,#1B7A3D,#145C2E);border-radius:14px;display:flex;align-items:center;justify-content:center;flex-direction:column;">
+              <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.65rem;font-weight:700;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.06em;">Step</span>
+              <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.125rem;font-weight:800;color:#fff;line-height:1;">{s.step}</span>
+            </div>
+            <div>
+              <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.0625rem;font-weight:700;color:#0F1B2D;margin-bottom:6px;">{s.title}</h3>
+              <p style="font-size:.9375rem;color:#475569;line-height:1.65;">{s.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose BamaClean -->
+  <section style="padding:72px 24px;background:linear-gradient(135deg,#0F1B2D 0%,#1A2A42 100%);color:#fff;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#22C55E;margin-bottom:10px;">The BamaClean Difference</p>
+        <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;">Why Choose BamaClean</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;">
+        {whyUs.map(w => (
+          <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px;">
+            <div style="font-size:2rem;margin-bottom:12px;">{w.icon}</div>
+            <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:8px;">{w.title}</h3>
+            <p style="font-size:.9rem;color:rgba(255,255,255,.75);line-height:1.6;">{w.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section style="padding:72px 24px;background:#F8FAFB;">
+    <div style="max-width:800px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:10px;">Got Questions?</p>
+        <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;">Frequently Asked Questions</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        {faqs.map(f => (
+          <details style="background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:0;overflow:hidden;">
+            <summary style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.9375rem;color:#0F1B2D;padding:20px 24px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              {f.q}
+              <span style="color:#1B7A3D;font-size:1.25rem;flex-shrink:0;margin-left:12px;">+</span>
+            </summary>
+            <div style="padding:0 24px 20px;font-size:.9375rem;color:#475569;line-height:1.7;border-top:1px solid #F1F5F9;">
+              {f.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section style="padding:72px 24px;background:#fff;text-align:center;">
+    <div style="max-width:900px;margin:0 auto;">
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:10px;">Where We Work</p>
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;margin-bottom:16px;">Serving All of North Alabama</h2>
+      <p style="color:#475569;font-size:.9375rem;margin-bottom:32px;">We provide this service throughout the region. Call to confirm availability in your city.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:36px;">
+        {cities.map(c => (
+          <span style="background:#E8F5EC;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.875rem;padding:8px 18px;border-radius:100px;">{c}, AL</span>
+        ))}
+      </div>
+      <a href="/locations" style="display:inline-block;background:#0F1B2D;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:13px 30px;border-radius:100px;font-size:.9375rem;margin-right:12px;">View All Locations</a>
+      <a href="/contact" style="display:inline-block;background:#1B7A3D;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:13px 30px;border-radius:100px;font-size:.9375rem;">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section style="background:linear-gradient(135deg,#1B7A3D 0%,#145C2E 100%);color:#fff;padding:72px 24px;text-align:center;">
+    <div style="max-width:680px;margin:0 auto;">
+      {emergency ? (
+        <>
+          <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;margin-bottom:14px;">Emergency? We Respond 24/7.</h2>
+          <p style="font-size:1.0625rem;color:rgba(255,255,255,.88);margin-bottom:36px;">Don't wait — every minute increases damage. Call us now and we'll be on our way.</p>
+          <a href="tel:+12563240492" style="background:#fff;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;padding:18px 40px;border-radius:100px;font-size:1.125rem;display:inline-block;">🚨 Call Now: (256) 324-0492</a>
+        </>
+      ) : (
+        <>
+          <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;margin-bottom:14px;">Ready to Get Started?</h2>
+          <p style="font-size:1.0625rem;color:rgba(255,255,255,.88);margin-bottom:36px;">Get a free, no-obligation quote. We'll confirm pricing upfront — no surprises at the door.</p>
+          <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+            <a href="/contact" style="background:#fff;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;padding:15px 34px;border-radius:100px;font-size:1rem;">Get a Free Quote</a>
+            <a href="tel:+12563240492" style="background:transparent;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:15px 34px;border-radius:100px;border:2px solid rgba(255,255,255,.5);font-size:1rem;">Call (256) 324-0492</a>
+          </div>
+        </>
+      )}
+    </div>
+  </section>
+</Layout>
