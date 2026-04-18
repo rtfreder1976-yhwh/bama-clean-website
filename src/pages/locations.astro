@@ -184,35 +184,80 @@ const locations = [
     </div>
   </section>
 
-  <!-- Response Time Map -->
+  <!-- Response Time — Two Locations -->
   <section style="padding:72px 24px;background:#F1F5F9;">
-    <div style="max-width:900px;margin:0 auto;text-align:center;">
-      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:12px;">Emergency Response</p>
-      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;margin-bottom:16px;">Response Times From Our Florence Headquarters</h2>
-      <p style="color:#475569;font-size:1rem;margin-bottom:40px;">BamaClean is headquartered at 205 S Seminary St, Florence, AL — centrally located in the Shoals. These are typical drive times for emergency dispatch:</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
-        {[
-          {city:'Florence', time:'15–25 min', color:'#1B7A3D'},
-          {city:'Sheffield', time:'15–25 min', color:'#1B7A3D'},
-          {city:'Tuscumbia', time:'15–25 min', color:'#1B7A3D'},
-          {city:'Muscle Shoals', time:'15–25 min', color:'#1B7A3D'},
-          {city:'Killen', time:'20–35 min', color:'#2D8A50'},
-          {city:'Leighton', time:'20–35 min', color:'#2D8A50'},
-          {city:'Huntsville', time:'25–40 min', color:'#2D8A50'},
-          {city:'Madison', time:'30–45 min', color:'#3D9A60'},
-          {city:'Athens', time:'30–45 min', color:'#3D9A60'},
-          {city:'Russellville', time:'40–60 min', color:'#E18B2B'},
-          {city:'Decatur', time:'35–55 min', color:'#E18B2B'},
-          {city:'Hartselle', time:'50–65 min', color:'#C05A1F'},
-        ].map(r => (
-          <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06);">
-            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.875rem;font-weight:700;color:#0F1B2D;margin-bottom:6px;">{r.city}, AL</p>
-            <p style={`font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:${r.color}`}>{r.time}</p>
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:48px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#1B7A3D;margin-bottom:12px;">Emergency Response</p>
+        <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:#0F1B2D;margin-bottom:16px;">Two Locations — Fastest Coverage Across North Alabama</h2>
+        <p style="color:#475569;font-size:1rem;max-width:680px;margin:0 auto;">BamaClean dispatches from whichever location gets to you fastest. Florence HQ covers the Shoals; Madison covers Huntsville, Madison City, and the eastern Tennessee Valley.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;" class="loc-grid">
+
+        <!-- Florence HQ -->
+        <div>
+          <div style="background:#1B7A3D;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:10px 20px;border-radius:12px 12px 0 0;text-align:center;">HQ · Florence, AL — 205 S Seminary St</div>
+          <div style="background:#fff;border-radius:0 0 12px 12px;padding:20px;box-shadow:0 2px 16px rgba(0,0,0,.07);">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              {[
+                {city:'Florence',      time:'10–20 min', color:'#1B7A3D'},
+                {city:'Sheffield',     time:'10–20 min', color:'#1B7A3D'},
+                {city:'Tuscumbia',     time:'10–20 min', color:'#1B7A3D'},
+                {city:'Muscle Shoals', time:'10–20 min', color:'#1B7A3D'},
+                {city:'Killen',        time:'20–30 min', color:'#2D8A50'},
+                {city:'Leighton',      time:'20–30 min', color:'#2D8A50'},
+                {city:'Russellville',  time:'35–50 min', color:'#3D9A60'},
+                {city:'Huntsville',    time:'40–55 min', color:'#E18B2B'},
+                {city:'Madison',       time:'45–60 min', color:'#E18B2B'},
+                {city:'Athens',        time:'45–60 min', color:'#E18B2B'},
+                {city:'Decatur',       time:'50–65 min', color:'#C05A1F'},
+                {city:'Hartselle',     time:'55–70 min', color:'#C05A1F'},
+              ].map(r => (
+                <div style="background:#F8FAFB;border-radius:10px;padding:12px 14px;border:1px solid #E2E8F0;">
+                  <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;color:#0F1B2D;margin-bottom:3px;">{r.city}, AL</p>
+                  <p style={`font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:800;color:${r.color}`}>{r.time}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
+        </div>
+
+        <!-- Madison Location -->
+        <div>
+          <div style="background:#1D4ED8;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:10px 20px;border-radius:12px 12px 0 0;text-align:center;">Location 2 · Madison, AL — 13234 Hwy 243</div>
+          <div style="background:#fff;border-radius:0 0 12px 12px;padding:20px;box-shadow:0 2px 16px rgba(0,0,0,.07);">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              {[
+                {city:'Madison',       time:'10–15 min', color:'#1D4ED8'},
+                {city:'Huntsville',    time:'15–25 min', color:'#1D4ED8'},
+                {city:'Athens',        time:'20–30 min', color:'#2563EB'},
+                {city:'Decatur',       time:'30–45 min', color:'#3B82F6'},
+                {city:'Hartselle',     time:'40–55 min', color:'#3B82F6'},
+                {city:'Florence',      time:'45–60 min', color:'#E18B2B'},
+                {city:'Sheffield',     time:'45–60 min', color:'#E18B2B'},
+                {city:'Tuscumbia',     time:'45–60 min', color:'#E18B2B'},
+                {city:'Muscle Shoals', time:'45–60 min', color:'#E18B2B'},
+                {city:'Killen',        time:'50–65 min', color:'#C05A1F'},
+                {city:'Leighton',      time:'50–65 min', color:'#C05A1F'},
+                {city:'Russellville',  time:'60–75 min', color:'#C05A1F'},
+              ].map(r => (
+                <div style="background:#F8FAFB;border-radius:10px;padding:12px 14px;border:1px solid #E2E8F0;">
+                  <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;color:#0F1B2D;margin-bottom:3px;">{r.city}, AL</p>
+                  <p style={`font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:800;color:${r.color}`}>{r.time}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <style>
+    @media (max-width: 640px) { .loc-grid { grid-template-columns: 1fr !important; } }
+  </style>
 
   <!-- CTA -->
   <section style="background:linear-gradient(135deg,#1B7A3D 0%,#145C2E 100%);color:#fff;padding:72px 24px;text-align:center;">
