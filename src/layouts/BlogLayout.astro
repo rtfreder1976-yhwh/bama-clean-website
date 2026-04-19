@@ -1,0 +1,186 @@
+---
+import Layout from './Layout.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  pubDate: string;
+  category: string;
+  service: string;
+  city?: string;
+  schema?: string;
+}
+
+const { title, description, canonical, pubDate, category, service, city, schema } = Astro.props;
+const formattedDate = new Date(pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  {schema && <script type="application/ld+json" set:html={schema} />}
+
+  <!-- Breadcrumb -->
+  <nav style="background:#F1F5F9;padding:12px 24px;font-size:.8125rem;">
+    <div style="max-width:900px;margin:0 auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+      <a href="/" style="color:#1B7A3D;font-weight:600;text-decoration:none;">Home</a>
+      <span style="color:#94A3B8;">›</span>
+      <a href="/blog/" style="color:#1B7A3D;font-weight:600;text-decoration:none;">Blog</a>
+      <span style="color:#94A3B8;">›</span>
+      <span style="color:#475569;">{category}</span>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header style="background:linear-gradient(135deg,#0F1B2D 0%,#1A2A42 100%);color:#fff;padding:56px 24px 48px;">
+    <div style="max-width:900px;margin:0 auto;">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;">
+        <span style="background:#1B7A3D;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:700;padding:4px 14px;border-radius:100px;text-transform:uppercase;letter-spacing:.06em;">{category}</span>
+        {city && <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:600;padding:4px 14px;border-radius:100px;">{city}, AL</span>}
+        <span style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:600;padding:4px 14px;border-radius:100px;">{service}</span>
+      </div>
+      <h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;margin-bottom:16px;">{title}</h1>
+      <p style="font-size:1.0625rem;color:rgba(255,255,255,.75);line-height:1.7;max-width:700px;margin-bottom:24px;">{description}</p>
+      <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <img src="/images/aj-ruiz.webp" alt="AJ Ruiz, BamaClean Owner" width="40" height="40" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #22C55E;" />
+          <div>
+            <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.875rem;font-weight:700;color:#fff;">AJ Ruiz</p>
+            <p style="font-size:.75rem;color:rgba(255,255,255,.55);">Owner, BamaClean · IICRC Certified</p>
+          </div>
+        </div>
+        <span style="color:rgba(255,255,255,.3);">|</span>
+        <p style="font-size:.8125rem;color:rgba(255,255,255,.5);">Updated {formattedDate}</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content + Sidebar -->
+  <div style="max-width:1100px;margin:0 auto;padding:48px 24px;display:grid;grid-template-columns:1fr 320px;gap:48px;" class="blog-layout">
+
+    <!-- Article -->
+    <article style="min-width:0;">
+      <div class="prose">
+        <slot />
+      </div>
+    </article>
+
+    <!-- Sidebar -->
+    <aside style="align-self:start;position:sticky;top:80px;">
+
+      <!-- CTA Card -->
+      <div style="background:linear-gradient(135deg,#1B7A3D,#145C2E);border-radius:18px;padding:28px;color:#fff;margin-bottom:24px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#86EFAC;margin-bottom:10px;">Free Estimate</p>
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.25rem;margin-bottom:10px;">Get an exact price for your home</p>
+        <p style="font-size:.875rem;color:rgba(255,255,255,.8);margin-bottom:20px;">No obligation. No upsells. Just a straight answer from a 40-year North Alabama company.</p>
+        <a href="tel:+12563240492" style="display:block;background:#fff;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;padding:13px 20px;border-radius:100px;text-align:center;font-size:.9375rem;text-decoration:none;margin-bottom:10px;">📞 (256) 324-0492</a>
+        <a href="#quote" style="display:block;background:rgba(255,255,255,.12);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;padding:12px 20px;border-radius:100px;text-align:center;font-size:.875rem;text-decoration:none;">Get a Quote Online →</a>
+      </div>
+
+      <!-- Trust signals -->
+      <div style="background:#F8FAFB;border:1px solid #E2E8F0;border-radius:14px;padding:20px;margin-bottom:24px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#0F1B2D;font-size:.875rem;margin-bottom:14px;">Why BamaClean?</p>
+        {[
+          '40+ years in North Alabama',
+          'IICRC Certified Firm',
+          'Licensed, Insured & Bonded',
+          '100% Satisfaction Guarantee',
+          'No hidden fees — ever',
+          '24/7 Emergency Response',
+        ].map(t => (
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="color:#1B7A3D;font-size:1rem;flex-shrink:0;">✓</span>
+            <span style="font-size:.8125rem;color:#475569;">{t}</span>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related posts placeholder -->
+      <div style="background:#F8FAFB;border:1px solid #E2E8F0;border-radius:14px;padding:20px;">
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#0F1B2D;font-size:.875rem;margin-bottom:14px;">Related Resources</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="/services/carpet-cleaning/" style="font-size:.8125rem;color:#1B7A3D;text-decoration:none;font-weight:600;">→ Carpet Cleaning Service Page</a>
+          <a href="/services/water-flood-damage/" style="font-size:.8125rem;color:#1B7A3D;text-decoration:none;font-weight:600;">→ Water Damage Restoration</a>
+          <a href="/services/mold-inspection/" style="font-size:.8125rem;color:#1B7A3D;text-decoration:none;font-weight:600;">→ Mold Inspection & Remediation</a>
+          <a href="/locations/" style="font-size:.8125rem;color:#1B7A3D;text-decoration:none;font-weight:600;">→ All Service Areas</a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+</Layout>
+
+<style>
+  .prose h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+    font-weight: 800;
+    color: #0F1B2D;
+    margin: 2.5rem 0 1rem;
+    line-height: 1.3;
+  }
+  .prose h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1B7A3D;
+    margin: 1.75rem 0 .75rem;
+  }
+  .prose p {
+    font-size: 1.0625rem;
+    color: #334155;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+  .prose ul, .prose ol {
+    margin: 1rem 0 1.5rem 1.5rem;
+  }
+  .prose li {
+    font-size: 1.0625rem;
+    color: #334155;
+    line-height: 1.75;
+    margin-bottom: .5rem;
+  }
+  .prose strong {
+    font-weight: 700;
+    color: #0F1B2D;
+  }
+  .prose blockquote {
+    border-left: 4px solid #1B7A3D;
+    background: #F0FDF4;
+    padding: 16px 24px;
+    border-radius: 0 12px 12px 0;
+    margin: 1.5rem 0;
+  }
+  .prose blockquote p {
+    margin: 0;
+    color: #166534;
+    font-weight: 600;
+  }
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: .9375rem;
+  }
+  .prose th {
+    background: #0F1B2D;
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    padding: 12px 16px;
+    text-align: left;
+  }
+  .prose td {
+    padding: 11px 16px;
+    border-bottom: 1px solid #E2E8F0;
+    color: #334155;
+  }
+  .prose tr:nth-child(even) td { background: #F8FAFB; }
+  .prose a { color: #1B7A3D; font-weight: 600; }
+  .prose hr { border: none; border-top: 2px solid #E2E8F0; margin: 2.5rem 0; }
+
+  @media (max-width: 768px) {
+    .blog-layout { grid-template-columns: 1fr !important; }
+  }
+</style>

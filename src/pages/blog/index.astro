@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+
+const categories = [...new Set(posts.map(p => p.data.category))];
+---
+
+<Layout
+  title="BamaClean Blog — Cleaning & Restoration Guides for North Alabama"
+  description="Expert carpet cleaning, water damage, mold, radon, and restoration guides for Madison, Huntsville, Florence, Decatur, Athens, Muscle Shoals & Russellville, AL."
+  canonical="/blog/"
+>
+
+  <section style="background:linear-gradient(135deg,#0F1B2D 0%,#1A2A42 100%);color:#fff;padding:64px 24px;text-align:center;">
+    <div style="max-width:720px;margin:0 auto;">
+      <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#22C55E;margin-bottom:12px;">Resources & Guides</p>
+      <h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:16px;">The BamaClean Blog</h1>
+      <p style="font-size:1.0625rem;color:rgba(255,255,255,.75);line-height:1.7;">Straight answers about carpet cleaning, water damage, mold, radon, and restoration — written by the team that's been doing this in North Alabama since 1985.</p>
+    </div>
+  </section>
+
+  <section style="padding:64px 24px;background:#fff;">
+    <div style="max-width:1200px;margin:0 auto;">
+
+      <!-- Category filters -->
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px;justify-content:center;">
+        {categories.map(cat => (
+          <span style="background:#F1F5F9;color:#334155;font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:600;padding:8px 18px;border-radius:100px;border:1px solid #E2E8F0;">{cat}</span>
+        ))}
+      </div>
+
+      <!-- Post grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px;">
+        {posts.map(post => (
+          <a href={`/blog/${post.slug}/`} style="display:block;background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:28px;text-decoration:none;box-shadow:0 2px 12px rgba(0,0,0,.05);transition:box-shadow .2s;">
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
+              <span style="background:#E8F5EC;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:700;padding:3px 12px;border-radius:100px;">{post.data.category}</span>
+              {post.data.city && <span style="background:#F1F5F9;color:#475569;font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:600;padding:3px 12px;border-radius:100px;">{post.data.city}, AL</span>}
+            </div>
+            <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.0625rem;font-weight:800;color:#0F1B2D;line-height:1.4;margin-bottom:10px;">{post.data.title}</h2>
+            <p style="font-size:.875rem;color:#475569;line-height:1.65;margin-bottom:16px;">{post.data.description}</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-size:.75rem;color:#94A3B8;">{new Date(post.data.pubDate).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}</span>
+              <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8125rem;font-weight:700;color:#1B7A3D;">Read →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
