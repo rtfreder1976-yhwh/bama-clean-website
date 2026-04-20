@@ -36,7 +36,7 @@ const categories = [...new Set(posts.map(p => p.data.category))];
       <!-- Post grid -->
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px;">
         {posts.map(post => (
-          <a href={`/blog/${post.slug}/`} style="display:block;background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:28px;text-decoration:none;box-shadow:0 2px 12px rgba(0,0,0,.05);transition:box-shadow .2s;">
+          <a href={`/blog/${post.id}/`} style="display:block;background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:28px;text-decoration:none;box-shadow:0 2px 12px rgba(0,0,0,.05);transition:box-shadow .2s;">
             <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
               <span style="background:#E8F5EC;color:#1B7A3D;font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:700;padding:3px 12px;border-radius:100px;">{post.data.category}</span>
               {post.data.city && <span style="background:#F1F5F9;color:#475569;font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:600;padding:3px 12px;border-radius:100px;">{post.data.city}, AL</span>}
