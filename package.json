@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.7",
+    "@astrojs/vercel": "^10.0.4",
     "@tailwindcss/vite": "^4.2.2",
+    "@vercel/analytics": "^2.0.1",
     "astro": "^6.1.7",
     "tailwindcss": "^4.2.2"
   }
